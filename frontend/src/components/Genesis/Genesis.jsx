@@ -6,12 +6,12 @@ const Genesis = () => {
 
       <div className="container text-center">
         <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-                <h2 className="H160">
+            <div className="col-lg-4 col-md-6 col-sm-12 Genesislmain">
+                <h2 className="H160 Genesisleft">
                     Genesis
                 </h2>
             </div>
-            <div className="col-lg-8 col-md-6 col-sm-12">
+            <div className="col-lg-8 col-md-6 col-sm-12 Genesisright">
                 <p>Datacharya emerged from 30 years of enterprise experience and interactions with global consultants. The founders recognized that Western consulting approaches often miss nuances of Indian business philosophy.</p>
 
                 <p>We emphasize holistic rather than transactional thinking, combining ancient scriptural wisdom with contemporary data science. </p>
@@ -24,6 +24,21 @@ const Genesis = () => {
                 <p className="Paragrapha 16">— Mission Statement</p>
 
             </div>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-6 col-md-12"></div>
+          <div className="col-lg-6 col-md-12">
+            <h2 className="H160">
+              Ethical Intelligence
+            </h2>
+            <h6>
+              Where logic intersects with deeper business purpose.
+            </h6>
+            <p className="paragraph18px">
+              We operate to ensure strategic visions are authentically lived across every level of execution.
+            </p>
+          </div>
         </div>
 
 
