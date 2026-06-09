@@ -1,0 +1,366 @@
+@use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
+
+.sage-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background: linear-gradient(
+    90deg,
+    #f7f8fc,
+    #f3f4f9
+  );
+
+  overflow: hidden;
+
+  /* =========================
+     SECTION TITLE
+  ========================= */
+
+  .section-title {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    .top-title {
+      display: inline-block;
+
+      color: #ff7b29;
+
+      text-transform: uppercase;
+
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      color: #101828  ;
+
+      margin-bottom: 18px;
+
+      span {
+        font-family: Nunito Sans;
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 70px;
+        text-align: center;
+        color: #4160F0;
+      }
+    }
+
+    p {
+      width: 768px;
+      color: #4A5565;
+
+      max-width: 760px;
+
+      margin-inline: auto;
+    }
+  }
+
+  /* =========================
+     GRID
+  ========================= */
+
+  .sage-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 13px;
+
+    position: relative;
+  }
+
+  /* =========================
+     CARD
+  ========================= */
+
+  .sage-card {
+    position: relative;
+
+    background: $white;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 70px 24px 28px;
+
+    min-height: 430px;
+
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-6px);
+
+      box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    }
+
+    /* ICON */
+
+    .icon-box {
+      position: absolute;
+
+      top: -22px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 50%;
+
+      background: #4f67ff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0 10px 25px rgba(79,103,255,.3);
+
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+    }
+
+    /* CONNECTOR */
+
+    .connector {
+      position: absolute;
+
+      top: 26px;
+      right: -14px;
+
+      width: 28px;
+      height: 28px;
+
+      border-radius: 50%;
+
+      border: 2px solid #ff7b29;
+
+      background: $white;
+
+      z-index: 2;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+        left: -70px;
+
+        transform: translateY(-50%);
+
+        width: 70px;
+        height: 1px;
+
+        background: #d1d5db;
+      }
+    }
+
+    h3 {
+      font-size: 34px;
+      font-weight: 300;
+
+      text-align: center;
+
+      color: #374151;
+
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      font-size: 14px;
+      font-weight: 500;
+
+      color: #ff7b29;
+
+      text-align: center;
+
+      margin-bottom: 30px;
+    }
+
+    .description {
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      color: #4b5563;
+
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+
+      background: #e5e7eb;
+
+      margin-bottom: 18px;
+    }
+
+    small {
+      display: block;
+
+      font-size: 12px;
+
+      color: #9ca3af;
+
+      margin-bottom: 10px;
+    }
+
+    .outcome {
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      color: #374151;
+    }
+  }
+
+  /* =========================
+     CTA BOX
+  ========================= */
+
+  .sage-cta {
+    margin-top: 50px;
+
+    background: linear-gradient(
+      135deg,
+      #5a73ff,
+      #4a63f0
+    );
+
+    border-radius: 12px;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    h3 {
+      font-size: 52px;
+      font-weight: 300;
+
+      color: $white;
+
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+
+      color: rgba(255,255,255,.85);
+
+      max-width: 700px;
+
+      line-height: 1.7;
+    }
+
+    button {
+      border: none;
+
+      background: $white;
+
+      color: #111827;
+
+      padding: 14px 26px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      white-space: nowrap;
+
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media only screen and (max-width: 1024px) {
+
+  .sage-section {
+
+    .sage-grid {
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .sage-card {
+
+      .connector {
+        display: none;
+      }
+    }
+
+    .sage-cta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media only screen and (max-width: 767px) {
+
+  .sage-section {
+    padding: 80px 0;
+
+    .section-title {
+
+      h2 {
+        font-size: 38px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .sage-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sage-card {
+      min-height: auto;
+
+      padding: 70px 20px 24px;
+
+      h3 {
+        font-size: 28px;
+      }
+    }
+
+    .sage-cta {
+      padding: 30px 20px;
+
+      h3 {
+        font-size: 34px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

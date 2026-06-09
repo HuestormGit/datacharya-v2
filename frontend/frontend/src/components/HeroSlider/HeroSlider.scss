@@ -1,0 +1,119 @@
+@use '../../assets/scss/variables' as *;
+@use '../../assets/scss/_mixins.scss' as *;
+
+.hero-section {
+  margin-top: -80px;
+  padding: 50px 0px;
+  z-index: 2;
+   overflow: hidden;
+
+  background-image: url('../../assets/images/herobg.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // background: linear-gradient(
+  //   to bottom,
+  //   #f6e7e7,
+  //   #bcc4ff
+  // );
+
+  border-radius: 0 0 40px 40px;
+
+  .hero-content {
+    max-width:1186px;
+    margin: auto;
+
+    h1 {
+      
+      margin: 20px 0;
+    }
+    p.blue{
+      color: $blue;
+    }
+
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .bulletpoint{
+
+    .sliderbulletpoint{
+      li {
+        position: relative;
+
+        padding-left: 30px;
+
+        margin-bottom: 12px;
+
+        list-style: none;
+
+        &::before {
+          content: "";
+
+          position: absolute;
+
+          left: 0;
+          top: 5px;
+
+          width: 16px;
+          height: 16px;
+
+          background-image: url('../../assets/images/check.png');
+
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+    
+        }
+      }
+    }
+
+  }
+  
+
+  button {
+    padding: 14px 30px;
+    border-radius: $radius-full;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .btn-dark {
+    background: #111;
+    color: #fff;
+  }
+
+  .btn-light {
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  @include md {
+
+    .hero-btns {
+      flex-direction: row;
+      // justify-content: center;
+    }
+  }
+
+  @include lg {
+
+    padding: 100px 0px;
+
+    .hero-content {
+      width:896px;
+
+      
+      p{
+        width:672px;
+      }
+    }
+  }
+}

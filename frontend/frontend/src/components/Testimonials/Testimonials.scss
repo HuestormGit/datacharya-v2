@@ -1,0 +1,161 @@
+.testimonial-section {
+  padding: 100px 0;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    span {
+      color: #f58220;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 52px;
+      font-weight: 300;
+      color: #222;
+
+      .highlight {
+        color: #4868ff;
+      }
+    }
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    min-height: 320px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    .stars {
+      color: #f58220;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .quote {
+      color: #cfd4ff;
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.8;
+      min-height: 120px;
+    }
+
+    .author {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      h4 {
+        color: #4868ff;
+        margin: 0;
+        font-size: 15px;
+      }
+
+      span {
+        display: block;
+        color: #555;
+        font-size: 13px;
+      }
+
+      small {
+        display: block;
+        color: #999;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .results-text {
+    text-align: center;
+    margin-top: 40px;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-align: center;
+
+    h3 {
+      font-size: 38px;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+
+    div:nth-child(1) h3,
+    div:nth-child(3) h3 {
+      color: #4868ff;
+    }
+
+    div:nth-child(2) h3 {
+      color: #f58220;
+    }
+
+    span {
+      color: #999;
+      font-size: 14px;
+    }
+  }
+
+  .industry-tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+    span {
+      border: 2px solid #4868ff;
+      color: #4868ff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+
+      &:nth-child(even) {
+        border-color: #f58220;
+        color: #f58220;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .testimonial-grid,
+    .stats-row {
+      grid-template-columns: 1fr;
+      display: grid;
+      gap: 20px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+    }
+  }
+}

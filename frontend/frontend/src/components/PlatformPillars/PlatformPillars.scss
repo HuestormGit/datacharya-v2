@@ -1,0 +1,68 @@
+.platform-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #3254C7 4.42%, rgba(65, 96, 240, 0.1) 100%);
+margin-top: -80px;
+
+  z-index: 1; 
+  // background: linear-gradient(135deg,#4f67ff,#7388ff);
+
+  .section-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+
+    span {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-top: 10px;
+    }
+  }
+
+  .platform-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 35px;
+    height: 100%;
+
+    h3 {
+      font-size: 32px;
+      color: #2a3cff;
+    }
+
+    h5 {
+      color: #ff7b00;
+      margin: 10px 0 20px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .tags {
+      margin-top: 20px;
+
+      span {
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 8px 14px;
+        border-radius: 30px;
+        margin: 5px;
+        font-size: 13px;
+      }
+    }
+
+    button {
+      margin-top: 25px;
+      background: #4361ee;
+      color: #fff;
+      border: 0;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+  }
+}

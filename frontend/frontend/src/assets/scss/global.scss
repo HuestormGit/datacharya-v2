@@ -1,0 +1,85 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  overflow-x: hidden;
+  color: $primary-color;
+  background: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @include sm {
+    max-width: 640px;
+  }
+
+  @include md {
+    max-width: 768px;
+  }
+
+  @include lg {
+    max-width: 1024px;
+  }
+
+  @include xl {
+    max-width: 1280px;
+  }
+}
+.paragraph18px{
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+.H160{
+  font-family: Nunito Sans;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 70px;
+}
+.H240px{
+  font-family: Nunito Sans;
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 50px;
+}
+.paragraph16{
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+.myButton{
+  font-family: Nunito Sans;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 14px 26px;
+}
+ 

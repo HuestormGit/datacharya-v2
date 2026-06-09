@@ -1,0 +1,145 @@
+@use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 9999;
+
+  padding: 18px 0;
+
+  transition: all 0.4s ease;
+
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .nav-link {
+    color: #1E1E1E;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition: $transition;
+
+    &:hover {
+      color: #dbe4ff;
+    }
+  }
+
+  .contact-btn {
+    background: $white;
+
+    color: $primary-color !important;
+
+    border-radius: 10px;
+
+    padding: 10px 22px !important;
+  }
+}
+
+/* =========================
+   HOME PAGE TRANSPARENT
+========================= */
+
+.home-navbar {
+  background: transparent;
+}
+
+/* =========================
+   INNER PAGE WHITE
+========================= */
+
+.inner-navbar {
+  background: $white;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+  .nav-link {
+    color: $primary-color;
+
+    &:hover {
+      color: #4361ee;
+    }
+  }
+
+  .contact-btn {
+    background: $primary-color;
+    color: $white !important;
+  }
+}
+
+/* =========================
+   STICKY NAVBAR
+========================= */
+
+.sticky-nav {
+  background: rgba(255,255,255,.95) !important;
+
+  backdrop-filter: blur(12px);
+
+  padding: 14px 0;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  .nav-link {
+    color: $primary-color !important;
+
+    &:hover {
+      color: #4361ee !important;
+    }
+  }
+
+  .contact-btn {
+    background: $primary-color;
+    color: $white !important;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media only screen and (max-width: 991px) {
+
+  .custom-navbar {
+
+    .navbar-brand img {
+      width: 150px;
+    }
+
+    .navbar-collapse {
+      background: $white;
+
+      margin-top: 15px;
+
+      padding: 20px;
+
+      border-radius: 20px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .nav-link {
+      color: $primary-color !important;
+
+      padding: 14px 0 !important;
+
+      border-bottom: 1px solid #eee;
+    }
+
+    .contact-btn {
+      text-align: center;
+      margin-top: 10px;
+      border-bottom: none;
+    }
+  }
+}

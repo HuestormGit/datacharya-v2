@@ -1,0 +1,38 @@
+.cta-section{
+    background: linear-gradient(135deg, #4160F0 0%, #5A7CED 50%, #4160F0 100%);
+    padding: 70px 0;
+    .container{
+        width: 896px;
+        h2{
+            color:#FFFFFF;
+;
+        }
+        p{
+            font-family: Nunito Sans;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #DBEAFE;
+
+
+        }
+        .buttons{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            .primary-btn{
+                background: #FF6700;
+                box-shadow: 0px 4px 20px 0px #FF67004D;
+                border: none;
+
+            }
+            .secondary-btn{
+                border: 2px solid #FFFFFF;
+
+
+            }
+
+        }
+    }
+}
