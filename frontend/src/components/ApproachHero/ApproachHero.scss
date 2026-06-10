@@ -1,0 +1,70 @@
+@use '../../assets/scss/variables' as *;
+
+.approach-page {
+  .approach-hero {
+    position: relative;
+    min-height: 325px;
+    margin-top: 78px;
+    border-radius: 0 0 58px 58px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    color: $white;
+
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 45, 151, 0.82);
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      min-height: 325px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    h1 {
+      margin: 8px 0 6px;
+      max-width: 800px;
+      color: $white;
+      font-family: $font-primary;
+      font-size: 42px;
+      font-weight: $fw-light;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    p {
+      color: $white;
+    }
+
+    &__summary {
+      max-width: 660px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .approach-page {
+    .approach-hero {
+      min-height: 360px;
+      margin-top: 70px;
+      border-radius: 0 0 36px 36px;
+
+      &__content {
+        min-height: 360px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  }
+}
