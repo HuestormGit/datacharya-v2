@@ -1,12 +1,18 @@
 import ContactUsHero from "../components/ContactUsHero/ContactUsHero";
+import ContactForm from "../components/ContactForm/ContactForm";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+
 const ContactUs = () => {
   return (
-     <>
+    <div className="contact-page">
       <Navbar />
-      <ContactUsHero />
-    
-    </> 
+      <main>
+        <ContactUsHero />
+        <ContactForm />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

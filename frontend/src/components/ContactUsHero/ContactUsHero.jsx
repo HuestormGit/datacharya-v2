@@ -3,10 +3,10 @@ import "./ContactUsHero.scss";
 
 const ContactUsHero = () => {
   return (
-    <section className="ContactUs-page" >
-      <div className="ContactUs-hero __content container">
-        <p className="paragraph16">Contact</p>
-        <h1 className="H160">
+    <section className="contact-hero">
+      <div className="contact-hero__content container">
+        <p className="paragraph16">CONTACT</p>
+        <h1>
           Lorem ipsum dolor sit amet
         </h1>
       </div>
