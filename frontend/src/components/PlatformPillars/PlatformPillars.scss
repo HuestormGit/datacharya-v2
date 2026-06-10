@@ -73,7 +73,13 @@ margin-top: -80px;
   .platform-ecosystem {
     margin-top: -1px;
     padding: 58px 0 110px;
-    background: linear-gradient(180deg, #4160f0 0%, #3155c5 100%);
+    background: linear-gradient(
+      180deg,
+      #dbe2ff 0%,
+      #8fa4f2 24%,
+      #5272df 52%,
+      #3155c5 100%
+    );
 
     &__grid {
       max-width: 1040px;
