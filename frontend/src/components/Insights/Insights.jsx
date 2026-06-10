@@ -70,32 +70,32 @@ const Insights = ({ variant = "default" }) => {
       <div className="container">
 
         <div className="section-title">
-          <h2>Latest Insights</h2>
+          <div>
+            <h2>
+              Latest <span>Insights</span>
+            </h2>
+            <p>Expert perspectives on enterprise governance</p>
+          </div>
+          <a href="/insights">View all&nbsp; →</a>
         </div>
 
-        <div className="row">
-
-          <div className="col-lg-4">
-            <div className="insight-card">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692"
-                alt=""
-              />
-
+        <div className="home-insights-grid">
+          {articles.map((article, index) => (
+            <article className="insight-card" key={article.title}>
+              <img src={article.image} alt="" />
               <div className="content">
-                <span>Governance</span>
-
-                <h3>What is not practiced is not preserved</h3>
-
-                <p>
-                  Governance gaps create execution problems.
-                </p>
-
-                <a href="#">Read More</a>
+                <div className="insight-meta">
+                  <span className={index === 1 ? "orange" : ""}>
+                    {article.category}
+                  </span>
+                  <small>{article.date}</small>
+                </div>
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <a href="/insights">Read More&nbsp; →</a>
               </div>
-            </div>
-          </div>
-
+            </article>
+          ))}
         </div>
 
       </div>

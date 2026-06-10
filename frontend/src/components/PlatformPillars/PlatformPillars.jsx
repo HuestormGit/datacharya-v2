@@ -184,10 +184,7 @@ const PlatformPillars = ({ variant = "default" }) => {
                 <div className="card-top">
 
                   <div className="icon-box">
-                    <img
-                      src="/images/platform-icon.png"
-                      alt=""
-                    />
+                    <span aria-hidden="true">{item.title.slice(0, 1)}</span>
                   </div>
 
                   <div>
@@ -217,9 +214,9 @@ const PlatformPillars = ({ variant = "default" }) => {
                 </div>
 
                 {/* BUTTON */}
-                <button>
+                <a className="platform-link" href="/approach">
                   {item.buttonText}
-                </button>
+                </a>
 
               </div>
 

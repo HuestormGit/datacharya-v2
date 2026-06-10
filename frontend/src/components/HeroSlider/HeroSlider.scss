@@ -1,118 +1,128 @@
 @use '../../assets/scss/variables' as *;
-@use '../../assets/scss/_mixins.scss' as *;
 
-.hero-section {
-  margin-top: -80px;
-  padding: 50px 0px;
-  z-index: 2;
-   overflow: hidden;
+.home-page {
+  .hero-section {
+    position: relative;
+    min-height: 600px;
+    padding: 150px 0 70px;
+    border-radius: 0 0 58px 58px;
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,.18), rgba(255,255,255,.02)),
+      url('../../assets/images/herobg.png');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 
-  background-image: url('../../assets/images/herobg.png');
+    .container {
+      max-width: 1024px;
+    }
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    .hero-content {
+      width: min(650px, 100%);
+      margin: 0;
+      text-align: left;
+    }
 
-  // background: linear-gradient(
-  //   to bottom,
-  //   #f6e7e7,
-  //   #bcc4ff
-  // );
-
-  border-radius: 0 0 40px 40px;
-
-  .hero-content {
-    max-width:1186px;
-    margin: auto;
+    .hero-eyebrow {
+      margin-bottom: 12px;
+      color: $blue;
+      font-size: 13px;
+      font-weight: $fw-semibold;
+      letter-spacing: .04em;
+    }
 
     h1 {
-      
-      margin: 20px 0;
+      margin: 0 0 20px;
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: $fw-light;
+      line-height: 1.08;
+      letter-spacing: 0;
     }
-    p.blue{
-      color: $blue;
+
+    .hero-summary {
+      max-width: 590px;
+      color: $primary-color;
+      font-size: 15px;
+      line-height: 1.55;
     }
 
-  }
+    .hero-btns {
+      margin-top: 30px;
+      display: flex;
+      gap: 12px;
 
-  .hero-btns {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
+      a {
+        padding: 13px 22px;
+        border: 1px solid $blue;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: $fw-semibold;
+      }
 
-  .bulletpoint{
+      .btn-dark {
+        background: $blue;
+        color: $white;
+      }
 
-    .sliderbulletpoint{
-      li {
-        position: relative;
-
-        padding-left: 30px;
-
-        margin-bottom: 12px;
-
-        list-style: none;
-
-        &::before {
-          content: "";
-
-          position: absolute;
-
-          left: 0;
-          top: 5px;
-
-          width: 16px;
-          height: 16px;
-
-          background-image: url('../../assets/images/check.png');
-
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-    
-        }
+      .btn-light {
+        background: $white;
+        color: $primary-color;
       }
     }
 
-  }
-  
+    .hero-benefits {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
 
-  button {
-    padding: 14px 30px;
-    border-radius: $radius-full;
-    border: 0;
-    cursor: pointer;
-  }
+      li {
+        position: relative;
+        padding-left: 24px;
+        display: flex;
+        flex-direction: column;
+        color: $primary-color;
 
-  .btn-dark {
-    background: #111;
-    color: #fff;
-  }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 15px;
+          height: 15px;
+          background: url('../../assets/images/check.png') center / contain no-repeat;
+        }
 
-  .btn-light {
-    background: #fff;
-    border: 1px solid #ddd;
-  }
+        strong {
+          font-size: 12px;
+        }
 
-  @include md {
-
-    .hero-btns {
-      flex-direction: row;
-      // justify-content: center;
+        span {
+          margin-top: 3px;
+          font-size: 10px;
+          line-height: 1.35;
+        }
+      }
     }
   }
+}
 
-  @include lg {
+@media only screen and (max-width: 767px) {
+  .home-page {
+    .hero-section {
+      min-height: auto;
+      padding: 130px 0 60px;
+      border-radius: 0 0 36px 36px;
+      background-position: 62% center;
 
-    padding: 100px 0px;
+      h1 {
+        font-size: 36px;
+      }
 
-    .hero-content {
-      width:896px;
-
-      
-      p{
-        width:672px;
+      .hero-benefits {
+        grid-template-columns: 1fr;
       }
     }
   }
