@@ -1,4 +1,5 @@
 import "./CTA.scss";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -17,13 +18,13 @@ const CTA = () => {
 
 
         <div className="buttons">
-          <button className="primary-btn myButton">
+          <Link className="primary-btn myButton" to="/contactUs">
             Request Consultation
-          </button>
+          </Link>
 
-          <button className="secondary-btn myButton">
+          <Link className="secondary-btn myButton" to="/advisory">
             Download Capability Overview
-          </button>
+          </Link>
         </div>
 
       </div>
