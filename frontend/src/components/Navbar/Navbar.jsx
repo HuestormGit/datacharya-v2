@@ -82,53 +82,40 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-<<<<<<< HEAD
               <Link className="nav-link" to="/advisory">
                 CXO Advisory
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/platforms">
+              <Link
+                className={`nav-link ${isActive("/platform") ? "active" : ""}`}
+                to="/platform"
+                aria-current={isActive("/platform") ? "page" : undefined}
+              >
                 Platforms
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/insights">
+              <Link
+                className={`nav-link ${isActive("/insights") ? "active" : ""}`}
+                to="/insights"
+                aria-current={isActive("/insights") ? "page" : undefined}
+              >
                 Insights
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <Link
+                className={`nav-link ${isActive("/contactUs") ? "active" : ""}`}
+                to="/contactUs"
+                aria-current={isActive("/contactUs") ? "page" : undefined}
+              >
                 Contact
               </Link>
             </li>
-=======
-              <a className="nav-link" href="/platform">
-                Platform
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="/insights">
-                Insights
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="/contactUs">
-                ContactUs
-              </a>
-            </li>
-
-            {/* <li className="nav-item">
-              <a className="nav-link contact-btn" href="#">
-                Contact
-              </a>
-            </li> */}
->>>>>>> 5effaeaaf96a7ffc4a8b31f38adb7cf23fbc74df
 
           </ul>
 
