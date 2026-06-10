@@ -164,8 +164,8 @@
     }
 
     h3 {
-      font-size: 34px;
-      font-weight: 300;
+      // font-size: 34px;
+      // font-weight: 300;
 
       text-align: center;
 
@@ -175,8 +175,8 @@
     }
 
     h5 {
-      font-size: 14px;
-      font-weight: 500;
+      // font-size: 14px;
+      // font-weight: 500;
 
       color: #ff7b29;
 
@@ -186,11 +186,7 @@
     }
 
     .description {
-      font-size: 14px;
-
-      line-height: 1.7;
-
-      color: #4b5563;
+      color: #101828;
 
       margin-bottom: 24px;
     }
@@ -215,11 +211,12 @@
     }
 
     .outcome {
+      font-family: Nunito Sans;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0px;
       font-size: 14px;
-
-      line-height: 1.7;
-
-      color: #374151;
+      color: #4A5565;
     }
   }
 
@@ -389,12 +386,17 @@
 
         small {
           font-size: 9px;
-          vertical-align: top;
+          vertical-align: bottom;
+          font-weight: 200;
+          font-size: 20px;
+          line-height: 50px;
+
         }
       }
 
       p {
         width: auto;
+        max-width: 660px;
         color: $primary-color;
       }
     }

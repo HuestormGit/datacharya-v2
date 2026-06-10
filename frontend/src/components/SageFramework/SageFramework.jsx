@@ -90,7 +90,7 @@ const SageFramework = ({ variant = "default" }) => {
       <section className="sage-section sage-section--approach">
         <div className="container">
           <div className="approach-sage-intro">
-            <h2>
+            <h2 className="H240px">
               SAGE<small>TM</small>
               <br />
               philosophy
@@ -110,9 +110,9 @@ const SageFramework = ({ variant = "default" }) => {
                 <div className="icon-box" aria-hidden="true">
                   {step.iconLabel}
                 </div>
-                <h3>{step.title}</h3>
-                <h5>{step.subtitle}</h5>
-                <p className="description">{step.description}</p>
+                <h3 className="H240px">{step.title}</h3>
+                <h5 className="paragraph18px">{step.subtitle}</h5>
+                <p className="description Paragrapha16">{step.description}</p>
                 <div className="divider"></div>
                 <p className="outcome">{step.outcome}</p>
                 {index !== steps.length - 1 && (
