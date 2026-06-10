@@ -3,10 +3,7 @@
 .approach-page {
   .approach-platforms {
     padding: 0 0 70px;
-    background:
-      radial-gradient(circle at 0 14%, rgba(61, 93, 247, 0.2), transparent 29%),
-      radial-gradient(circle at 100% 62%, rgba(255, 107, 26, 0.63), transparent 46%),
-      linear-gradient(120deg, #fff 5%, #fff8f3 52%, #ffb27d 100%);
+    background: $white;
 
     &__list {
       max-width: 760px;

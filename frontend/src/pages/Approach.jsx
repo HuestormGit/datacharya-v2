@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import ApproachHero from "../components/ApproachHero/ApproachHero";
-import ApproachSage from "../components/ApproachSage/ApproachSage";
+import SageFramework from "../components/SageFramework/SageFramework";
 import ApproachPlatforms from "../components/ApproachPlatforms/ApproachPlatforms";
 import Footer from "../components/Footer/Footer";
 
@@ -10,7 +10,7 @@ const Approach = () => {
       <Navbar />
       <main>
         <ApproachHero />
-        <ApproachSage />
+        <SageFramework variant="approach" />
         <ApproachPlatforms />
       </main>
       <Footer />

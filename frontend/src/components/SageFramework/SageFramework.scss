@@ -364,3 +364,142 @@
     }
   }
 }
+
+.approach-page {
+  .sage-section--approach {
+    padding: 52px 0 68px;
+    background: $white;
+
+    .approach-sage-intro {
+      max-width: 690px;
+      margin: 0 auto 56px;
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      align-items: center;
+      gap: 34px;
+      text-align: left;
+
+      h2 {
+        margin: 0;
+        color: $primary-color;
+        font-family: $font-primary;
+        font-size: 30px;
+        font-weight: $fw-light;
+        line-height: 1.12;
+
+        small {
+          font-size: 9px;
+          vertical-align: top;
+        }
+      }
+
+      p {
+        width: auto;
+        color: $primary-color;
+      }
+    }
+
+    .sage-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    .sage-card {
+      min-height: 385px;
+      padding: 20px 17px;
+      border-color: $border-color;
+      border-radius: 4px;
+      text-align: left;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .icon-box {
+        position: static;
+        width: 38px;
+        height: 38px;
+        margin: 0 auto;
+        transform: none;
+        background: $blue;
+        color: $white;
+        font-family: $font-primary;
+        font-size: $fs-14;
+        font-weight: $fw-semibold;
+        box-shadow: none;
+      }
+
+      .connector {
+        top: 115px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        border-width: 1px;
+        display: grid;
+        place-items: center;
+        color: #ff6b1a;
+        font-size: 9px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      h3 {
+        margin: 8px 0 0;
+        color: $primary-color;
+        font-size: 25px;
+        font-weight: $fw-light;
+      }
+
+      h5 {
+        margin: 0 0 20px;
+        color: #ff6b1a;
+        font-size: 12px;
+        font-weight: $fw-regular;
+      }
+
+      .description,
+      .outcome {
+        color: $text-color;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .description {
+        margin-bottom: 0;
+      }
+
+      .divider {
+        margin: 16px 0;
+        background: $border-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .approach-page {
+    .sage-section--approach {
+      .sage-card {
+        .connector {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .approach-page {
+    .sage-section--approach {
+      .approach-sage-intro {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
