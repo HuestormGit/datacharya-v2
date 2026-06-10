@@ -9,9 +9,9 @@ const About = () => {
       <AboutHero  />
       <Genesis />
       <WhoWeServe />
-    {/* <div style={{ paddingTop: "120px" }}>
+      <div style={{ paddingTop: "120px" }}>
       <h1>About Page</h1>
-    </div> */}
+    </div>
     </> 
   );
 };
