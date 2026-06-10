@@ -1,3 +1,5 @@
+@use '../../assets/scss/variables' as *;
+
 .platform-section {
   padding: 100px 0;
   background: linear-gradient(180deg, #3254C7 4.42%, rgba(65, 96, 240, 0.1) 100%);
@@ -63,6 +65,122 @@ margin-top: -80px;
       border: 0;
       padding: 12px 24px;
       border-radius: 8px;
+    }
+  }
+}
+
+.platform-page {
+  .platform-ecosystem {
+    margin-top: -1px;
+    padding: 58px 0 110px;
+    background: linear-gradient(
+      180deg,
+      #dbe2ff 0%,
+      #8fa4f2 24%,
+      #5272df 52%,
+      #3155c5 100%
+    );
+
+    &__grid {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+  }
+
+  .ecosystem-card {
+    min-height: 365px;
+    padding: 30px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $white;
+    color: $primary-color;
+    text-align: left;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      > span {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #ff6500;
+        color: $white;
+        font-size: 12px;
+        font-weight: $fw-semibold;
+      }
+
+      h2 {
+        margin: 0;
+        color: $blue;
+        font-family: $font-primary;
+        font-size: 27px;
+        font-weight: $fw-light;
+        letter-spacing: 0;
+      }
+    }
+
+    h3 {
+      margin: 20px 0 12px;
+      color: $blue;
+      font-family: $font-primary;
+      font-size: 21px;
+      font-weight: $fw-light;
+    }
+
+    > strong,
+    > p {
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    > strong {
+      font-weight: $fw-bold;
+    }
+
+    > p {
+      margin-bottom: 22px;
+    }
+
+    > a {
+      margin-top: auto;
+      padding: 11px 17px;
+      border-radius: 4px;
+      background: #ff6500;
+      color: $white;
+      font-size: 12px;
+      box-shadow: 0 5px 12px rgba(255, 101, 0, 0.25);
+    }
+
+    &:last-child {
+      grid-column: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .platform-page {
+    .platform-ecosystem__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ecosystem-card {
+      min-height: auto;
+
+      &:last-child {
+        grid-column: auto;
+      }
     }
   }
 }
