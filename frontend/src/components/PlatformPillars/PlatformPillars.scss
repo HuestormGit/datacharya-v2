@@ -184,3 +184,129 @@ margin-top: -80px;
     }
   }
 }
+
+.home-page {
+  .platform-section {
+    margin-top: -48px;
+    padding: 105px 0 70px;
+    background: linear-gradient(180deg, #4c69df 0%, #aebcf1 100%);
+
+    .container {
+      max-width: 1040px;
+    }
+
+    .section-title {
+      margin-bottom: 34px;
+
+      span {
+        font-size: 11px;
+        letter-spacing: .08em;
+      }
+
+      h2 {
+        margin: 7px 0;
+        color: $white;
+        font-family: $font-primary;
+        font-size: 40px;
+        font-weight: $fw-light;
+      }
+
+      p {
+        color: rgba(255,255,255,.85);
+        font-size: 13px;
+      }
+    }
+
+    .row {
+      --bs-gutter-x: 16px;
+      --bs-gutter-y: 0;
+    }
+
+    .platform-card {
+      min-height: 245px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .card-top {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .icon-box {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+        background: $blue;
+        color: $white;
+        font-size: 13px;
+        font-weight: $fw-semibold;
+      }
+
+      h3 {
+        margin: 0;
+        color: $primary-color;
+        font-size: 25px;
+        font-weight: $fw-light;
+      }
+
+      h5 {
+        margin: 2px 0 0;
+        color: #ff6500;
+        font-size: 11px;
+        font-weight: $fw-regular;
+      }
+
+      > p {
+        margin: 16px 0 8px;
+        color: $text-color;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .tags {
+        margin-top: 0;
+
+        span {
+          margin: 3px 4px 3px 0;
+          padding: 4px 9px;
+          border: 0;
+          border-radius: 3px;
+          background: $light-bg;
+          color: $light-text;
+          font-size: 9px;
+        }
+      }
+
+      .platform-link {
+        align-self: flex-end;
+        margin-top: auto;
+        padding: 9px 16px;
+        border-radius: 3px;
+        background: $blue;
+        color: $white;
+        font-size: 10px;
+      }
+    }
+
+    .row > div:nth-child(1) .platform-link {
+      background: #ff6500;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-page {
+    .platform-section {
+      margin-top: -30px;
+      padding-top: 80px;
+    }
+  }
+}

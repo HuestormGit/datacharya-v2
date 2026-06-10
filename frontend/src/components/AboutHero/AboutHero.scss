@@ -1,20 +1,56 @@
 @use '../../assets/scss/variables' as *;
-@use '../../assets/scss/_mixins.scss' as *;
-.AboutHero-section{
-    // height: 540px;
-    padding: 70px 0px;
-    z-index: 2;
-    overflow: hidden;
 
-    background-image: url('../../assets/images/aboutherobg.png');
+.about-page .AboutHero-section {
+  position: relative;
+  min-height: 285px;
+  padding: 62px 0 68px;
+  overflow: hidden;
+  border-radius: 0 0 48px 48px;
+  background:
+    linear-gradient(rgba(20, 38, 83, .82), rgba(20, 38, 83, .82)),
+    url('../../assets/images/aboutherobg.png') center 42% / cover no-repeat;
+  box-shadow: 0 12px 22px rgba(20, 38, 83, .18);
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    .container{
-        width: 800px;
-        p,h2{color: #fff;}
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+  }
+
+  .about-hero-eyebrow {
+    margin-bottom: 8px;
+    color: $white;
+    font-size: 12px;
+  }
+
+  h2 {
+    margin: 0 0 8px;
+    color: $white;
+    font-size: 38px;
+    line-height: 1.14;
+
+    span {
+      color: #ff6700;
     }
+  }
 
-    
+  .about-hero-copy {
+    max-width: 530px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .9);
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-page .AboutHero-section {
+    min-height: 250px;
+    padding: 52px 0;
+    border-radius: 0 0 30px 30px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
 }

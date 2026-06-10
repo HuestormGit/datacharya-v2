@@ -1,3 +1,5 @@
+@use '../../assets/scss/variables' as *;
+
 .testimonial-section {
   padding: 100px 0;
 
@@ -156,6 +158,108 @@
 
     .section-title h2 {
       font-size: 36px;
+    }
+  }
+}
+
+.home-page {
+  .testimonial-section {
+    padding: 45px 0 70px;
+    background: $light-bg;
+
+    .container {
+      max-width: 760px;
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+
+      span {
+        font-size: 10px;
+      }
+
+      h2 {
+        margin-top: 5px;
+        font-size: 36px;
+      }
+    }
+
+    .testimonial-grid {
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      min-height: 240px;
+      padding: 18px;
+      border: 1px solid $border-color;
+      border-radius: 7px;
+      box-shadow: none;
+
+      .stars {
+        font-size: 10px;
+      }
+
+      .quote {
+        font-size: 30px;
+      }
+
+      p {
+        min-height: 90px;
+        font-size: 10px;
+        line-height: 1.45;
+      }
+
+      .author {
+        padding-top: 12px;
+
+        .author-avatar {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: #eef1ff;
+          color: #4868ff;
+          font-size: 9px;
+        }
+
+        h4 {
+          font-size: 11px;
+        }
+
+        span,
+        small {
+          font-size: 8px;
+        }
+      }
+    }
+
+    .results-text {
+      margin-top: 26px;
+      font-size: 10px;
+    }
+
+    .stats-row {
+      margin-top: 18px;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 9px;
+      }
+    }
+
+    .industry-tags {
+      margin-top: 24px;
+      gap: 8px;
+
+      span {
+        padding: 5px 12px;
+        border-width: 1px;
+        font-size: 9px;
+      }
     }
   }
 }

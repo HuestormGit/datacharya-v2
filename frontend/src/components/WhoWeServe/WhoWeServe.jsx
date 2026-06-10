@@ -1,25 +1,14 @@
 import "./WhoWeServe.scss";
 
-const WhoWeServeData = [
+const audiences = [
+  { title: "Visionary Leaders", tags: ["CXOs", "Boards"] },
+  { title: "Compliance Guardians", tags: ["Audit", "Risk", "Quality"] },
+  { title: "Systems Builders", tags: ["CIOs", "Architects"] },
+  { title: "Talent Orchestrators", tags: ["CHROs", "OD Heads"] },
+  { title: "Growth Engineers", tags: ["Founders", "BU Heads"] },
   {
-    id: 1,
-    title: "Visionary Leaders",
-    tags: ["CXOs", "Boards"],
-  },
-  {
-    id: 2,
-    title: "Compliance Guardians",
-    tags: ["Audit","Risk","Quality",],
-  },
-  {
-    id: 3,
-    title: "Systems Builders",
-    tags: ["CIOs", "Architects"],
-  },
-  {
-    id: 4,
-    title: "Talent Orchestrators",
-    tags: ["CHROs","OD Heads",],
+    title: "Sector Specialists",
+    tags: ["Pharma", "Fintech", "Infrastructure", "Agriculture", "MSMEs"],
   },
 ];
 
@@ -27,67 +16,23 @@ const WhoWeServe = () => {
   return (
     <section className="WhoWeServe-section">
       <div className="container">
-
-        {/* SECTION TITLE */}
         <div className="section-title">
-          <span className="paragraph18px">
-            THE DATACHARYA FRAMEWORK
-          </span>
-
-          <h2 className="H160">
-            Four WhoWeServe Pillars
-          </h2>
-
-          <p className="paragraph18px">
-            A structured system that unifies governance,
-            execution, and assurance across your enterprise
-          </p>
+          <h2>Who We Serve</h2>
+          <p>Primary stakeholders for governance transformation</p>
         </div>
 
-        {/* WhoWeServe GRID */}
-        <div className="row">
-
-          {WhoWeServeData.map((item) => (
-
-            <div
-              className="col-lg-6 col-md-6 mb-4"
-              key={item.id}
-            >
-
-              <div className="WhoWeServe-card">
-
-                {/* ICON + TITLE */}
-                <div className="card-top">
-
-                  <div>
-                    <h3>{item.title}</h3>
-                  </div>
-
-                </div>
-
-
-                {/* TAGS */}
-                <div className="tags">
-
-                  {item.tags.map((tag, index) => (
-
-                    <span key={index}>
-                      {tag}
-                    </span>
-
-                  ))}
-
-                </div>
-
-
+        <div className="serve-grid">
+          {audiences.map((audience) => (
+            <article className="WhoWeServe-card" key={audience.title}>
+              <h3>{audience.title}</h3>
+              <div className="tags">
+                {audience.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
               </div>
-
-            </div>
-
+            </article>
           ))}
-
         </div>
-
       </div>
     </section>
   );

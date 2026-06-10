@@ -1,11 +1,8 @@
 import "./SageFramework.scss";
-import senseIcon from "../../assets/images/sense-icon.png";
-// import alignIcon from "../../assets/images/align-icon.png";
-// import governIcon from "../../assets/images/govern-icon.png";
 
 const defaultSteps = [
   {
-    icon: senseIcon,
+    icon: "sense",
     title: "SENSE",
     subtitle: "Advisory diagnosis",
     description:
@@ -14,7 +11,7 @@ const defaultSteps = [
       "Platform Outcome Control inventory baseline + risk visibility dashboard",
   },
   {
-    icon: "/images/align-icon.png",
+    icon: "align",
     title: "ALIGN",
     subtitle: "Framework design",
     description:
@@ -23,7 +20,7 @@ const defaultSteps = [
       "Platform Outcome Configured SMRITI governance packs + SUTRA blueprint structure",
   },
   {
-    icon: "/images/govern-icon.png",
+    icon: "govern",
     title: "GOVERN",
     subtitle: "Platform execution",
     description:
@@ -32,7 +29,7 @@ const defaultSteps = [
       "Platform Outcome Live workflows + automated evidence capture + measurable controls",
   },
   {
-    icon: "/images/elevate-icon.png",
+    icon: "elevate",
     title: "ELEVATE",
     subtitle: "Continuous assurance",
     description:
@@ -41,6 +38,51 @@ const defaultSteps = [
       "Platform Outcome Board-ready dashboards + assurance metrics + monitoring systems",
   },
 ];
+
+const StepIcon = ({ type }) => {
+  if (type === "sense") {
+    return (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M3.5 16s4.5-7 12.5-7 12.5 7 12.5 7-4.5 7-12.5 7S3.5 16 3.5 16Z" />
+        <circle cx="16" cy="16" r="4.5" />
+        <circle cx="16" cy="16" r="1.4" />
+      </svg>
+    );
+  }
+
+  if (type === "align") {
+    return (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="4.5" />
+        <circle cx="16" cy="4.5" r="2" />
+        <circle cx="26" cy="10" r="2" />
+        <circle cx="26" cy="22" r="2" />
+        <circle cx="16" cy="27.5" r="2" />
+        <circle cx="6" cy="22" r="2" />
+        <circle cx="6" cy="10" r="2" />
+        <path d="M16 6.5v5M24.2 11l-4.3 2.5M24.2 21l-4.3-2.5M16 25.5v-5M7.8 21l4.3-2.5M7.8 11l4.3 2.5" />
+      </svg>
+    );
+  }
+
+  if (type === "govern") {
+    return (
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3.5 26 7v7.8c0 6.1-4 10.9-10 13.7-6-2.8-10-7.6-10-13.7V7l10-3.5Z" />
+        <rect x="11" y="9" width="10" height="13" rx="1.5" />
+        <path d="M13.5 12.5h5M13.5 15.5h5M13.5 18.5h3.5" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="12" />
+      <path d="m9 20 5-5 4 3 6-7" />
+      <path d="M19.5 11H24v4.5" />
+    </svg>
+  );
+};
 
 const approachSteps = [
   {
@@ -161,12 +203,7 @@ const SageFramework = ({ variant = "default" }) => {
 
               {/* ICON */}
               <div className="icon-box">
-
-                <img
-                  src={step.icon}
-                  alt={step.title}
-                />
-
+                <StepIcon type={step.icon} />
               </div>
 
               {/* CONNECTOR */}
