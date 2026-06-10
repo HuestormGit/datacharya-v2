@@ -1,23 +1,14 @@
 import "./ContactUsHero.scss";
-import heroImage from "../../assets/images/aboutherobg.png";
+// import heroImage from "../../assets/images/aboutherobg.png";
 
 const ContactUsHero = () => {
   return (
-    <section
-      className="ContactUs-hero"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      <div className="ContactUs-hero__content container">
-        <p className="paragraph16">CXO ADVISORY</p>
-        <h1>
-          <span>Strategic advisory</span> —
-          <br />
-          with the ability to execute
+    <section className="ContactUs-page" >
+      <div className="ContactUs-hero __content container">
+        <p className="paragraph16">Contact</p>
+        <h1 className="H160">
+          Lorem ipsum dolor sit amet
         </h1>
-        <p className="paragraph16">
-          CXO-level governance advisory that bridges the gap between strategy
-          and execution.
-        </p>
       </div>
     </section>
   );
