@@ -8,15 +8,20 @@
     &__stack {
       max-width: 800px;
       margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid $border-color;
+      border-radius: 12px;
+      background: $white;
+      box-shadow: 0 8px 28px rgba(17, 17, 17, 0.08);
     }
   }
 
   .advisory-panel {
     padding: 34px;
-    border: 1px solid $border-color;
-    border-radius: 12px;
+    border: 0;
+    border-radius: 0;
     background: $white;
-    box-shadow: 0 8px 28px rgba(17, 17, 17, 0.08);
+    box-shadow: none;
 
     header {
       margin-bottom: 28px;
@@ -228,7 +233,8 @@
 
   .advisory-scope + .engagement-model,
   .engagement-model + .advisory-testimonials {
-    margin-top: -1px;
+    margin-top: 0;
+    border-top: 1px solid $border-color;
   }
 }
 
