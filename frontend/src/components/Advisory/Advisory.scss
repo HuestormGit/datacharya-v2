@@ -1,3 +1,5 @@
+@use '../../assets/scss/variables' as *;
+
 .advisory-section {
   padding: 100px 0;
 
@@ -120,6 +122,77 @@
       p {
         font-size: 15px;
       }
+    }
+  }
+}
+
+.advisory-section--cxo {
+  padding: 52px 0 70px;
+  background: $white;
+
+  .advisory-image {
+    max-width: 480px;
+    margin-left: auto;
+
+    img {
+      min-height: 440px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .advisory-content {
+    max-width: 480px;
+    padding-left: 50px;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 16px;
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: $fw-light;
+      line-height: 1.08;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: $text-color;
+      font-family: $font-primary;
+      font-size: $fs-14;
+      line-height: $lh-150;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .advisory-section--cxo {
+    .advisory-image {
+      margin: 0 auto;
+    }
+
+    .advisory-content {
+      max-width: 680px;
+      margin: 36px auto 0;
+      padding-left: 0;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .advisory-section--cxo {
+    padding-top: 40px;
+
+    .advisory-image img {
+      min-height: 320px;
+    }
+
+    .advisory-content h2 {
+      font-size: 34px;
     }
   }
 }

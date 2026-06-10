@@ -82,7 +82,11 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/advisory">
+              <Link
+                className={`nav-link ${isActive("/advisory") ? "active" : ""}`}
+                to="/advisory"
+                aria-current={isActive("/advisory") ? "page" : undefined}
+              >
                 CXO Advisory
               </Link>
             </li>

@@ -1,7 +1,64 @@
 import "./Advisory.scss";
 import advisoryImg from "../../assets/images/advisory.png";
 
-const Advisory = () => {
+const Advisory = ({ variant = "default" }) => {
+  const isCxo = variant === "cxo";
+
+  if (isCxo) {
+    return (
+      <section className="advisory-section advisory-section--cxo">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="advisory-image">
+                <img
+                  src={advisoryImg}
+                  alt="Executives reviewing governance strategy"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="advisory-content">
+                <h2>
+                  Advisory
+                  <br />
+                  Transformed
+                  <br />
+                  Into Executable
+                  <br />
+                  Governance
+                </h2>
+
+                <p>
+                  In today&apos;s dynamic enterprise landscape, CXOs need more than
+                  advisory decks and disconnected technology solutions. They need
+                  governance that can actually execute. Pure advisory has a
+                  structural weakness: when execution fails, the strategy fails
+                  with it.
+                </p>
+
+                <p>
+                  Datacharya bridges this gap by combining governance advisory,
+                  platform execution and continuous assurance into one operational
+                  model. We help enterprises leverage IT, AI and shared services to
+                  optimize controls, improve visibility, bridge process gaps and
+                  drive measurable business outcomes.
+                </p>
+
+                <p>
+                  This is not traditional consulting. It is advisory transformed
+                  into executable governance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="advisory-section">
       <div className="container">

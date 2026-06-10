@@ -6,6 +6,7 @@ import Approach from "./pages/Approach";
 import Platform from "./pages/Platform";
 import Insights from "./pages/Insights";
 import ContactUs from "./pages/ContactUs";
+import AdvisoryPage from "./pages/Advisory";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/platform" element={<Platform />} />
       <Route path="/insights" element={<Insights />} />
       <Route path="/contactUs" element={<ContactUs />} />
+      <Route path="/advisory" element={<AdvisoryPage />} />
     </Routes>
   );
 }
