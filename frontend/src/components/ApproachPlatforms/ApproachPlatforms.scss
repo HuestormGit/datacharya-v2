@@ -1,0 +1,260 @@
+@use '../../assets/scss/variables' as *;
+
+.approach-page {
+  .approach-platforms {
+    padding: 0 0 70px;
+    background:
+      radial-gradient(circle at 0 14%, rgba(61, 93, 247, 0.2), transparent 29%),
+      radial-gradient(circle at 100% 62%, rgba(255, 107, 26, 0.63), transparent 46%),
+      linear-gradient(120deg, #fff 5%, #fff8f3 52%, #ffb27d 100%);
+
+    &__list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__item {
+      overflow: hidden;
+      background: $white;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(17, 17, 17, 0.08);
+
+      &.is-open {
+        border-color: $blue;
+      }
+
+      > button {
+        width: 100%;
+        padding: 18px 22px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: $white;
+        color: $primary-color;
+        font-family: $font-primary;
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+
+    &__item-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      color: $white;
+      font-size: 19px;
+      box-shadow: 0 5px 10px rgba(17, 17, 17, 0.15);
+
+      &.blue {
+        background: $blue;
+      }
+
+      &.orange {
+        background: #ff6b1a;
+      }
+    }
+
+    &__item-title {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      strong {
+        color: $blue;
+        font-size: 23px;
+        font-weight: $fw-light;
+        line-height: 1.1;
+      }
+
+      small {
+        margin-top: 2px;
+        color: $primary-color;
+        font-size: 10px;
+      }
+    }
+
+    &__item:has(.orange) &__item-title strong {
+      color: #ff6b1a;
+    }
+
+    &__chevron {
+      color: $blue;
+      font-size: 18px;
+    }
+
+    &__body {
+      padding: 22px;
+      border-top: 1px solid $border-color;
+      text-align: left;
+
+      > h3 {
+        margin: 0 0 9px;
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: $fw-light;
+      }
+
+      > p {
+        color: $text-color;
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      > h4 {
+        margin: 25px 0 8px;
+        color: $blue;
+        font-size: 18px;
+      }
+    }
+
+    &__packs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      article {
+        min-height: 112px;
+        padding: 14px;
+        border: 1px solid $border-color;
+        border-radius: 7px;
+        background: #fbfcff;
+
+        h5 {
+          margin: 0 0 3px;
+          color: $blue;
+          font-size: 12px;
+        }
+
+        strong,
+        span {
+          display: block;
+          font-size: 9px;
+          line-height: 1.5;
+        }
+
+        strong {
+          color: #ff6b1a;
+          font-weight: $fw-regular;
+        }
+
+        p {
+          margin-top: 6px;
+          color: $text-color;
+          font-size: 9px;
+          line-height: 1.35;
+        }
+      }
+    }
+
+    &__capability {
+      margin-top: 30px;
+
+      > span {
+        color: $blue;
+        font-size: 9px;
+      }
+
+      > h4 {
+        margin: 3px 0 9px;
+        color: $blue;
+        font-size: 19px;
+        font-weight: $fw-regular;
+      }
+
+      > div {
+        padding: 14px;
+        border: 1px solid $border-color;
+        border-radius: 7px;
+        background: #fbfcff;
+
+        h5 {
+          color: $blue;
+          font-size: 11px;
+          font-weight: $fw-regular;
+        }
+
+        p,
+        li {
+          color: $text-color;
+          font-size: 9px;
+          line-height: 1.5;
+        }
+
+        ul {
+          margin-top: 8px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 4px 20px;
+        }
+      }
+    }
+
+    &__actions {
+      margin-top: 22px;
+      display: flex;
+      gap: 10px;
+
+      a {
+        padding: 11px 18px;
+        border: 1px solid $blue;
+        border-radius: 3px;
+        background: $blue;
+        color: $white;
+        font-size: 10px;
+        font-weight: $fw-semibold;
+
+        &.outline {
+          background: $white;
+          color: $blue;
+        }
+      }
+    }
+
+    &__placeholder {
+      padding: 22px;
+      border-top: 1px solid $border-color;
+      text-align: left;
+
+      p {
+        color: $text-color;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .approach-page {
+    .approach-platforms {
+      &__item {
+        > button {
+          padding: 15px;
+        }
+      }
+
+      &__item-title strong {
+        font-size: 18px;
+      }
+
+      &__packs {
+        grid-template-columns: 1fr;
+      }
+
+      &__capability > div ul {
+        grid-template-columns: 1fr;
+      }
+
+      &__actions {
+        flex-direction: column;
+      }
+    }
+  }
+}
