@@ -82,6 +82,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
+<<<<<<< HEAD
               <Link className="nav-link" to="/advisory">
                 CXO Advisory
               </Link>
@@ -104,6 +105,30 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+=======
+              <a className="nav-link" href="/platform">
+                Platform
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/insights">
+                Insights
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/contactUs">
+                ContactUs
+              </a>
+            </li>
+
+            {/* <li className="nav-item">
+              <a className="nav-link contact-btn" href="#">
+                Contact
+              </a>
+            </li> */}
+>>>>>>> 5effaeaaf96a7ffc4a8b31f38adb7cf23fbc74df
 
           </ul>
 
