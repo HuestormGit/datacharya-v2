@@ -1,0 +1,44 @@
+@use '../../assets/scss/variables' as *;
+
+.insights-page {
+  .insights-hero {
+    min-height: 285px;
+    border-radius: 0 0 58px 58px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(110deg, $blue 0%, #8174b9 52%, #ff6500 100%);
+    color: $white;
+
+    &__content {
+      text-align: center;
+
+      h1 {
+        margin: 8px 0 0;
+        color: $white;
+        font-family: $font-primary;
+        font-size: 42px;
+        font-weight: $fw-light;
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .insights-page {
+    .insights-hero {
+      min-height: 340px;
+      margin-top: 70px;
+      border-radius: 0 0 36px 36px;
+
+      &__content h1 {
+        font-size: 34px;
+      }
+    }
+  }
+}

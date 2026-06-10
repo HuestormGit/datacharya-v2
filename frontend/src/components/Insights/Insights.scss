@@ -1,3 +1,5 @@
+@use '../../assets/scss/variables' as *;
+
 .insights-section {
   padding: 100px 0;
 
@@ -32,6 +34,107 @@
       a {
         color: #4361ee;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+.insights-page {
+  .insights-section--page {
+    min-height: 1050px;
+    padding: 72px 0 120px;
+    background: $light-bg;
+
+    .insights-grid {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px 24px;
+    }
+
+    .insight-card {
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      background: $white;
+      box-shadow: none;
+
+      img {
+        height: 150px;
+      }
+
+      .content {
+        min-height: 215px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        h3 {
+          margin: 12px 0 8px;
+          color: $primary-color;
+          font-family: $font-primary;
+          font-size: 18px;
+          font-weight: $fw-light;
+          line-height: 1.15;
+        }
+
+        p {
+          color: $text-color;
+          font-size: 11px;
+          line-height: 1.45;
+        }
+
+        a {
+          margin-top: auto;
+          color: $blue;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .insight-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+
+      span {
+        padding: 3px 6px;
+        border-radius: 3px;
+        background: rgba(61, 93, 247, 0.08);
+        color: $blue;
+        font-size: 8px;
+
+        &.orange {
+          background: rgba(255, 101, 0, 0.08);
+          color: #ff6500;
+        }
+      }
+
+      small {
+        color: $light-text;
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .insights-page {
+    .insights-section--page {
+      .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .insights-page {
+    .insights-section--page {
+      .insights-grid {
+        grid-template-columns: 1fr;
       }
     }
   }
