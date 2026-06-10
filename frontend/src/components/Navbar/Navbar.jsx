@@ -12,6 +12,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const isHome = location.pathname === "/";
+  const isActive = (path) => location.pathname === path;
 
   useEffect(() => {
 
@@ -61,21 +62,47 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
 
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Home
+              <Link
+                className={`nav-link ${isActive("/about") ? "active" : ""}`}
+                to="/about"
+                aria-current={isActive("/about") ? "page" : undefined}
+              >
+                About Us
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
+              <Link
+                className={`nav-link ${isActive("/approach") ? "active" : ""}`}
+                to="/approach"
+                aria-current={isActive("/approach") ? "page" : undefined}
+              >
+                Our Approach
               </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link contact-btn" href="#">
+              <Link className="nav-link" to="/advisory">
+                CXO Advisory
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/platforms">
+                Platforms
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/insights">
+                Insights
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
 
           </ul>

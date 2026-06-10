@@ -33,6 +33,10 @@
     &:hover {
       color: #dbe4ff;
     }
+
+    &.active {
+      color: $blue;
+    }
   }
 
   .contact-btn {
@@ -66,7 +70,8 @@
   .nav-link {
     color: $primary-color;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #4361ee;
     }
   }
