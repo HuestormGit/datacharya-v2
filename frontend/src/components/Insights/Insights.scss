@@ -41,12 +41,12 @@
 
 .insights-page {
   .insights-section--page {
-    min-height: 1050px;
+    // min-height: 1050px;
     padding: 72px 0 120px;
     background: $light-bg;
 
     .insights-grid {
-      max-width: 780px;
+      // max-width: 780px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);

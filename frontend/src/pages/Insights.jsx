@@ -9,7 +9,9 @@ const Insights = () => {
       <Navbar />
       <main>
         <InsightsHero />
-        <InsightsSection variant="page" />
+         <InsightsSection variant="page" />
+        {/* <InsightsSection variant="page" /> */}
+        {/* <Insights variant="page" /> */}
       </main>
       <Footer />
     </div>

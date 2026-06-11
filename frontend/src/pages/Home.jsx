@@ -17,7 +17,8 @@ const Home = () => {
       <SageFramework />
       <Testimonials />
       <Advisory />
-      <Insights />
+      {/* <Insights /> */}
+      <Insights variant="home" />
       <CTA />
       <Footer />
     </div>
