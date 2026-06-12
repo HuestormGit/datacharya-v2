@@ -4,8 +4,8 @@ const InsightsHero = () => {
   return (
     <section className="insights-hero">
       <div className="container insights-hero__content">
-        <p className="paragraph16">INSIGHTS</p>
-        <h1>
+        <p className="paragraph18px">INSIGHTS</p>
+        <h1 className="H160">
           Expert perspectives on
           <br />
           enterprise governance
