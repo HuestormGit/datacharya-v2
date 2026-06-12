@@ -62,10 +62,11 @@ const Insights = ({ variant = "page" }) => {
         >
           {articles.map((article, index) => (
             <article className="insight-card" key={article.id}>
-              <img
-                src={`${import.meta.env.VITE_API_URL}${article.featured_image?.url}`}
-                alt={article.title}
-              />
+              {/* <img
+                    src={`${import.meta.env.VITE_API_URL}${article.featured_image?.url}`}
+                    alt={article.title}
+              /> */}
+               <img src={article.featured_image?.url || ""} alt={article.title} />
 
               <div className="content">
                 <div className="insight-meta">
