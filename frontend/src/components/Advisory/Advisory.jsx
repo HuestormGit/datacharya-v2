@@ -1,5 +1,6 @@
 import "./Advisory.scss";
 import advisoryImg from "../../assets/images/advisory.png";
+import advisorysecImg from "../../assets/images/advisorysec.png";
 
 const Advisory = ({ variant = "default" }) => {
   const isCxo = variant === "cxo";
@@ -12,7 +13,7 @@ const Advisory = ({ variant = "default" }) => {
             <div className="col-lg-6">
               <div className="advisory-image">
                 <img
-                  src={advisoryImg}
+                  src={advisorysecImg}
                   alt="Executives reviewing governance strategy"
                   className="img-fluid"
                 />
@@ -21,7 +22,7 @@ const Advisory = ({ variant = "default" }) => {
 
             <div className="col-lg-6">
               <div className="advisory-content">
-                <h2>
+                <h2 className="H160">
                   Advisory
                   <br />
                   Transformed
@@ -31,15 +32,15 @@ const Advisory = ({ variant = "default" }) => {
                   Governance
                 </h2>
 
-                <p>
-                  In today&apos;s dynamic enterprise landscape, CXOs need more than
+                <p className="paragraph18px">
+                  In today's dynamic enterprise landscape, CXOs need more than
                   advisory decks and disconnected technology solutions. They need
                   governance that can actually execute. Pure advisory has a
                   structural weakness: when execution fails, the strategy fails
                   with it.
                 </p>
 
-                <p>
+                <p className="paragraph18px">
                   Datacharya bridges this gap by combining governance advisory,
                   platform execution and continuous assurance into one operational
                   model. We help enterprises leverage IT, AI and shared services to
@@ -47,7 +48,7 @@ const Advisory = ({ variant = "default" }) => {
                   drive measurable business outcomes.
                 </p>
 
-                <p>
+                <p className="paragraph18px">
                   This is not traditional consulting. It is advisory transformed
                   into executable governance.
                 </p>
@@ -89,7 +90,7 @@ const Advisory = ({ variant = "default" }) => {
                 <span>slide deck.</span>
               </h2>
 
-              <p>
+              <p className="paragraph18px">
                 Our advisory services integrate strategic guidance with
                 hands-on execution. We don't just recommend—we implement,
                 validate, and ensure your governance framework delivers

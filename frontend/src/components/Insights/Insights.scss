@@ -30,10 +30,16 @@
         font-size: 24px;
         margin: 15px 0;
       }
+      
 
       a {
         color: #4361ee;
         text-decoration: none;
+      
+      &.orange {
+          // background: rgba(255, 101, 0, 0.08);
+          color: #ff6500;
+        }
       }
     }
   }
@@ -60,51 +66,63 @@
       box-shadow: none;
 
       img {
-        height: 150px;
+        height: 224px;
       }
 
       .content {
         min-height: 215px;
-        padding: 16px;
+        padding: 24px;
         display: flex;
         flex-direction: column;
         text-align: left;
 
-        h3 {
-          margin: 12px 0 8px;
-          color: $primary-color;
-          font-family: $font-primary;
-          font-size: 18px;
-          font-weight: $fw-light;
-          line-height: 1.15;
-        }
+        
+        h3{
+        font-family: $font-primary;
+        font-weight: 200;
+        font-size: 30px;
+        line-height: 34px;
+        letter-spacing: 0%;
+
+      }
 
         p {
-          color: $text-color;
-          font-size: 11px;
-          line-height: 1.45;
+          color:  #4A5565;
+
         }
 
         a {
           margin-top: auto;
           color: $blue;
           font-size: 11px;
+
+          &.orange {
+          // background: rgba(255, 101, 0, 0.08);
+          color: #ff6500;
         }
+        }
+
+        
       }
     }
 
     .insight-meta {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content:  flex-start;
       gap: 8px;
 
       span {
-        padding: 3px 6px;
-        border-radius: 3px;
+        padding: 4px 12px;
+        border-radius: 33554400px;
         background: rgba(61, 93, 247, 0.08);
         color: $blue;
-        font-size: 8px;
+        font-family: Nunito Sans;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0px;
+
 
         &.orange {
           background: rgba(255, 101, 0, 0.08);
@@ -113,9 +131,14 @@
       }
 
       small {
-        color: $light-text;
-        font-size: 8px;
+        font-family: Nunito Sans;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #6A7282;
       }
+      
     }
   }
 }

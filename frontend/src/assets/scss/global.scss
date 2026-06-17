@@ -59,7 +59,7 @@ ul {
   line-height: 26px;
 }
 .H160{
-  font-family: Nunito Sans;
+   font-family: $font-primary;
   font-weight: 200;
   font-size: 60px;
   line-height: 70px;
@@ -75,6 +75,12 @@ ul {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+}
+.h30px{
+   font-family: Nunito Sans;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 34px;
 }
 .myButton{
   font-family: Nunito Sans;

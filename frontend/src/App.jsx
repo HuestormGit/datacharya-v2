@@ -7,6 +7,7 @@ import Platform from "./pages/Platform";
 import Insights from "./pages/Insights";
 import ContactUs from "./pages/ContactUs";
 import AdvisoryPage from "./pages/Advisory";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (

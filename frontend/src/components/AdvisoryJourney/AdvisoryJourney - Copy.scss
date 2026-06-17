@@ -159,30 +159,30 @@
     }
   }
 
-  // &__slider {
-  //   .swiper {
-  //     padding-bottom: 50px;
-  //   }
+  &__slider {
+    .swiper {
+      padding-bottom: 50px;
+    }
 
-  //   .swiper-slide {
-  //     height: auto;
-  //   }
+    .swiper-slide {
+      height: auto;
+    }
 
-  //   .swiper-pagination {
-  //     bottom: 0 !important;
-  //   }
+    .swiper-pagination {
+      bottom: 0 !important;
+    }
 
-  //   .swiper-pagination-bullet {
-  //     width: 10px;
-  //     height: 10px;
-  //     background: #d6d9e6;
-  //     opacity: 1;
-  //   }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #d6d9e6;
+      opacity: 1;
+    }
 
-  //   .swiper-pagination-bullet-active {
-  //     background: $blue;
-  //   }
-  // }
+    .swiper-pagination-bullet-active {
+      background: $blue;
+    }
+  }
 
   .testimonial-card {
     margin: 0;
@@ -295,9 +295,9 @@
 @media only screen and (max-width: 575px) {
   .advisory-page {
     .advisory-scope__grid,
-    // .advisory-testimonials__grid {
-    //   grid-template-columns: 1fr;
-    // }
+    .advisory-testimonials__grid {
+      grid-template-columns: 1fr;
+    }
 
     .advisory-panel header h2,
     .engagement-model__content h2 {

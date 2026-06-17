@@ -88,9 +88,9 @@ const Insights = ({ variant = "page" }) => {
 
                 <h3>{article.title}</h3>
 
-                <p>{article.excerpt}</p>
+                <p className="paragraph16">{article.excerpt}</p>
 
-                <a href={`/insights/${article.url}`}>
+                <a href={`/insights/${article.url}`} className={index === 1 ? "orange" : ""}>
                   Read More →
                 </a>
               </div>

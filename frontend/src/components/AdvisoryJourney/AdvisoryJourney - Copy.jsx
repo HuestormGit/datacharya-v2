@@ -1,11 +1,6 @@
 import "./AdvisoryJourney.scss";
+import engagementImage from "../../assets/images/herobg.png";
 import EngagementModel from "../../assets/images/EngagementModel.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
 
 const scopeItems = [
   "Enterprise governance design",
@@ -37,8 +32,7 @@ const testimonials = [
     name: "Anita Rao",
     role: "Transformation Head",
     company: "Enterprise Services",
-    outcome:
-      "Control ownership and execution visibility improved across teams.",
+    outcome: "Control ownership and execution visibility improved across teams.",
   },
 ];
 
@@ -47,8 +41,6 @@ const AdvisoryJourney = () => {
     <section className="advisory-journey">
       <div className="container">
         <div className="advisory-journey__stack">
-
-          {/* Advisory Scope */}
           <article className="advisory-scope advisory-panel">
             <header>
               <h2 className="H160">
@@ -60,27 +52,17 @@ const AdvisoryJourney = () => {
             <div className="advisory-scope__grid">
               {scopeItems.map((item, index) => (
                 <div key={item}>
-                  <i
-                    className={
-                      index % 2 !== 0
-                        ? "fa-regular fa-circle-check orange"
-                        : "fa-regular fa-circle-check"
-                    }
-                  ></i>
-
+                  {/* <span className={index % 3 === 1 ? "orange" : ""}>✓</span> */}
+                  <i className={index % 2 !== 0 ? "fa-regular fa-circle-check orange" : "fa-regular fa-circle-check"}></i>
                   <p className="paragraph18px">{item}</p>
                 </div>
               ))}
             </div>
           </article>
 
-          {/* Engagement Model */}
           <article className="engagement-model advisory-panel">
             <div className="engagement-model__image">
-              <img
-                src={EngagementModel}
-                alt="Enterprise engagement environment"
-              />
+              <img src={EngagementModel} alt="Enterprise engagement environment" />
             </div>
 
             <div className="engagement-model__content">
@@ -89,10 +71,7 @@ const AdvisoryJourney = () => {
                 <br />
                 <span>Model</span>
               </h2>
-
-              <p>
-                Strategic guidance across the full governance lifecycle
-              </p>
+              <p>Strategic guidance across the full governance lifecycle</p>
 
               <ol>
                 {engagementSteps.map((step, index) => (
@@ -105,59 +84,38 @@ const AdvisoryJourney = () => {
             </div>
           </article>
 
-          {/* Testimonials Slider */}
           <article className="advisory-testimonials advisory-panel">
             <header>
-              <h2 className="H160">
+              <h2>
                 Trusted by <span>CXO Leaders</span>
               </h2>
               <p>Strategic outcomes delivered across sectors</p>
             </header>
 
-            <div className="advisory-testimonials__slider">
-              <Swiper
-                modules={[Autoplay, Pagination]}
-                slidesPerView={1}
-                spaceBetween={30}
-                loop={true}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-              >
-                {testimonials.map((testimonial, index) => (
-                  <SwiperSlide key={index}>
-                    <blockquote className="testimonial-card">
-                      <span className="quote-mark">“</span>
-
-                      <p>{testimonial.quote}</p>
-
-                      <footer>
-                        <span className="avatar">
-                          {testimonial.name
-                            .split(" ")
-                            .map((part) => part[0])
-                            .join("")}
-                        </span>
-
-                        <div>
-                          <strong>{testimonial.name}</strong>
-                          <small>{testimonial.role}</small>
-                          <small>{testimonial.company}</small>
-                        </div>
-                      </footer>
-
-                      <div className="outcome">
-                        <strong>OUTCOME</strong>
-                        <p>{testimonial.outcome}</p>
-                      </div>
-                    </blockquote>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className="advisory-testimonials__grid">
+              {testimonials.map((testimonial) => (
+                <blockquote key={testimonial.name}>
+                  <span className="quote-mark">“</span>
+                  <p>{testimonial.quote}</p>
+                  <footer>
+                    <span className="avatar" aria-hidden="true">
+                      {testimonial.name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")}
+                    </span>
+                    <div>
+                      <strong>{testimonial.name}</strong>
+                      <small>{testimonial.role}</small>
+                      <small>{testimonial.company}</small>
+                    </div>
+                  </footer>
+                  <div className="outcome">
+                    <strong>OUTCOME</strong>
+                    <p>{testimonial.outcome}</p>
+                  </div>
+                </blockquote>
+              ))}
             </div>
           </article>
         </div>

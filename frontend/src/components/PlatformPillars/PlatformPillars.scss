@@ -81,8 +81,8 @@ margin-top: -80px;
       #3155c5 100%
     );
 
-    &__grid {
-      max-width: 1040px;
+    &__grid { 
+      max-width: 1680px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -132,17 +132,17 @@ margin-top: -80px;
     h3 {
       margin: 20px 0 12px;
       color: $blue;
-      font-family: $font-primary;
-      font-size: 21px;
-      font-weight: $fw-light;
+      // font-family: $font-primary;
+      // font-size: 21px;
+      // font-weight: $fw-light;
     }
 
     > strong,
     > p {
       color: $primary-color;
-      font-family: $font-primary;
-      font-size: 12px;
-      line-height: 1.5;
+      // font-family: $font-primary;
+      // font-size: 12px;
+      // line-height: 1.5;
     }
 
     > strong {

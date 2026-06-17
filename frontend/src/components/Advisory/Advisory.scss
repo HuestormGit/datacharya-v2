@@ -25,11 +25,11 @@
     }
 
     h2 {
-      font-size: 60px;
-      line-height: 1.15;
-      font-weight: 300;
+      // font-size: 60px;
+      // line-height: 1.15;
+      // font-weight: 300;
       color: #222;
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
 
       span {
         color: #ff6b00;
@@ -147,12 +147,14 @@
     text-align: left;
 
     h2 {
+      color: #1A1A1A;
+;
       margin-bottom: 16px;
-      color: $primary-color;
-      font-family: $font-primary;
-      font-size: 48px;
-      font-weight: $fw-light;
-      line-height: 1.08;
+      // color: $primary-color;
+      // font-family: $font-primary;
+      // font-size: 48px;
+      // font-weight: $fw-light;
+      // line-height: 1.08;
     }
 
     p {

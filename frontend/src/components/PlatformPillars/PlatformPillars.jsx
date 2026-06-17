@@ -1,4 +1,11 @@
 import "./PlatformPillars.scss";
+import C from "../../assets/images/CHETAK.png";
+import D from "../../assets/images/CHATURVIMA.png";
+import DA from "../../assets/images/DATARAKSHA.png";
+import DAT from "../../assets/images/DATANEETI.png";
+import T from "../../assets/images/TRUSTLINK.png";
+import AI from "../../assets/images/AGENTICAI.png";
+import R from "../../assets/images/ROIDASHBOARD.png";
 
 const platformData = [
   {
@@ -55,6 +62,7 @@ const ecosystemData = [
   {
     id: 1,
     icon: "C",
+    img: C,
     title: "CHETAK",
     subtitle: "SAP Due Diligence & AI Audit",
     highlight:
@@ -65,6 +73,7 @@ const ecosystemData = [
   {
     id: 2,
     icon: "4D",
+    img: D,
     title: "CHATURVIMA",
     subtitle: "4D Enterprise Transformation",
     highlight:
@@ -75,6 +84,7 @@ const ecosystemData = [
   {
     id: 3,
     icon: "D",
+    img: DA,
     title: "DATARAKSHA",
     subtitle: "DPDP Readiness & Consent Governance",
     highlight:
@@ -85,6 +95,7 @@ const ecosystemData = [
   {
     id: 4,
     icon: "D",
+    img: DAT,
     title: "DATANEETI",
     subtitle: "Verifiable Digital Trust",
     highlight:
@@ -95,6 +106,7 @@ const ecosystemData = [
   {
     id: 5,
     icon: "T",
+    img: T,
     title: "TRUSTLINK",
     subtitle: "Responsible Decision Governance",
     highlight:
@@ -105,6 +117,7 @@ const ecosystemData = [
   {
     id: 6,
     icon: "AI",
+    img: AI,
     title: "AGENTIC AI",
     subtitle: "Autonomous Governance Intelligence",
     highlight:
@@ -115,6 +128,7 @@ const ecosystemData = [
   {
     id: 7,
     icon: "R",
+    img: R,
     title: "ROI DASHBOARD",
     subtitle: "Governance Impact & Value Visibility",
     highlight:
@@ -128,17 +142,18 @@ const PlatformPillars = ({ variant = "default" }) => {
   if (variant === "ecosystem") {
     return (
       <section className="platform-ecosystem">
-        <div className="container">
+        <div className="container-fluid">
           <div className="platform-ecosystem__grid">
             {ecosystemData.map((item) => (
               <article className="ecosystem-card" key={item.id}>
                 <div className="ecosystem-card__title">
-                  <span aria-hidden="true">{item.icon}</span>
-                  <h2>{item.title}</h2>
+                  <img src={item.img} alt={item.title} />
+                  {/* <span aria-hidden="true">{item.icon}</span>
+                  <h2>{item.title}</h2> */}
                 </div>
-                <h3>{item.subtitle}</h3>
-                <strong>{item.highlight}</strong>
-                <p>{item.description}</p>
+                <h3 className="h30px">{item.subtitle}</h3>
+                <strong className="paragraph18px">{item.highlight}</strong>
+                <p className="paragraph18px">{item.description}</p>
                 <a href="/contactUs">Take a trial&nbsp; →</a>
               </article>
             ))}
