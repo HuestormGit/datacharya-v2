@@ -1,47 +1,91 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getHeroSlides } from "../../services/heroService";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 import "./HeroSlider.scss";
 
-const benefits = [
-  ["Advisory + Execution", "Not advice alone, platforms that execute"],
-  ["Evidence Over Opinion", "Continuous assurance, not periodic audits"],
-  ["Living Governance", "In your systems, not in a folder"],
-];
-
 const HeroSlider = () => {
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    const loadSlides = async () => {
+      try {
+        const data = await getHeroSlides();
+        setSlides(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadSlides();
+  }, []);
+
   return (
-    <section className="hero-section">
-      <div className="container">
-        <div className="hero-content">
-          <p className="hero-eyebrow">ENTERPRISE GOVERNANCE & ASSURANCE</p>
-          <h1>
-            Most enterprise transformation fails not at the technology layer,
-            but at the governance layer.
-          </h1>
-          <p className="hero-summary">
-            Datacharya closes this gap by converting governance intent into
-            executable systems, evidence-backed controls, and measurable
-            enterprise outcomes.
-          </p>
+    <section className="hero-slider">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        pagination={{ clickable: true }}
+      >
+        {slides.map((slide) => {
+          const hero = slide;
 
-          <div className="hero-btns">
-            <Link className="btn-dark" to="/approach">
-              Explore Our Framework
-            </Link>
-            <Link className="btn-light" to="/insights">
-              View Case Studies
-            </Link>
-          </div>
+          return (
+            <SwiperSlide key={hero.id}>
+              <section className="hero-section">
+                <div className="container">
+                  <div className="hero-content">
+                    <p className="hero-eyebrow">
+                      {hero.eyebrow}
+                    </p>
 
-          <ul className="hero-benefits">
-            {benefits.map(([title, description]) => (
-              <li key={title}>
-                <strong>{title}</strong>
-                <span>{description}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+                    <h1>{hero.title}</h1>
+
+                    <p className="hero-summary">
+                      {hero.summary}
+                    </p>
+
+                    <div className="hero-btns">
+                      <Link
+                        className="btn-dark"
+                        to={hero.primaryButtonLink}
+                      >
+                        {hero.primaryButtonText}
+                      </Link>
+
+                      <Link
+                        className="btn-light"
+                        to={hero.secondaryButtonLink}
+                      >
+                        {hero.secondaryButtonText}
+                      </Link>
+                    </div>
+
+                    <ul className="hero-benefits">
+                      {hero.benefits?.map((item) => (
+                        <li key={item.id}>
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </section>
   );
 };
