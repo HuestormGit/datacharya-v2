@@ -6,7 +6,7 @@
     background: $white;
 
     &__list {
-      max-width: 760px;
+      max-width: 1150px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -26,7 +26,7 @@
 
       > button {
         width: 100%;
-        padding: 18px 22px;
+        padding: 32px;
         border: 0;
         display: flex;
         align-items: center;
@@ -57,6 +57,7 @@
       &.orange {
         background: #ff6b1a;
       }
+      
     }
 
     &__item-title {
@@ -65,10 +66,13 @@
       flex-direction: column;
 
       strong {
-        color: $blue;
-        font-size: 23px;
-        font-weight: $fw-light;
-        line-height: 1.1;
+        &.blue {
+          color: $blue;
+        }
+
+        &.orange {
+          color: #ff6b1a;
+        }
       }
 
       small {
@@ -83,7 +87,14 @@
     }
 
     &__chevron {
-      color: $blue;
+      &.blue {
+          color: $blue;
+        }
+
+        &.orange {
+          color: #ff6b00;
+        }
+      // color: $blue;
       font-size: 18px;
     }
 

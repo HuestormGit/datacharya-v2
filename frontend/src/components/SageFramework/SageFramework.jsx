@@ -1,4 +1,5 @@
 import "./SageFramework.scss";
+import sense  from "../../assets/images/sense-icon.png";
 
 const defaultSteps = [
   {
@@ -88,6 +89,7 @@ const approachSteps = [
   {
     iconLabel: "S",
     title: "SENSE",
+    img: sense,
     subtitle: "Advisory diagnosis",
     description:
       "We begin by capturing the truth of the organisation. This involves deep-dive data discovery and sensing the cultural pulse. We identify the hidden silos and friction points that traditional audits miss.",
@@ -97,6 +99,7 @@ const approachSteps = [
   {
     iconLabel: "A",
     title: "ALIGN",
+    img: sense,
     subtitle: "Framework design",
     description:
       "Inspired by the concept of Yoga, alignment brings together your people, processes, and systems. We ensure that your data architecture supports your leadership's vision and that your culture is ready for the technical shifts ahead.",
@@ -106,6 +109,7 @@ const approachSteps = [
   {
     iconLabel: "G",
     title: "GOVERN",
+    img: sense,
     subtitle: "Platform execution",
     description:
       "Governance isn't just about compliance; it is about flow. We build the Digital Nervous System of your company, establishing clear data protocols and behaviour guardrails that ensure your systems remain scalable and secure.",
@@ -115,6 +119,7 @@ const approachSteps = [
   {
     iconLabel: "E",
     title: "ELEVATE",
+    img: sense,
     subtitle: "Continuous assurance",
     description:
       "With a stable foundation in place, we move toward high-performance outcomes. Whether it is AI adoption or cost-major synergy, we elevate the organisation into a state of AI Readiness and peak leadership alignment.",
@@ -137,7 +142,7 @@ const SageFramework = ({ variant = "default" }) => {
               <br />
               philosophy
             </h2>
-            <p className="paragraph16">
+            <p className="paragraph18px">
               The SAGE (Sense. Align. Govern. Elevate.) Framework gives enterprises
               a structured path to operationalize governance, from identifying
               control and process gaps to executing governance workflows, enabling
@@ -150,7 +155,8 @@ const SageFramework = ({ variant = "default" }) => {
             {steps.map((step, index) => (
               <article className="sage-card" key={step.title}>
                 <div className="icon-box" aria-hidden="true">
-                  {step.iconLabel}
+                  {/* {step.iconLabel} */}
+                  <img src={step.img} alt={step.title} />
                 </div>
                 <h3 className="H240px">{step.title}</h3>
                 <h5 className="paragraph18px">{step.subtitle}</h5>

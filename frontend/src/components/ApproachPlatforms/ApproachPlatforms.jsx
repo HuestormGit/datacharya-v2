@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./ApproachPlatforms.scss";
-
+import SMRITISUTRA  from "../../assets/images/SMRITISUTRA.png";
+import SHRUTI  from "../../assets/images/SHRUTI.png";
+import SAMYOG  from "../../assets/images/SAMYOG.png";
+import SAMVAD  from "../../assets/images/SAMVAD.png";
+import orangeicon  from "../../assets/images/orange-arrow.png";
+ 
 const packs = [
   {
     title: "ERP Pack",
@@ -39,28 +44,28 @@ const platformItems = [
     id: "smriti",
     title: "SMRITI + SUTRA",
     subtitle: "Enterprise Governance Framework & SAP Blueprint Design",
-    icon: "▣",
+    icon: SMRITISUTRA,
     tone: "blue",
   },
   {
     id: "shruti",
     title: "SHRUTI",
     subtitle: "AI Assurance & Execution Engine",
-    icon: "⬡",
+    icon: SHRUTI,
     tone: "orange",
   },
   {
     id: "samyog",
     title: "SAMYOG",
     subtitle: "Trust & Organizational Alignment",
-    icon: "♙",
+    icon: SAMYOG,
     tone: "blue",
   },
   {
     id: "samvad",
     title: "SAMVAD",
     subtitle: "Enterprise Interaction & Collaboration",
-    icon: "□",
+    icon: SAMVAD,
     tone: "orange",
   },
 ];
@@ -139,14 +144,17 @@ const ApproachPlatforms = () => {
                   onClick={() => toggleItem(item.id)}
                 >
                   <span className={`approach-platforms__item-icon ${item.tone}`}>
-                    {item.icon}
+                    <img src={item.icon} alt={item.icon} />
                   </span>
                   <span className="approach-platforms__item-title">
-                    <strong>{item.title}</strong>
+                    <strong className={`H240px ${item.tone === "orange" ? "orange" : "blue"}`}>{item.title}</strong>
                     <small>{item.subtitle}</small>
                   </span>
-                  <span className="approach-platforms__chevron" aria-hidden="true">
+                  {/* <span className="approach-platforms__chevron" aria-hidden="true">
                     {isOpen ? "⌃" : "⌄"}
+                  </span> */}
+                  <span className={`approach-platforms__chevron ${item.tone === "orange" ? "orange" : "blue"}`}>
+                    <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                   </span>
                 </button>
 

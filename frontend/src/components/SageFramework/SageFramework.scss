@@ -409,9 +409,9 @@
       }
 
       .sage-grid {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
-        gap: 10px;
+        gap: 12px;
       }
 
       .sage-card {
@@ -428,8 +428,8 @@
 
         .icon-box {
           position: static;
-          width: 38px;
-          height: 38px;
+          width: 56px;
+          height: 56px;
           margin: 0 auto;
           transform: none;
           background: $blue;
@@ -473,8 +473,11 @@
         .description,
         .outcome {
           color: $text-color;
-          font-size: 11px;
-          line-height: 1.45;
+          font-family: $font-primary;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0px;
         }
 
         .description {
