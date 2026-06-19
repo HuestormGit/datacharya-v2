@@ -1,9 +1,13 @@
-const API_URL = import.meta.env.VITE_STRAPI_URL;
+// const API_URL = import.meta.env.VITE_STRAPI_URL;
+
 
 export const getHeroSlides = async () => {
   const response = await fetch(
-    `${API_URL}/api/hero-slides?populate=*`
+    `${import.meta.env.VITE_API_URL}/api/hero-slides?populate=*`
   );
+//   const response = await fetch(
+//     `${API_URL}/api/hero-slides?populate=*`
+//   );
 
   const data = await response.json();
 
