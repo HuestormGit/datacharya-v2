@@ -1,4 +1,5 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .platform-section {
   padding: 100px 0;
@@ -13,13 +14,7 @@ margin-top: -80px;
     color: #fff;
     margin-bottom: 60px;
 
-    span {
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
-
     h2 {
-      font-size: 48px;
       margin-top: 10px;
     }
   }
@@ -31,30 +26,30 @@ margin-top: -80px;
     height: 100%;
 
     h3 {
-      font-size: 32px;
+      // font-size: 32px;
       color: #2a3cff;
     }
 
-    h5 {
-      color: #ff7b00;
-      margin: 10px 0 20px;
-    }
+    // h5 {
+    //   color: #ff7b00;
+    //   margin: 10px 0 20px;
+    // }
 
-    p {
-      color: #555;
-      line-height: 1.8;
-    }
+    // p {
+    //   color: #555;
+    //   line-height: 1.8;
+    // }
 
     .tags {
       margin-top: 20px;
 
       span {
         display: inline-block;
-        border: 1px solid #ddd;
-        padding: 8px 14px;
-        border-radius: 30px;
-        margin: 5px;
-        font-size: 13px;
+        // border: 1px solid #ddd;
+        // padding: 8px 14px;
+        // border-radius: 30px;
+        // margin: 5px;
+        // font-size: 13px;
       }
     }
 
@@ -198,17 +193,11 @@ margin-top: -80px;
     .section-title {
       margin-bottom: 34px;
 
-      span {
-        font-size: 11px;
-        letter-spacing: .08em;
-      }
+      
 
       h2 {
         margin: 7px 0;
         color: $white;
-        font-family: $font-primary;
-        font-size: 40px;
-        font-weight: $fw-light;
       }
 
       p {
@@ -238,9 +227,9 @@ margin-top: -80px;
       }
 
       .icon-box {
-        flex: 0 0 36px;
-        width: 36px;
-        height: 36px;
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
         border-radius: 6px;
         display: grid;
         place-items: center;
@@ -253,22 +242,22 @@ margin-top: -80px;
       h3 {
         margin: 0;
         color: $primary-color;
-        font-size: 25px;
-        font-weight: $fw-light;
+        // font-size: 25px;
+        // font-weight: $fw-light;
       }
 
       h5 {
-        margin: 2px 0 0;
+        margin: 1px 0 0;
         color: #ff6500;
-        font-size: 11px;
-        font-weight: $fw-regular;
+        // font-size: 11px;
+        // font-weight: $fw-regular;
       }
 
       > p {
         margin: 16px 0 8px;
-        color: $text-color;
-        font-size: 11px;
-        line-height: 1.45;
+        color: $black;
+        // font-size: 11px;
+        // line-height: 1.45;
       }
 
       .tags {
@@ -276,29 +265,64 @@ margin-top: -80px;
 
         span {
           margin: 3px 4px 3px 0;
-          padding: 4px 9px;
-          border: 0;
-          border-radius: 3px;
-          background: $light-bg;
-          color: $light-text;
-          font-size: 9px;
+          padding: 7px 15px;
+          border: 1px solid #4160F00D;
+          border-radius: 10px;
+          background: #4160F00D;
+          color: #364153;
         }
       }
 
-      .platform-link {
+      .card-bottom{
+        margin:45px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+        flex-direction: column;
+
+        @include lg{
+          flex-direction: row;
+        }
+
+        .featured-capability {
+          min-height: 86px; // reserve space for all cards
+          flex: 1;
+
+          .featured-title{
+            font-family: Nunito Sans;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            color: #4160F0;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #4160F0;
+          }
+          .featured-content{
+            padding: 10px 0;
+          }
+        }
+        .platform-link {
         align-self: flex-end;
         margin-top: auto;
-        padding: 9px 16px;
-        border-radius: 3px;
-        background: $blue;
+        padding: 10px 16px;
+        border-radius: 4px;
+        background: #3D5DF7;
         color: $white;
-        font-size: 10px;
       }
+      .platform-link:hover{
+        background: $orange;
+      }
+      }
+
+      
     }
 
-    .row > div:nth-child(1) .platform-link {
-      background: #ff6500;
-    }
+    // .row > div:nth-child(1) .platform-link {
+    //   background: #ff6500;
+    // }
   }
 }
 

@@ -1,8 +1,12 @@
+@use '../../assets/scss/mixins' as *;
 .cta-section{
     background: linear-gradient(135deg, #4160F0 0%, #5A7CED 50%, #4160F0 100%);
     padding: 70px 0;
     .container{
-        width: 896px;
+        width: 100%;
+        @include lg{
+width: 896px;
+        }
         h2{
             color:#FFFFFF;
 ;

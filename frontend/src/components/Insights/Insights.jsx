@@ -90,7 +90,11 @@ const Insights = ({ variant = "page" }) => {
 
                 <p className="paragraph16">{article.excerpt}</p>
 
-                <a href={`/insights/${article.url}`} className={index === 1 ? "orange" : ""}>
+                {/* <a href={`/insights/${article.url}`} className={index === 1 ? "orange" : ""}>
+                  Read More →
+                </a> */}
+
+                <a href={article.read_more_link || `/insights/${article.url}`} target={article.read_more_link ? "_blank" : "_self"} rel={article.read_more_link ? "noopener noreferrer" : ""} className={index === 1 ? "orange" : ""}>
                   Read More →
                 </a>
               </div>

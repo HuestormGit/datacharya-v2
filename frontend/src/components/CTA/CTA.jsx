@@ -6,6 +6,7 @@ const CTA = () => {
     <section className="cta-section">
 
       <div className="container text-center">
+        <div className="row">
 
         <h2 className="H160">
           Ready to close the gap between your systems and their value?
@@ -25,6 +26,7 @@ const CTA = () => {
           <Link className="secondary-btn myButton" to="/advisory">
             Download Capability Overview
           </Link>
+        </div>
         </div>
 
       </div>

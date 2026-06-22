@@ -1,7 +1,9 @@
 @use '../../assets/scss/variables' as *;
 
-.home-page {
+.hero-slider {
+  margin-top: -56px;
   .hero-section {
+    
     position: relative;
     min-height: 600px;
     padding: 150px 0 70px;
@@ -19,7 +21,7 @@
     }
 
     .hero-content {
-      width: min(650px, 100%);
+      width: min(896px, 100%);
       margin: 0;
       text-align: left;
     }
@@ -27,26 +29,19 @@
     .hero-eyebrow {
       margin-bottom: 12px;
       color: $blue;
-      font-size: 13px;
-      font-weight: $fw-semibold;
       letter-spacing: .04em;
     }
 
     h1 {
       margin: 0 0 20px;
       color: $primary-color;
-      font-family: $font-primary;
-      font-size: 48px;
-      font-weight: $fw-light;
-      line-height: 1.08;
       letter-spacing: 0;
     }
 
     .hero-summary {
       max-width: 590px;
       color: $primary-color;
-      font-size: 15px;
-      line-height: 1.55;
+
     }
 
     .hero-btns {
@@ -111,7 +106,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .home-page {
+  .hero-slider {
     .hero-section {
       min-height: auto;
       padding: 130px 0 60px;

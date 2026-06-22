@@ -6,20 +6,27 @@ import DAT from "../../assets/images/DATANEETI.png";
 import T from "../../assets/images/TRUSTLINK.png";
 import AI from "../../assets/images/AGENTICAI.png";
 import R from "../../assets/images/ROIDASHBOARD.png";
+import SAMYOG_hp from "../../assets/images/SAMYOG-hp.png";
+import SHRUTI_hp from "../../assets/images/SHRUTI-hp.png";
+import SMRITI_hp from "../../assets/images/SMRITI-hp.png";
 
 const platformData = [
   {
     id: 1,
     title: "SMRITI",
+    img: SAMYOG_hp,
     subtitle: "Governance Frameworks",
     description:
       "Advisory defines the governance spine; platform converts it into policies, procedures, controls, ownership, evidence and exceptions.",
     tags: ["ERP Pack", "IFC Pack", "IPO Pack", "EXE Pack", "RASE Pack"],
+    Featuredcapabilitytitle :" Featured capability",
+    Featuredcapabilitycontent : "SUTRA - SAP Blueprinting & KRIYA Execution Governance",
     buttonText: "Read more",
   },
   {
     id: 2,
     title: "SHRUTI",
+    img: SHRUTI_hp,
     subtitle: "Evidence & Assurance Intelligence",
     description:
       "Advisory identifies risk and value leakage; platform monitors controls, ITGC, DPDP, audit, ROI and exceptions continuously.",
@@ -35,6 +42,7 @@ const platformData = [
   {
     id: 3,
     title: "SAMYOG",
+    img: SMRITI_hp,
     subtitle: "Trust & Organizational Intelligence",
     description:
       "Advisory interprets credibility, culture and leadership signals; platform validates professional trust and organizational health.",
@@ -44,6 +52,7 @@ const platformData = [
   {
     id: 4,
     title: "SAMVAD",
+    img: SAMYOG_hp,
     subtitle: "Enterprise Interaction Layer",
     description:
       "Advisory turns decisions into operating rhythm; platform manages workflows, collaboration, utilities and action tracking.",
@@ -178,12 +187,15 @@ const PlatformPillars = ({ variant = "default" }) => {
           </h2>
 
           <p className="paragraph18px">
-            A structured system that unifies governance,
-            execution, and assurance across your enterprise
+            A structured system that unifies governance, execution, and assurance across your enterprise
           </p>
         </div>
 
-        {/* PLATFORM GRID */}
+       
+
+      </div>
+      <div className="container-1680">
+         {/* PLATFORM GRID */}
         <div className="row">
 
           {platformData.map((item) => (
@@ -199,19 +211,20 @@ const PlatformPillars = ({ variant = "default" }) => {
                 <div className="card-top">
 
                   <div className="icon-box">
-                    <span aria-hidden="true">{item.title.slice(0, 1)}</span>
+                     <img src={item.img} alt={item.title} />
+                    {/* <span aria-hidden="true">{item.title.slice(0, 1)}</span> */}
                   </div>
 
                   <div>
-                    <h3>{item.title}</h3>
+                    <h3 className="H240px">{item.title}</h3>
 
-                    <h5>{item.subtitle}</h5>
+                    <h5 className="paragraph18px">{item.subtitle}</h5>
                   </div>
 
                 </div>
 
                 {/* DESCRIPTION */}
-                <p>
+                <p className="paragraph18px">
                   {item.description}
                 </p>
 
@@ -220,7 +233,7 @@ const PlatformPillars = ({ variant = "default" }) => {
 
                   {item.tags.map((tag, index) => (
 
-                    <span key={index}>
+                    <span key={index} className="paragraph16">
                       {tag}
                     </span>
 
@@ -228,11 +241,30 @@ const PlatformPillars = ({ variant = "default" }) => {
 
                 </div>
 
-                {/* BUTTON */}
-                <a className="platform-link" href="/approach">
-                  {item.buttonText}
-                </a>
+                <div className="card-bottom">
 
+                  <div className="featured-capability">
+
+                    {item.Featuredcapabilitytitle && (
+                      <span className="featured-title">
+                        {item.Featuredcapabilitytitle}
+                      </span>
+                    )}
+
+                    {item.Featuredcapabilitycontent && (
+                      <p className="featured-content paragraph18px">
+                        {item.Featuredcapabilitycontent}
+                      </p>
+                    )}
+
+                  </div>
+
+                  <a className="platform-link myButton" href="/approach">
+                    {item.buttonText} <i className="fa-solid fa-arrow-right"></i>
+
+                  </a>
+
+                </div>
               </div>
 
             </div>

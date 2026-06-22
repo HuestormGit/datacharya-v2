@@ -71,40 +71,41 @@ const HeroSlider = () => {
             >
               <div className="container">
                 <div className="hero-content">
-                  <p className="hero-eyebrow">
+                  <p className="hero-eyebrow paragraph18px">
                     {hero.eyebrow}
                   </p>
 
-                  <h1>
+                  <h1 className="H160">
                     {getTextFromBlocks(hero.title)}
                   </h1>
 
-                  <p className="hero-summary">
+                  <p className="hero-summary paragraph18px">
                     {getTextFromBlocks(hero.summary)}
                   </p>
 
-                  <div className="hero-btns">
-                    <Link
-                      className="btn-dark"
-                      to={hero.primaryButtonLink}
-                    >
-                      {hero.primaryButtonText}
-                    </Link>
+                  <div className="hero-btns row">
+                    <div className="col-lg-3 col-sm-12">
+                        <Link className="btn-dark Button" to={hero.primaryButtonLink}>
+                            {hero.primaryButtonText}
+                        </Link>
 
-                    <Link
-                      className="btn-light"
-                      to={hero.secondaryButtonLink}
-                    >
-                      {hero.secondaryButtonText}
-                    </Link>
+                    </div>
+                    <div className="col-lg-3 col-sm-12">
+                        <Link className="btn-light Button" to={hero.secondaryButtonLink}>
+                            {hero.secondaryButtonText}
+                        </Link>
+                    </div>
+                    
+
+                    
                   </div>
 
                   {hero.benefits?.length > 0 && (
                     <ul className="hero-benefits">
                       {hero.benefits.map((item) => (
                         <li key={item.id}>
-                          <strong>{item.title}</strong>
-                          <span>{item.description}</span>
+                          <strong className="paragraph18px">{item.title}</strong>
+                          <span className="Paragrapha16">{item.description}</span>
                         </li>
                       ))}
                     </ul>

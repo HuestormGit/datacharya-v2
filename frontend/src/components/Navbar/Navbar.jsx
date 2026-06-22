@@ -1,50 +1,42 @@
 import "./Navbar.scss";
-
 import logo from "../../assets/images/logo.png";
 
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-
   const [sticky, setSticky] = useState(false);
 
   const location = useLocation();
-
   const isHome = location.pathname === "/";
-  const isActive = (path) => location.pathname === path;
 
   useEffect(() => {
-
     const handleScroll = () => {
+  console.log("Scroll Y:", window.scrollY);
 
-      if (window.scrollY > 80) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
-
-    };
+  if (window.scrollY > 80) {
+    setSticky(true);
+  } else {
+    setSticky(false);
+  }
+};
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-
   }, []);
 
   return (
     <nav
-      className={`navbar navbar-expand-lg custom-navbar
-      ${sticky ? "sticky-nav" : ""}
-      ${isHome ? "home-navbar" : "inner-navbar"}
-      `}
+      className={`navbar navbar-expand-lg custom-navbar ${
+        isHome && !sticky ? "home-navbar" : "inner-navbar"
+      } ${sticky ? "sticky-nav" : ""}`}
     >
       <div className="container">
-
         {/* LOGO */}
-        <Link className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/">
           <img src={logo} alt="Datacharya" />
-        </Link>
+        </NavLink>
 
         {/* TOGGLE */}
         <button
@@ -52,79 +44,83 @@ const Navbar = () => {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* MENU */}
         <div className="collapse navbar-collapse" id="navbarContent">
-
           <ul className="navbar-nav ms-auto">
-
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/about") ? "active" : ""}`}
+              <NavLink
                 to="/about"
-                aria-current={isActive("/about") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 About Us
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/approach") ? "active" : ""}`}
+              <NavLink
                 to="/approach"
-                aria-current={isActive("/approach") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 Our Approach
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/advisory") ? "active" : ""}`}
+              <NavLink
                 to="/advisory"
-                aria-current={isActive("/advisory") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 CXO Advisory
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/platform") ? "active" : ""}`}
+              <NavLink
                 to="/platform"
-                aria-current={isActive("/platform") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 Platforms
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/insights") ? "active" : ""}`}
+              <NavLink
                 to="/insights"
-                aria-current={isActive("/insights") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 Insights
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link
-                className={`nav-link ${isActive("/contactUs") ? "active" : ""}`}
+              <NavLink
                 to="/contactUs"
-                aria-current={isActive("/contactUs") ? "page" : undefined}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
-
           </ul>
-
         </div>
-
       </div>
     </nav>
   );

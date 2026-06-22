@@ -52,6 +52,30 @@ ul {
     max-width: 1186px;
   }
 }
+.container-1680 {
+  width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @include sm {
+    max-width: 640px;
+  }
+
+  @include md {
+    max-width: 768px;
+  }
+
+  @include lg {
+    max-width: 1024px;
+  }
+
+  @include xl {
+    max-width: 1186px;
+  }
+  @include xxl {
+    max-width: 1700px;
+  }
+}
 .paragraph18px{
   font-family: Nunito Sans;
   font-weight: 300;
