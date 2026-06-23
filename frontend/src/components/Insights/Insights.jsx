@@ -41,13 +41,13 @@ const Insights = ({ variant = "page" }) => {
         {variant === "home" && (
             <div className="section-title">
                 <div>
-                <h2>
+                <h2 className="H160">
                     Latest <span>Insights</span>
                 </h2>
                 <p>Expert perspectives on enterprise governance</p>
                 </div>
 
-                <a href="/insights">
+                <a href="/insights" className="myButton">
                 View all →
                 </a>
             </div>
@@ -86,7 +86,7 @@ const Insights = ({ variant = "page" }) => {
                   </small>
                 </div>
 
-                <h3>{article.title}</h3>
+                <h3 className="h30px">{article.title}</h3>
 
                 <p className="paragraph16">{article.excerpt}</p>
 

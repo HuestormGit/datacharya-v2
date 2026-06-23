@@ -1,3 +1,4 @@
+@use '../../assets/scss/variables' as *;
 @use '../../assets/scss/mixins' as *;
 .cta-section{
     background: linear-gradient(135deg, #4160F0 0%, #5A7CED 50%, #4160F0 100%);
@@ -5,7 +6,7 @@
     .container{
         width: 100%;
         @include lg{
-width: 896px;
+            width: 896px;
         }
         h2{
             color:#FFFFFF;
@@ -29,11 +30,18 @@ width: 896px;
                 background: #FF6700;
                 box-shadow: 0px 4px 20px 0px #FF67004D;
                 border: none;
+                color: $white;
+                i{
+                    margin: 0 5px;
+                }
 
             }
             .secondary-btn{
                 border: 2px solid #FFFFFF;
-
+                color: $white;
+                i{
+                    margin: 0 5px;
+                }
 
             }
 

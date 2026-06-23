@@ -1,16 +1,10 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .advisory-section {
   padding: 100px 0;
 
-  .advisory-image {
-    img {
-      width: 100%;
-      border-radius: 18px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-      display: block;
-    }
-  }
+  
 
   .advisory-content {
     padding-left: 40px;
@@ -44,60 +38,60 @@
       max-width: 560px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 35px;
+    // ul {
+    //   list-style: none;
+    //   padding: 0;
+    //   margin: 0 0 35px;
 
-      li {
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 16px;
-        color: #5f6673;
-        font-size: 15px;
+    //   li {
+    //     position: relative;
+    //     padding-left: 28px;
+    //     margin-bottom: 16px;
+    //     color: #5f6673;
+    //     font-size: 15px;
 
-        &::before {
-          content: "✓";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 18px;
-          height: 18px;
-          border: 2px solid #4f6cff;
-          border-radius: 50%;
-          color: #4f6cff;
-          font-size: 11px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 1;
-        }
+    //     &::before {
+    //       content: "✓";
+    //       position: absolute;
+    //       left: 0;
+    //       top: 0;
+    //       width: 18px;
+    //       height: 18px;
+    //       border: 2px solid #4f6cff;
+    //       border-radius: 50%;
+    //       color: #4f6cff;
+    //       font-size: 11px;
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+    //       line-height: 1;
+    //     }
 
-        &:nth-child(2)::before {
-          border-color: #ff6b00;
-          color: #ff6b00;
-        }
-      }
-    }
+    //     &:nth-child(2)::before {
+    //       border-color: #ff6b00;
+    //       color: #ff6b00;
+    //     }
+    //   }
+    // }
 
-    .advisory-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #ff6b00;
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 600;
-      transition: 0.3s;
+    // .advisory-btn {
+    //   display: inline-flex;
+    //   align-items: center;
+    //   gap: 10px;
+    //   background: #ff6b00;
+    //   color: #fff;
+    //   text-decoration: none;
+    //   padding: 16px 28px;
+    //   border-radius: 6px;
+    //   font-size: 15px;
+    //   font-weight: 600;
+    //   transition: 0.3s;
 
-      &:hover {
-        transform: translateY(-2px);
-        color: #fff;
-      }
-    }
+    //   &:hover {
+    //     transform: translateY(-2px);
+    //     color: #fff;
+    //   }
+    // }
   }
 
   @media (max-width: 991px) {
@@ -195,6 +189,74 @@
 
     .advisory-content h2 {
       font-size: 34px;
+    }
+  }
+}
+//cscc
+.advisory-section-home{
+  padding: 50px 0px;
+  @include xl{
+    padding: 100px 0px;
+  }
+
+  .advisory-image {
+    text-align: center;
+    img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      display: block;
+    }
+  }
+  
+  .advisory-content{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 32px;
+
+    p.label{
+      color: $orange;
+      margin: 0px 0px 5px;
+    }
+    
+    h2{
+      color: #1A1A1A;
+      span{
+        color: $orange;
+      }
+    }
+    p{
+      color: #4A5565;
+      margin: 23px 0px 46px;
+    }
+    .mylist{
+      i{
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+      }
+      div:nth-child(1) i, div:nth-child(3) i {
+        color: #4868ff;
+      }
+
+      div:nth-child(2) i {
+        color: #f58220;
+      }
+    }
+
+    .advisory-btn{
+      margin-top: 21px;
+      box-shadow: 0px 4px 14px 0px #FF670040;
+      background: $orange;
+      color: #fff;
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-2px);
+        color: #fff;
+      }
     }
   }
 }

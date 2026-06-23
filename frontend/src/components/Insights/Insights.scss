@@ -1,19 +1,53 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .insights-section {
-  padding: 100px 0;
+  padding: 50px 0;
 
   .section-title {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
-
-    h2 {
-      font-size: 48px;
+    @include xl{
+      display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
     }
+
+    h2{
+      color:#1A1A1A;
+      span{
+        color: $bluetext;
+      }
+    }
+
+    p{
+      font-family: Nunito Sans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+      color: #4A5565;
+
+    }
+
+  
   }
 
-  .insight-card {
+  .home-insights-grid{
+    display: flex;
+    flex-direction: column;
+    @include xl{
+      flex-direction: row;
+      gap: 35px;
+    }
+
+    .insight-card {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0,0,0,.08);
 
@@ -26,8 +60,43 @@
     .content {
       padding: 25px;
 
+      .insight-meta {
+      display: flex;
+      align-items: center;
+      justify-content:  flex-start;
+      gap: 8px;
+
+      span {
+        padding: 4px 12px;
+        border-radius: 33554400px;
+        background: rgba(61, 93, 247, 0.08);
+        color: $blue;
+        font-family: Nunito Sans;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0px;
+
+
+        &.orange {
+          background: rgba(255, 101, 0, 0.08);
+          color: #ff6500;
+        }
+      }
+
+      small {
+        font-family: Nunito Sans;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #6A7282;
+      }
+      
+    }
+
       h3 {
-        font-size: 24px;
+        // font-size: 24px;
         margin: 15px 0;
       }
       
@@ -43,6 +112,9 @@
       }
     }
   }
+  }
+
+  
 }
 
 .insights-page {

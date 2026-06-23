@@ -61,11 +61,11 @@ const Advisory = ({ variant = "default" }) => {
   }
 
   return (
-    <section className="advisory-section">
+    <section className="advisory-section-home">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-content-between">
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-12">
             <div className="advisory-image">
               <img
                 src={advisoryImg}
@@ -75,20 +75,31 @@ const Advisory = ({ variant = "default" }) => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-d-12">
             <div className="advisory-content">
-
-              <span className="section-label">
+              <p className="paragraph18px label">
                 ADVISORY SERVICES
-              </span>
+              </p>
 
-              <h2>
+              <h2 className="H160">
                 Advisory that
                 <br />
                 doesn't stop at the
                 <br />
                 <span>slide deck.</span>
               </h2>
+
+              {/* <span className="section-label">
+                ADVISORY SERVICES
+              </span>
+
+              <h2 className="H160">
+                Advisory that
+                <br />
+                doesn't stop at the
+                <br />
+                <span>slide deck.</span>
+              </h2> */}
 
               <p className="paragraph18px">
                 Our advisory services integrate strategic guidance with
@@ -97,13 +108,28 @@ const Advisory = ({ variant = "default" }) => {
                 measurable outcomes.
               </p>
 
-              <ul>
+              <div className="mylist">
+                <div className="paragraph16">
+                  <i class="fa-regular fa-circle-check"></i>
+                  Strategic governance design backed by implementation expertise
+                </div>
+                 <div className="paragraph16"> 
+                  <i class="fa-regular fa-circle-check"></i>
+                  Executive-level insights with operational depth
+                </div>
+                 <div className="paragraph16"> 
+                  <i class="fa-regular fa-circle-check"></i>
+                  Measurable outcomes tracked from day one
+                </div>
+              </div>
+
+              {/* <ul>
                 <li>Strategic governance design backed by implementation expertise</li>
                 <li>Executive-level insights with operational depth</li>
                 <li>Measurable outcomes tracked from day one</li>
-              </ul>
+              </ul> */}
 
-              <a href="#contact" className="advisory-btn">
+              <a href="#contact" className="advisory-btn myButton">
                 Talk to Our Advisory Team →
               </a>
 

@@ -20,11 +20,13 @@ const CTA = () => {
 
         <div className="buttons">
           <Link className="primary-btn myButton" to="/contactUs">
+          <i class="fa-regular fa-envelope"></i>
             Request Consultation
           </Link>
 
           <Link className="secondary-btn myButton" to="/advisory">
             Download Capability Overview
+            <i class="fa-solid fa-download"></i>
           </Link>
         </div>
         </div>
