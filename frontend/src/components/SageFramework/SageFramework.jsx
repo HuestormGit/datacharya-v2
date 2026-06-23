@@ -1,9 +1,11 @@
 import "./SageFramework.scss";
 import sense  from "../../assets/images/sense-icon.png";
+import ALIGN  from "../../assets/images/ALIGN.png";
+import GOVERN  from "../../assets/images/GOVERN.png";
 
 const defaultSteps = [
   {
-    icon: "sense",
+    icon: ALIGN,
     title: "SENSE",
     subtitle: "Advisory diagnosis",
     description:
@@ -12,7 +14,7 @@ const defaultSteps = [
       "Platform Outcome Control inventory baseline + risk visibility dashboard",
   },
   {
-    icon: "align",
+    icon: ALIGN,
     title: "ALIGN",
     subtitle: "Framework design",
     description:
@@ -21,7 +23,7 @@ const defaultSteps = [
       "Platform Outcome Configured SMRITI governance packs + SUTRA blueprint structure",
   },
   {
-    icon: "govern",
+    icon: GOVERN,
     title: "GOVERN",
     subtitle: "Platform execution",
     description:
@@ -30,7 +32,7 @@ const defaultSteps = [
       "Platform Outcome Live workflows + automated evidence capture + measurable controls",
   },
   {
-    icon: "elevate",
+    icon: GOVERN,
     title: "ELEVATE",
     subtitle: "Continuous assurance",
     description:
@@ -207,34 +209,56 @@ const SageFramework = ({ variant = "default" }) => {
 
             <div className="sage-card" key={index}>
 
-              {/* ICON */}
-              <div className="icon-box">
-                <StepIcon type={step.icon} />
+              <div className="sage-card-top">
+                <img src={step.icon} alt={step.title} />
+                {/* ICON */}
+                {/* <div className="icon-box1">
+                  <StepIcon type={step.icon} />
+                   
+                </div> */}
+
+                <h3 className="H240px">{step.title}</h3>
+
+                <p className="paragraph18px">{step.subtitle}</p>
+
+
               </div>
+
+              <div className="sage-card-bottom">
+                <p className="paragraph16">
+                  Advisory Outcome
+                </p>
+                <p className="paragraph16 description">
+                {step.description}
+                </p>
+
+                <div className="divider"></div>
+
+                <p className="paragraph16">
+                  Platform Outcome
+                </p>
+                <p className="paragraph16 description">
+                {step.outcome}
+                </p>
+
+                
+              </div>
+
+              
 
               {/* CONNECTOR */}
               {index !== steps.length - 1 && (
-                <div className="connector"></div>
+                <div className="connector">
+                  <i className="fa-solid fa-arrow-right"></i>
+                </div>
               )}
 
               {/* CONTENT */}
-              <h3>{step.title}</h3>
+              
 
-              <h5>{step.subtitle}</h5>
+              
 
-              <p className="description">
-                {step.description}
-              </p>
-
-              <div className="divider"></div>
-
-              <small>
-                Platform Outcome
-              </small>
-
-              <p className="outcome">
-                {step.outcome}
-              </p>
+             
 
             </div>
 
@@ -247,17 +271,17 @@ const SageFramework = ({ variant = "default" }) => {
 
           <div>
 
-            <h3>
+            <h3 className="H160">
               See SAGE in Action
             </h3>
 
-            <p>
-              Learn how enterprises used this methodology to close critical governance gaps and extract maximum value from technology investments.
+            <p className="paragraph16">
+              Learn how enterprises used this methodology to close critical governance gaps and extract maximum value from technology investments.            
             </p>
 
           </div>
 
-          <button>
+          <button className="myButton">
             View Case Studies
           </button>
 
