@@ -1,152 +1,9 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .testimonial-section {
-  padding: 100px 0;
+ 
 
-  .section-title {
-    text-align: center;
-    margin-bottom: 60px;
-
-    span {
-      color: #f58220;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin-top: 10px;
-      font-size: 52px;
-      font-weight: 300;
-      color: #222;
-
-      .highlight {
-        color: #4868ff;
-      }
-    }
-  }
-
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .testimonial-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px;
-    min-height: 320px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-
-    .stars {
-      color: #f58220;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .quote {
-      color: #cfd4ff;
-      font-size: 40px;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #555;
-      font-size: 14px;
-      line-height: 1.8;
-      min-height: 120px;
-    }
-
-    .author {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-
-      img {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      h4 {
-        color: #4868ff;
-        margin: 0;
-        font-size: 15px;
-      }
-
-      span {
-        display: block;
-        color: #555;
-        font-size: 13px;
-      }
-
-      small {
-        display: block;
-        color: #999;
-        font-size: 12px;
-      }
-    }
-  }
-
-  .results-text {
-    text-align: center;
-    margin-top: 40px;
-    color: #999;
-    font-size: 14px;
-  }
-
-  .stats-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    text-align: center;
-
-    h3 {
-      font-size: 38px;
-      font-weight: 300;
-      margin-bottom: 5px;
-    }
-
-    div:nth-child(1) h3,
-    div:nth-child(3) h3 {
-      color: #4868ff;
-    }
-
-    div:nth-child(2) h3 {
-      color: #f58220;
-    }
-
-    span {
-      color: #999;
-      font-size: 14px;
-    }
-  }
-
-  .industry-tags {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-
-    span {
-      border: 2px solid #4868ff;
-      color: #4868ff;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-size: 14px;
-
-      &:nth-child(even) {
-        border-color: #f58220;
-        color: #f58220;
-      }
-    }
-  }
 
   @media (max-width: 991px) {
     .testimonial-grid,
@@ -162,59 +19,82 @@
   }
 }
 
-.home-page {
-  .testimonial-section {
+//scss
+.testimonial-section {
+    // padding: 100px 0;  
     padding: 45px 0 70px;
     background: $light-bg;
 
-    .container {
-      max-width: 760px;
-    }
 
     .section-title {
+      text-align: center;
       margin-bottom: 30px;
 
-      span {
-        font-size: 10px;
+      h5{
+        color: $orange;
       }
 
       h2 {
-        margin-top: 5px;
-        font-size: 36px;
+        
+        .highlight {
+         color: #4868ff;
+        }
       }
     }
 
     .testimonial-grid {
-      gap: 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      @include md{
+       grid-template-columns: repeat(3, 1fr);
+       
+      }
+      
     }
 
     .testimonial-card {
-      min-height: 240px;
-      padding: 18px;
-      border: 1px solid $border-color;
-      border-radius: 7px;
+      background: #fff;
+      min-height: 386px;
+      padding: 27px;
+      border: 2px solid #F3F4F6;
+      border-radius: 16px;
       box-shadow: none;
 
       .stars {
-        font-size: 10px;
+        font-size: 15px;
+        color: $orange;
+        margin-bottom: 10px;
       }
 
       .quote {
         font-size: 30px;
+        margin-bottom: 10px;
       }
 
       p {
-        min-height: 90px;
-        font-size: 10px;
-        line-height: 1.45;
+        min-height: 88px;
+        // font-size: 10px;
+        // line-height: 1.45;
+        margin-bottom: 32px;
       }
 
       .author {
-        padding-top: 12px;
+        padding-top: 24px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        flex-direction: column;
+        @include lg{
+          flex-direction: row;
+          align-items: center;
+        }
 
         .author-avatar {
-          width: 34px;
-          height: 34px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
           display: grid;
           place-items: center;
@@ -222,44 +102,83 @@
           color: #4868ff;
           font-size: 9px;
         }
-
-        h4 {
-          font-size: 11px;
+        .author-info{
+          .author-name{
+            font-family: Nunito Sans;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0%;
+            color: $bluetext;
+          }
+          .author-role{
+            min-height: 10px;
+            margin-bottom: 0px;
+            color: $black;
+          }
+          .author-company{
+            min-height: 10px;
+            margin-bottom: 0px;
+            max-width: 257px;
+            width: 100%;
+            color: $gray-text;
+            @include xl{
+              min-width: 257px;
+            }
+          }
         }
 
-        span,
-        small {
-          font-size: 8px;
-        }
       }
     }
 
     .results-text {
-      margin-top: 26px;
-      font-size: 10px;
+      text-align: center;
+      margin: 40px 0px;
+      color: #4A5565; 
     }
 
     .stats-row {
-      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 30px 0px 60px;
+      text-align: center;
+      @include xl{
+        flex-direction: row;
+      }
+      
 
-      h3 {
-        font-size: 20px;
+      div:nth-child(1) h3, div:nth-child(3) h3 {
+        color: #4868ff;
       }
 
-      span {
-        font-size: 9px;
+      div:nth-child(2) h3 {
+        color: #f58220;
       }
+
+      span{
+        color: #4A5565;
+      }
+
     }
 
     .industry-tags {
-      margin-top: 24px;
-      gap: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 70px;
+      flex-wrap: wrap;
 
-      span {
-        padding: 5px 12px;
-        border-width: 1px;
-        font-size: 9px;
+      span.myButton {
+        border-radius: 50px;
+        border: 2px solid $bluetext;
+        color: $bluetext;
+
+        &:nth-child(even) {
+          border-color: $orange;
+          color: $orange;
+        }
+        
       }
     }
-  }
 }
