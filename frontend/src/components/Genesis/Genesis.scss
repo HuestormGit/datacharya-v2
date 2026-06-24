@@ -5,65 +5,54 @@
   background: linear-gradient(115deg, #f7f8ff 0%, #fff8f3 100%);
 
   .container {
-    max-width: 800px;
+    // max-width: 800px;
   }
 
   .genesis-intro {
-    display: grid;
-    grid-template-columns: 180px 1fr;
+    display: flex;
     gap: 36px;
     align-items: start;
-    max-width: 610px;
+    max-width: 990px;
     margin: 0 auto 44px;
 
     h2 {
       margin: 0;
-      font-size: 32px;
-      font-weight: $fw-light;
-      line-height: 1.2;
+      
     }
-  }
+    .genesis-info{
+      max-width: 660px;
+      .genesis-lead {
+        margin: 0;
+    
+      }
+      .genesis-note {
+        margin: 20px 0 0;
+        span {
+          color: #ff6700;
+        }
+      }
 
-  .genesis-lead {
-    margin: 0;
-    font-size: 17px;
-    font-weight: $fw-light;
-    line-height: 1.25;
-  }
-
-  .genesis-note {
-    margin: 20px 0 0;
-    font-size: 10px;
-    line-height: 1.5;
-
-    span {
-      color: #ff6700;
     }
   }
 
   .core-philosophy {
-    margin-bottom: 38px;
-    padding: 24px 22px 18px;
-    border-radius: 5px;
+    margin-bottom: 39px;
+    padding: 33px;
+    border-radius: 10px;
     color: $white;
     background: linear-gradient(100deg, #ff6700 0%, #9b78a9 48%, #4160f0 100%);
+    // background: linear-gradient(135deg, #4160F0 0%, #5A7CED 50%, #4160F0 100%),linear-gradient(90deg, #FF6700 0%, rgba(255, 103, 0, 0.6) 10.58%, #4160F0 85%);
+
 
     h2 {
       margin: 0 0 8px;
-      font-size: 31px;
-      font-weight: $fw-light;
+     
     }
 
     p {
       margin: 0 0 10px;
-      font-size: 20px;
-      font-weight: $fw-light;
-      line-height: 1.2;
     }
 
-    small {
-      font-size: 9px;
-    }
   }
 
   .ethical-intelligence {
@@ -72,38 +61,38 @@
     gap: 42px;
     align-items: start;
 
-    img {
-      width: 100%;
-      height: 215px;
-      object-fit: cover;
-      border-radius: 5px;
-      box-shadow: 0 12px 24px rgba(29, 40, 72, .18);
+    .img-box{
+      padding: 16px 32px 0px 16px;
+
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 12px 24px rgba(29, 40, 72, .18);
+      }
     }
-  }
 
-  .ethical-copy {
-    padding-top: 2px;
-
+    .ethical-copy {
+    
     h2 {
-      margin: 0 0 10px;
-      font-size: 31px;
-      font-weight: $fw-light;
+      margin: 0 0 20px;
+     
     }
 
     h3 {
       margin: 0 0 8px;
-      font-size: 16px;
-      font-weight: $fw-light;
-      line-height: 1.2;
+      
     }
 
     p {
-      max-width: 330px;
+      
       margin: 0;
-      font-size: 10px;
-      line-height: 1.45;
     }
   }
+  }
+
+  
 }
 
 @media only screen and (max-width: 767px) {
