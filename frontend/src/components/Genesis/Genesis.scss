@@ -1,4 +1,5 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .about-page .Genesis-section {
   padding: 58px 0 78px;
@@ -14,6 +15,10 @@
     align-items: start;
     max-width: 990px;
     margin: 0 auto 44px;
+    flex-direction: column;
+    @include lg{
+      flex-direction: row;
+    }
 
     h2 {
       margin: 0;
@@ -66,10 +71,13 @@
 
       img {
         width: 100%;
-        height: 400px;
+        height: auto;
         object-fit: cover;
         border-radius: 5px;
         box-shadow: 0 12px 24px rgba(29, 40, 72, .18);
+        @include xl{
+          height: 400px;
+        }
       }
     }
 

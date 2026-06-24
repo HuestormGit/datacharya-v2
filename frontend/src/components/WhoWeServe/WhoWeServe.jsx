@@ -17,17 +17,17 @@ const WhoWeServe = () => {
     <section className="WhoWeServe-section">
       <div className="container">
         <div className="section-title">
-          <h2>Who We Serve</h2>
-          <p>Primary stakeholders for governance transformation</p>
+          <h2 className="H160">Who We Serve</h2>
+          <p className="paragraph18px">Six key stakeholder groups across industries</p>
         </div>
 
         <div className="serve-grid">
           {audiences.map((audience) => (
             <article className="WhoWeServe-card" key={audience.title}>
-              <h3>{audience.title}</h3>
+              <h3 className="h30px">{audience.title}</h3>
               <div className="tags">
                 {audience.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
+                  <span key={tag} className="paragraph16">{tag}</span>
                 ))}
               </div>
             </article>

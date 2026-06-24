@@ -1,138 +1,154 @@
-@use '../../assets/scss/variables' as *;
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixins" as *;
 
-.about-page .about-voices {
-  padding: 60px 0 86px;
+.about-voices {
+  padding: 80px 0;
   background: #f7f8fc;
 
-  .container {
-    max-width: 800px;
-  }
-
   .voices-card {
-    padding: 36px 30px 25px;
-    border: 1px solid #4160f0;
-    border-radius: 6px;
-    background: $white;
-    box-shadow: 0 10px 22px rgba(29, 40, 72, .14);
+    background: #fff;
+    border: 1px solid $bluetext;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 25px 0px #00000026;
 
-    > h2 {
-      margin: 0 0 32px;
+    h2 {
       text-align: center;
-      font-size: 31px;
-      font-weight: $fw-light;
+      margin-bottom: 40px;
     }
   }
 
-  .voices-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 52px;
+  .slide-item {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .voice-item {
+    padding: 15px;
+    border-radius: 16px;
+    height: 100%;
   }
 
   .quote-mark {
-    display: block;
-    height: 24px;
-    color: #9cafff;
-    font-family: Georgia, serif;
-    font-size: 42px;
-    line-height: 1;
+    display: inline-block;
+    margin-bottom: 20px;
+
+    img {
+      width: 32px;
+      height: auto;
+    }
   }
 
-  .voice-quote,
-  .voice-outcome {
-    margin: 0;
-    font-size: 9px;
-    line-height: 1.45;
+  .voice-quote {
+    color: $black;
+    min-height: 120px;
   }
 
   .voice-person {
     display: flex;
-    gap: 9px;
     align-items: center;
-    margin: 18px 0;
+    gap: 12px;
+    margin: 25px 0 15px;
 
-    > span {
-      display: grid;
-      width: 27px;
-      height: 27px;
-      place-items: center;
+    .avatar {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: #eef1f8;
-      color: #4160f0;
-      font-size: 8px;
+      background: #eef1ff;
+      color: $bluetext;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
     }
 
-    div {
+    .avatar-profile {
       display: flex;
       flex-direction: column;
-    }
 
-    strong {
-      color: #4160f0;
-      font-size: 9px;
-      font-weight: $fw-regular;
-    }
+      .avatar-name {
+        color: $bluetext;
+        margin-bottom: 0;
+        font-size: 18px;
+      }
 
-    small {
-      color: #65708a;
-      font-size: 8px;
-      line-height: 1.25;
+      .avatar-role,
+      .avatar-company {
+        margin-bottom: 0;
+      }
+
+      .avatar-company {
+        color: $gray-text;
+      }
     }
   }
 
   .outcome-label {
-    margin: 0 0 2px;
-    color: #ff6700;
-    font-size: 8px;
+    color: $orange;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
-  .voices-progress {
-    height: 2px;
-    margin-top: 28px;
+  .voice-outcome {
+    color: $gray-text;
+  }
+
+  .custom-progress {
+    width: 100%;
+    height: 4px;
     background: #dfe3eb;
+    margin-top: 35px;
+    border-radius: 50px;
+    overflow: hidden;
 
     span {
       display: block;
-      width: 32%;
       height: 100%;
-      background: #ff6700;
+      background: $orange;
+      transition: width 0.5s ease;
+      border-radius: 50px;
     }
   }
 
   .about-closing {
-    margin: 76px 0 0;
     text-align: center;
-    font-size: 29px;
-    font-weight: $fw-light;
-    line-height: 1.25;
+    margin-top: 70px;
 
-    span {
-      color: #4160f0;
+    .blue {
+      color: $bluetext;
     }
 
-    em {
-      color: #ff6700;
-      font-style: normal;
+    .orange {
+      color: $orange;
     }
   }
-}
 
-@media only screen and (max-width: 767px) {
-  .about-page .about-voices {
-    padding: 45px 0 65px;
-
+  // Tablet
+  @media (max-width: 991px) {
     .voices-card {
-      padding: 30px 22px 22px;
+      padding: 30px 15px;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 767px) {
+    padding: 60px 0;
+
+    .slide-item {
+      padding: 0 5px;
     }
 
-    .voices-grid {
-      grid-template-columns: 1fr;
-      gap: 34px;
+    .voice-item {
+      padding: 10px;
+    }
+
+    .voice-quote {
+      min-height: auto;
     }
 
     .about-closing {
-      margin-top: 58px;
-      font-size: 23px;
+      margin-top: 50px;
     }
   }
 }

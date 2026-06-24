@@ -1,13 +1,11 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .about-page .WhoWeServe-section {
   padding: 28px 0 66px;
   border-radius: 42px 42px 0 0;
   background: linear-gradient(180deg, #4c67f4 0%, #91a4ef 58%, #f7f8fc 100%);
 
-  .container {
-    max-width: 800px;
-  }
 
   .section-title {
     margin-bottom: 30px;
@@ -16,66 +14,80 @@
 
     h2 {
       margin: 0 0 4px;
-      font-size: 31px;
-      font-weight: $fw-light;
     }
 
     p {
-      margin: 0;
-      font-size: 9px;
+      margin-bottom: 25px;
+      @include xl{
+        margin-bottom: 63px;
+      }
+      
     }
   }
 
   .serve-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    
     gap: 18px;
-  }
-
-  .WhoWeServe-card {
-    min-height: 95px;
-    padding: 18px 14px;
-    border-radius: 4px;
-    background: $white;
-    text-align: center;
-    box-shadow: 0 9px 14px rgba(29, 40, 72, .24);
-
-    h3 {
-      margin: 0 0 12px;
-      font-size: 16px;
-      font-weight: $fw-light;
-    }
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-
-    span {
-      padding: 2px 12px;
-      border: 1px solid #4160f0;
-      border-radius: 4px;
-      color: #27304a;
-      font-size: 8px;
-      line-height: 1.2;
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .about-page .WhoWeServe-section {
-    border-radius: 30px 30px 0 0;
-
-    .serve-grid {
+    @include md{
       grid-template-columns: repeat(2, 1fr);
     }
+    @include xl{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .WhoWeServe-card {
+      min-height: 200px;
+      padding: 30px 17px;
+      border-radius: 4px;
+      background: $white;
+      text-align: center;
+      box-shadow: 0 9px 14px rgba(29, 40, 72, .24);
+
+      h3 {
+        margin: 0 0 12px;
+        @include xl{
+          margin:0 0 20px;
+        }
+          
+        
+      }
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+
+      span {
+        padding: 7px 14px;
+        border: 1px solid #4160f0;
+        border-radius: 10px;
+        color: #27304a;
+        background: #4160F00D;
+        border-top: 1px solid #4160F075
+      }
+    }
   }
+
+  
+
+ 
 }
 
-@media only screen and (max-width: 480px) {
-  .about-page .WhoWeServe-section .serve-grid {
-    grid-template-columns: 1fr;
-  }
-}
+// @media only screen and (max-width: 767px) {
+//   .about-page .WhoWeServe-section {
+//     border-radius: 30px 30px 0 0;
+
+//     .serve-grid {
+//       
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .about-page .WhoWeServe-section .serve-grid {
+//     grid-template-columns: 1fr;
+//   }
+// }
