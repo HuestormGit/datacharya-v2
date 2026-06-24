@@ -46,10 +46,10 @@ ul {
   }
 
   @include xl {
-    max-width: 1186px;
+    max-width: 1200px;
   }
   @include xxl {
-    max-width: 1186px;
+    max-width: 1200px;
   }
 }
 .container-1680 {
@@ -80,8 +80,12 @@ ul {
 .H160{
    font-family: $font-primary;
   font-weight: 200;
-  font-size: 40px;
+  font-size: 30px;
+  line-height: 35px;
+  @include md{
+    font-size: 40px;
   line-height: 50px;
+  }
   @include xl{
     font-size: 60px;
     line-height: 70px;

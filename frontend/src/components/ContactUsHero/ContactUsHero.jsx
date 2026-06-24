@@ -6,8 +6,10 @@ const ContactUsHero = () => {
     <section className="contact-hero">
       <div className="contact-hero__content container">
         <p className="paragraph16">CONTACT</p>
-        <h1>
-          Lorem ipsum dolor sit amet
+        <h1 className="H160">
+          Most problems are solved with one honest conversation.
+          <br/>Start yours here.
+
         </h1>
       </div>
     </section>

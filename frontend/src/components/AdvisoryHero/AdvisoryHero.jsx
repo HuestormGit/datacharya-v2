@@ -9,12 +9,12 @@ const AdvisoryHero = () => {
     >
       <div className="advisory-hero__content container">
         <p className="paragraph16">CXO ADVISORY</p>
-        <h1>
+        <h1 className="H160">
           <span>Strategic advisory</span> —
           <br />
           with the ability to execute
         </h1>
-        <p className="paragraph16">
+        <p className="paragraph18px">
           CXO-level governance advisory that bridges the gap between strategy
           and execution.
         </p>

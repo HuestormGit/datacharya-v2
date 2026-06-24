@@ -1,17 +1,22 @@
 @use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
 
 .advisory-page {
   .advisory-hero {
     position: relative;
-    min-height: 350px;
-    margin-top: 0;
-    border-radius: 0 0 58px 58px;
     display: flex;
     align-items: center;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     color: $white;
+    min-height: 380px;
+    border-radius: 0 0 36px 36px;
+    @include md{
+      min-height: 350px;
+      margin-top: 0;
+      border-radius: 0 0 58px 58px;
+    }
 
     &::before {
       content: "";
@@ -28,11 +33,9 @@
       h1 {
         margin: 8px 0;
         color: $white;
-        font-family: $font-primary;
-        font-size: 45px;
-        font-weight: $fw-light;
-        line-height: 1.12;
-        letter-spacing: 0;
+        // font-size: 34px;
+        
+        
 
         span {
           color: #ff6b00;
@@ -46,16 +49,4 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .advisory-page {
-    .advisory-hero {
-      min-height: 380px;
-      margin-top: 70px;
-      border-radius: 0 0 36px 36px;
 
-      &__content h1 {
-        font-size: 34px;
-      }
-    }
-  }
-}
