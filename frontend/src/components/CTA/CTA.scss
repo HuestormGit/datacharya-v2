@@ -24,8 +24,12 @@
         }
         .buttons{
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 gap: 15px;
+                @include xl{
+                    flex-direction: row;
+                }
             .primary-btn{
                 background: #FF6700;
                 box-shadow: 0px 4px 20px 0px #FF67004D;

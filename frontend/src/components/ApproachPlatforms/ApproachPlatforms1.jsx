@@ -10,31 +10,31 @@ const packs = [
   {
     title: "ERP Pack",
     label: "Process Governance",
-    audience: "CIO / SAP Program Leads",
+    audience: "For: CIO / SAP Program Leads",
     copy: "SAP and ERP process standards, linked to controls and exceptions. Outputs for implementation and operations.",
   },
   {
     title: "IFC Pack",
     label: "Internal Financial Controls",
-    audience: "CFO / Finance Controller",
+    audience: "For: CFO / Finance Controller",
     copy: "Financial control frameworks for accuracy, reliability, and regulatory compliance. Linked to SAP process flows.",
   },
   {
     title: "IPO Pack",
     label: "Listing Readiness",
-    audience: "CEO / Board / Company Secretary",
+    audience: "For: CEO / Board / Company Secretary",
     copy: "Corporate governance frameworks for public market readiness, controls, disclosures, board processes.",
   },
   {
     title: "EXE Pack",
     label: "Operating Discipline",
-    audience: "COO / Transformation Head",
+    audience: "For: COO / Transformation Head",
     copy: "KPI governance, performance management frameworks, operating procedures linked to strategic intent.",
   },
   {
     title: "RASE Pack",
     label: "Risk, Audit, Strategy, ESG",
-    audience: "CAC / Risk Officer / Board",
+    audience: "For: CAC / Risk Officer / Board",
     copy: "Enterprise risk framework, audit governance, strategic planning controls, and ESG reporting governance.",
   },
 ];
@@ -189,28 +189,28 @@ const platformData = [
 ];
 
 const SmritiContent = () => (
-  <div className="approach-platforms_body">
-    {/* <h3 className="h30px">Governance that lives in your systems — not in a SharePoint folder.</h3>
+  <div className="approach-platforms__body">
+    <h3 className="h30px">Governance that lives in your systems — not in a SharePoint folder.</h3>
     <p>
       Smriti is Datacharya&apos;s enterprise governance framework — a structured
       system that links policies to procedures, procedures to controls, and
       controls to verifiable evidence. Built for enterprises that already have
       governance documents but lack governance execution.
-    </p> */}
+    </p>
 
-    <h4 className="h30px">Smriti Packs</h4>
-    <div className="approach-platforms_packs">
+    <h4>Smriti Packs</h4>
+    <div className="approach-platforms__packs">
       {packs.map((pack) => (
         <article key={pack.title}>
           <h5>{pack.title}</h5>
-          <p className="label">{pack.label}</p>
-          <p className="audience">For: <span>{pack.audience}</span></p>
-          <p className="copy">{pack.copy}</p>
+          <strong>{pack.label}</strong>
+          <span>{pack.audience}</span>
+          <p>{pack.copy}</p>
         </article>
       ))}
     </div>
 
-    {/* <div className="approach-platforms__capability">
+    <div className="approach-platforms__capability">
       <span>FEATURED CAPABILITY</span>
       <h4>SUTRA - SAP Blueprinting & KRIYA Execution Governance</h4>
       <div>
@@ -226,9 +226,13 @@ const SmritiContent = () => (
           <li>✓ Remediation blueprints after failed implementations</li>
         </ul>
       </div>
-    </div> */}
+    </div>
 
-    
+    <div className="approach-platforms__actions">
+      {/* <a href="/contact?interest=smriti-demo">Request a Smriti Demo →</a> */}
+      <a href="/contactUs">Request a Smriti Demo →</a>
+      <a className="outline" href="/smriti-pack-overview.pdf">Download Pack Overview ↓</a>
+    </div>
   </div>
 );
 
@@ -238,7 +242,6 @@ const ApproachPlatforms = () => {
   const toggleItem = (id) => {
     setOpenItem((current) => (current === id ? null : id));
   };
-  
 
   return (
     <section className="approach-platforms">
@@ -250,7 +253,7 @@ const ApproachPlatforms = () => {
 
             return (
               <article
-                className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone} `}
+                className={`approach-platforms__item ${isOpen ? "is-open" : ""}`}
                 key={item.id}
               >
                 <button
@@ -259,73 +262,55 @@ const ApproachPlatforms = () => {
                   aria-controls={panelId}
                   onClick={() => toggleItem(item.id)}
                 >
-                  <span className="approach-platforms__item-icon">
+                  <span className={`approach-platforms__item-icon ${item.tone}`}>
                     <img src={item.icon} alt={item.icon} />
                   </span>
                   <span className="approach-platforms__item-title">
-                    {/* <h2 className={`H240px ${item.tone === "orange" ? "orange" : "blue"}`}>{item.title}</h2> */}
-                    <h2 className="H240px">{item.title}</h2>
-                    <p>{item.subtitle}</p>
+                    <strong className={`H240px ${item.tone === "orange" ? "orange" : "blue"}`}>{item.title}</strong>
+                    <small>{item.subtitle}</small>
                   </span>
                   {/* <span className="approach-platforms__chevron" aria-hidden="true">
                     {isOpen ? "⌃" : "⌄"}
                   </span> */}
-                  <span className="approach-platforms__chevron">
+                  <span className={`approach-platforms__chevron ${item.tone === "orange" ? "orange" : "blue"}`}>
                     <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div id={panelId} className="innerpanel">
-                    
+                  <div id={panelId}>
+                    {item.id === 1 ? (
+                      <SmritiContent />
+                    ) : (
                       <div className="approach-platforms__placeholder">
                         <h3 className="h30px">{item.headline}</h3>
                         <p className="paragraph18px">{item.description}</p>
-                            {item.id === 1 ? (<SmritiContent />) : ( "")}
-
                         <div className="approach-platforms__capability">
 
-                          <h6>FEATURED CAPABILITY</h6>
+                          <span>FEATURED CAPABILITY</span>
 
                           <h4 className="h30px">
                             {item.Featuredcapabilitytitle}
                           </h4>
 
-                          <div className="featuredbox">
+                          <p className="paragraph18px">
+                            {item.Featuredcapabilitycontent}
+                          </p>
 
-                            <p className="paragraph16">
-                                {item.Featuredcapabilitycontent}
-                            </p>
+                          {item.features?.length > 0 && (
+                            <ul className="feature-list">
+                              {item.features.map((feature, index) => (
+                                <li key={index}>
+                                  <i className="fa-solid fa-check"></i>
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
 
-                            {item.features?.length > 0 && (
-                                <ul className="feature-list">
-                                    {item.features.map((feature, index) => (
-                                        <li key={index} >
-                                        <i className="fa-solid fa-check"></i>
-                                        <span className="paragraph16">{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-
-                          </div>
-
-                          
-
-                          
-
-                        </div> 
-                        {item.id === 1 ? (
-                            <div className="approach-platforms__actions">
-                                {/* <a href="/contact?interest=smriti-demo">Request a Smriti Demo →</a> */}
-                                <a href="/contactUs">Request a Smriti Demo →</a>
-                                <a className="outline" href="/smriti-pack-overview.pdf">Download Pack Overview ↓</a>
-                            </div>
-                        ) : ( "")}
-
-
+                        </div>     
                       </div>
-                    
+                    )}
                   </div>
                 )}
               </article>

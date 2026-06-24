@@ -1,5 +1,5 @@
 import "./SageFramework.scss";
-import sense  from "../../assets/images/sense-icon.png";
+import sense  from "../../assets/images/sense-icon.png"; //must change
 import ALIGN  from "../../assets/images/ALIGN.png";
 import GOVERN  from "../../assets/images/GOVERN.png";
 
@@ -42,50 +42,50 @@ const defaultSteps = [
   },
 ];
 
-const StepIcon = ({ type }) => {
-  if (type === "sense") {
-    return (
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M3.5 16s4.5-7 12.5-7 12.5 7 12.5 7-4.5 7-12.5 7S3.5 16 3.5 16Z" />
-        <circle cx="16" cy="16" r="4.5" />
-        <circle cx="16" cy="16" r="1.4" />
-      </svg>
-    );
-  }
+// const StepIcon = ({ type }) => {
+//   if (type === "sense") {
+//     return (
+//       <svg viewBox="0 0 32 32" aria-hidden="true">
+//         <path d="M3.5 16s4.5-7 12.5-7 12.5 7 12.5 7-4.5 7-12.5 7S3.5 16 3.5 16Z" />
+//         <circle cx="16" cy="16" r="4.5" />
+//         <circle cx="16" cy="16" r="1.4" />
+//       </svg>
+//     );
+//   }
 
-  if (type === "align") {
-    return (
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <circle cx="16" cy="16" r="4.5" />
-        <circle cx="16" cy="4.5" r="2" />
-        <circle cx="26" cy="10" r="2" />
-        <circle cx="26" cy="22" r="2" />
-        <circle cx="16" cy="27.5" r="2" />
-        <circle cx="6" cy="22" r="2" />
-        <circle cx="6" cy="10" r="2" />
-        <path d="M16 6.5v5M24.2 11l-4.3 2.5M24.2 21l-4.3-2.5M16 25.5v-5M7.8 21l4.3-2.5M7.8 11l4.3 2.5" />
-      </svg>
-    );
-  }
+//   if (type === "align") {
+//     return (
+//       <svg viewBox="0 0 32 32" aria-hidden="true">
+//         <circle cx="16" cy="16" r="4.5" />
+//         <circle cx="16" cy="4.5" r="2" />
+//         <circle cx="26" cy="10" r="2" />
+//         <circle cx="26" cy="22" r="2" />
+//         <circle cx="16" cy="27.5" r="2" />
+//         <circle cx="6" cy="22" r="2" />
+//         <circle cx="6" cy="10" r="2" />
+//         <path d="M16 6.5v5M24.2 11l-4.3 2.5M24.2 21l-4.3-2.5M16 25.5v-5M7.8 21l4.3-2.5M7.8 11l4.3 2.5" />
+//       </svg>
+//     );
+//   }
 
-  if (type === "govern") {
-    return (
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 3.5 26 7v7.8c0 6.1-4 10.9-10 13.7-6-2.8-10-7.6-10-13.7V7l10-3.5Z" />
-        <rect x="11" y="9" width="10" height="13" rx="1.5" />
-        <path d="M13.5 12.5h5M13.5 15.5h5M13.5 18.5h3.5" />
-      </svg>
-    );
-  }
+//   if (type === "govern") {
+//     return (
+//       <svg viewBox="0 0 32 32" aria-hidden="true">
+//         <path d="M16 3.5 26 7v7.8c0 6.1-4 10.9-10 13.7-6-2.8-10-7.6-10-13.7V7l10-3.5Z" />
+//         <rect x="11" y="9" width="10" height="13" rx="1.5" />
+//         <path d="M13.5 12.5h5M13.5 15.5h5M13.5 18.5h3.5" />
+//       </svg>
+//     );
+//   }
 
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="12" />
-      <path d="m9 20 5-5 4 3 6-7" />
-      <path d="M19.5 11H24v4.5" />
-    </svg>
-  );
-};
+//   return (
+//     <svg viewBox="0 0 32 32" aria-hidden="true">
+//       <circle cx="16" cy="16" r="12" />
+//       <path d="m9 20 5-5 4 3 6-7" />
+//       <path d="M19.5 11H24v4.5" />
+//     </svg>
+//   );
+// };
 
 const approachSteps = [
   {
@@ -101,7 +101,7 @@ const approachSteps = [
   {
     iconLabel: "A",
     title: "ALIGN",
-    img: sense,
+    img: ALIGN,
     subtitle: "Framework design",
     description:
       "Inspired by the concept of Yoga, alignment brings together your people, processes, and systems. We ensure that your data architecture supports your leadership's vision and that your culture is ready for the technical shifts ahead.",
@@ -111,7 +111,7 @@ const approachSteps = [
   {
     iconLabel: "G",
     title: "GOVERN",
-    img: sense,
+    img: GOVERN,
     subtitle: "Platform execution",
     description:
       "Governance isn't just about compliance; it is about flow. We build the Digital Nervous System of your company, establishing clear data protocols and behaviour guardrails that ensure your systems remain scalable and secure.",
@@ -140,7 +140,7 @@ const SageFramework = ({ variant = "default" }) => {
         <div className="container approach-sage-box">
           <div className="approach-sage-intro">
             <h2 className="H240px">
-              SAGE<small>TM</small>
+              SAGE<sub>TM</sub>
               <br />
               philosophy
             </h2>
@@ -156,18 +156,19 @@ const SageFramework = ({ variant = "default" }) => {
           <div className="sage-grid">
             {steps.map((step, index) => (
               <article className="sage-card" key={step.title}>
-                <div className="icon-box" aria-hidden="true">
-                  {/* {step.iconLabel} */}
-                  <img src={step.img} alt={step.title} />
+                <div className="sage-card-top">
+                  <div className="icon-box" aria-hidden="true">
+                    <img src={step.img} alt={step.title} />
+                  </div>
+                  <h3 className="H240px">{step.title}</h3>
+                  <p className="paragraph18px">{step.subtitle}</p>
                 </div>
-                <h3 className="H240px">{step.title}</h3>
-                <h5 className="paragraph18px">{step.subtitle}</h5>
-                <p className="description Paragrapha16">{step.description}</p>
+                <p className="description paragraph16">{step.description}</p>
                 <div className="divider"></div>
                 <p className="outcome">{step.outcome}</p>
                 {index !== steps.length - 1 && (
                   <span className="connector" aria-hidden="true">
-                    &rarr;
+                    <i className="fa-solid fa-arrow-right"></i>
                   </span>
                 )}
               </article>

@@ -2,226 +2,10 @@
 @use '../../assets/scss/mixins' as *;
 
 .sage-section {
-  position: relative;
+  
 
-  padding: 120px 0;
 
-  background: linear-gradient(
-    90deg,
-    #f7f8fc,
-    #f3f4f9
-  );
-
-  overflow: hidden;
-
-  /* =========================
-     SECTION TITLE
-  ========================= */
-
-  .section-title {
-    text-align: center;
-
-    // max-width: 850px;
-
-    margin: 0 auto 70px;
-
-    .top-title {
-      display: inline-block;
-
-      color: $orange;
-
-      text-transform: uppercase;
-
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      color: #101828 ;
-
-      span {
-        font-family: Nunito Sans;
-        font-weight: 200;
-        font-size: 60px;
-        line-height: 70px;
-        text-align: center;
-        color: #4160F0;
-      }
-    }
-
-    p {
-      width: 100%;
-      color: #4A5565;
-
-      max-width: 760px;
-
-      margin-inline: auto;
-    }
-  }
-
-  /* =========================
-     GRID
-  ========================= */
-
-  .sage-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 13px;
-
-    position: relative;
-  }
-
-  /* =========================
-     CARD
-  ========================= */
-
-  .sage-card {
-    position: relative;
-
-    background: $white;
-
-    border: 1px solid #e5e7eb;
-
-    padding: 70px 24px 28px;
-
-    min-height: 430px;
-
-    transition: $transition;
-
-    &:hover {
-      transform: translateY(-6px);
-
-      box-shadow: 0 20px 40px rgba(0,0,0,.08);
-    }
-
-    /* ICON */
-
-    .icon-box {
-      position: absolute;
-
-      top: -22px;
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      width: 52px;
-      height: 52px;
-
-      border-radius: 50%;
-
-      background: #4f67ff;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      box-shadow: 0 10px 25px rgba(79,103,255,.3);
-
-      svg {
-        width: 28px;
-        height: 28px;
-        fill: none;
-        stroke: $white;
-        stroke-width: 1.35;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-    }
-
-    /* CONNECTOR */
-
-    .connector {
-      position: absolute;
-
-      top: 26px;
-      right: -14px;
-
-      width: 28px;
-      height: 28px;
-
-      border-radius: 50%;
-
-      border: 2px solid #ff7b29;
-
-      background: $white;
-
-      z-index: 2;
-
-      &::before {
-        content: "";
-
-        position: absolute;
-
-        top: 50%;
-        left: -70px;
-
-        transform: translateY(-50%);
-
-        width: 70px;
-        height: 1px;
-
-        background: #d1d5db;
-      }
-    }
-
-    // h3 {
-    //   font-size: 34px;
-    //   font-weight: 300;
-
-    //   text-align: center;
-
-    //   color: #374151;
-
-    //   margin-bottom: 10px;
-    // }
-
-    h5 {
-      // font-size: 14px;
-      // font-weight: 500;
-
-      color: #ff7b29;
-
-      text-align: center;
-
-      margin-bottom: 30px;
-    }
-
-    // .description {
-    //   color: #101828;
-
-    //   margin-bottom: 24px;
-    // }
-
-    // .divider {
-    //   width: 100%;
-    //   height: 1px;
-
-    //   background: #e5e7eb;
-
-    //   margin-bottom: 18px;
-    // }
-
-    small {
-      display: block;
-
-      font-size: 12px;
-
-      color: #9ca3af;
-
-      margin-bottom: 10px;
-    }
-
-    .outcome {
-      font-family: Nunito Sans;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0px;
-      font-size: 14px;
-      color: #4A5565;
-    }
-  }
-
+  
   /* =========================
      CTA BOX
   ========================= */
@@ -292,236 +76,74 @@
    TABLET
 ========================= */
 
-@media only screen and (max-width: 1024px) {
+// @media only screen and (max-width: 1024px) {
 
-  .sage-section {
+//   .sage-section {
 
-    .sage-grid {
-      grid-template-columns: repeat(2, 1fr);
+    
 
-      gap: 20px;
-    }
+//     .sage-card {
 
-    .sage-card {
+//       .connector {
+//         display: none;
+//       }
+//     }
 
-      .connector {
-        display: none;
-      }
-    }
-
-    .sage-cta {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-}
+//     .sage-cta {
+//       flex-direction: column;
+//       align-items: flex-start;
+//     }
+//   }
+// }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media only screen and (max-width: 767px) {
+// @media only screen and (max-width: 767px) {
 
-  .sage-section {
-    padding: 80px 0;
+//   .sage-section {
+//     padding: 80px 0;
 
-    .section-title {
 
-      h2 {
-        font-size: 38px;
-      }
+    
 
-      p {
-        font-size: 15px;
-      }
-    }
+//     .sage-card {
+//       min-height: auto;
 
-    .sage-grid {
-      grid-template-columns: 1fr;
-    }
+//       padding: 70px 20px 24px;
 
-    .sage-card {
-      min-height: auto;
+//       h3 {
+//         font-size: 28px;
+//       }
+//     }
 
-      padding: 70px 20px 24px;
+//     .sage-cta {
+//       padding: 30px 20px;
 
-      h3 {
-        font-size: 28px;
-      }
-    }
+//       h3 {
+//         font-size: 34px;
+//       }
 
-    .sage-cta {
-      padding: 30px 20px;
+//       button {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
 
-      h3 {
-        font-size: 34px;
-      }
 
-      button {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.approach-page {
-  .sage-section--approach {
-    padding: 52px 0 68px;
-    background: $white;
-    .approach-sage-box{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .approach-sage-intro {
-        max-width: 690px;
-        margin: 0 auto 77px;
-        display: flex;
-        align-items: center;
-        gap: 34px;
-        text-align: left;
-
-        h2 {
-          margin: 0;
-          color: $primary-color;
-          font-family: $font-primary;
-          font-size: 30px;
-          font-weight: $fw-light;
-          line-height: 1.12;
-
-          small {
-            font-size: 9px;
-            vertical-align: bottom;
-            font-weight: 200;
-            font-size: 20px;
-            line-height: 50px;
-
-          }
-        }
-
-        p {
-          width: auto;
-          max-width: 768px;
-          color: #4A5565;
-        }
-      }
-
-      .sage-grid {
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 12px;
-      }
-
-      .sage-card {
-        min-height: 385px;
-        padding: 20px 17px;
-        border-color: $border-color;
-        border-radius: 4px;
-        text-align: left;
-
-        &:hover {
-          transform: none;
-          box-shadow: none;
-        }
-
-        .icon-box {
-          position: static;
-          width: 56px;
-          height: 56px;
-          margin: 0 auto;
-          transform: none;
-          background: $blue;
-          color: $white;
-          font-family: $font-primary;
-          font-size: $fs-14;
-          font-weight: $fw-semibold;
-          box-shadow: none;
-        }
-
-        .connector {
-          top: 115px;
-          right: -8px;
-          width: 16px;
-          height: 16px;
-          border-width: 1px;
-          display: grid;
-          place-items: center;
-          color: #ff6b1a;
-          font-size: 9px;
-
-          &::before {
-            display: none;
-          }
-        }
-
-        h3 {
-          margin: 8px 0 0;
-          color: $primary-color;
-          font-size: 25px;
-          font-weight: $fw-light;
-        }
-
-        h5 {
-          margin: 0 0 20px;
-          color: #ff6b1a;
-          font-size: 12px;
-          font-weight: $fw-regular;
-        }
-
-        .description,
-        .outcome {
-          color: $text-color;
-          font-family: $font-primary;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0px;
-        }
-
-        // .description {
-        //   margin-bottom: 0;
-        // }
-
-        // .divider {
-        //   margin: 16px 0;
-        //   background: $border-color;
-        // }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .approach-page {
-    .sage-section--approach {
-      .sage-card {
-        .connector {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .approach-page {
-    .sage-section--approach {
-      .approach-sage-intro {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        text-align: center;
-      }
-    }
-  }
-}
 
 //scss
 .sage-section {
     padding: 70px 0 32px;
     background: $light-bg;
+    position: relative;
+    overflow: hidden;
 
     .section-title {
       margin-bottom: 48px;
+      text-align: center;
 
       .top-title {
         display: inline-block;
@@ -531,7 +153,7 @@
       }
 
       h2 {
-       color: #101828;
+       color: $black-text;
 
 
         span {
@@ -541,24 +163,41 @@
           line-height: inherit;
         }
       }
+      p{
+        color: #4A5565;
+        max-width: 760px;
+        margin-inline: auto;
+      }
 
       
     }
 
     .sage-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 13px;
+      position: relative;
+      @include md{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include xl{
+        grid-template-columns: repeat(4, 1fr);
+      }
       .sage-card {
+      background: $white;
+      border: 2px solid #E5E7EB;
       min-height:430px;
       padding: 26px 18px 18px;
       border-radius: 10px;
+      position: relative;
+      transition: $transition;
       // min-width: 290px;
 
       &:hover {
-        transform: none;
-        box-shadow: none;
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.08);
       }
+      
       .sage-card-top{
         display: flex;
         flex-direction: column;
@@ -598,15 +237,19 @@
       }
 
       .connector {
-        position: absolute;
-        top: 14px;
-        right: -14px;
-        width: 34px;
-        height: 34px;
-        border : 2px solid $orange;
-        padding: 5px;
-        border-radius: 50%;
-        background-color: $white;
+        display: none;
+        @include md{
+          display: block;
+          position: absolute;
+          top: 14px;
+          right: -14px;
+          width: 34px;
+          height: 34px;
+          border : 2px solid $orange;
+          padding: 5px;
+          border-radius: 50%;
+          background-color: $white;
+        }
 
         &::before {
           display: none;
@@ -629,9 +272,13 @@
       border-radius: 10px;
       background: linear-gradient(135deg, #4160F0 0%, #5A7CED 50%, #4160F0 100%);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
+      @include md{
+        flex-direction: row;
+      }
 
       div{
         max-width: 963px;
@@ -662,5 +309,156 @@
         }
       }
     }
+}
+
+.sage-section.sage-section--approach{
+  padding: 52px 0 68px;
+  background: $white;
+
+  .approach-sage-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .approach-sage-intro{
+      max-width: 820px;
+      margin: 0 auto 77px;
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      text-align: left;
+      flex-direction: column;
+      @include lg{
+        flex-direction: row;
+      }
+
+      h2 {
+        margin: 0;
+        color: $black;
+
+          sub {
+            font-size: 20px;
+
+          }
+        }
+
+        p {
+          width: auto;
+          max-width: 768px;
+          color: $black;
+        }
+
+    }
+    .sage-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 13px;
+      position: relative;
+      @include md{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include xl{
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      .sage-card {
+        background: $white;
+        border: 2px solid #E5E7EB;
+        min-height: 510px;
+        padding: 20px 17px;
+        border-radius: 4px;
+        text-align: left;
+        position: relative;
+        transition: $transition;
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 20px 40px rgba(0,0,0,.08);
+        }
+
+        .sage-card-top{
+          .icon-box {
+            position: static;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto;
+            transform: none;
+            background: $blue;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(79,103,255,.3);
+            img{
+              width: 35px;
+              height: 35px;
+            }
+          }
+          h3 {
+            margin: 16px 0 0;
+            color: $black-text;
+          }
+        }
+
+        
+
+
+        .connector {
+          display: none;
+        @include md{
+          display: block;
+          position: absolute;
+          top: 150px;
+          right: -10px;
+          width: 34px;
+          height: 34px;
+          border : 2px solid $orange;
+          padding: 5px;
+          border-radius: 50%;
+          background-color: $white;
+        }
+
+        &::before {
+          display: none;
+        }
+        i{
+          width: 12px;
+          height: 10px;
+          color: $orange;
+        }
+      }
+
+        
+
+        h5 {
+          margin: 0 0 20px;
+          color: #ff6b1a;
+          font-size: 12px;
+          font-weight: $fw-regular;
+        }
+
+        .description{
+          color: $black-text;
+        }
+
+        .outcome {
+          font-family: Nunito Sans;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0px;
+          font-size: 14px;
+          color: #4A5565;
+        }
+        .divider{
+          width: 100%;
+          height: 1px;
+          color: $gray-text;
+          margin: 12px 0 ;
+          background: $border-color;
+        }
+        
+
+      }
+    }
+  }
 }
 

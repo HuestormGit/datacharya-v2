@@ -90,9 +90,12 @@ ul {
 .H240px{
   font-family: Nunito Sans;
   font-weight: 200;
-  font-size: 40px;
-  line-height: 50px;
-    @include xl{}
+  font-size: 30px;
+  line-height: 40px;
+    @include xl{
+      font-size: 40px;
+      line-height: 50px;
+    }
 }
 .h30px{
    font-family: Nunito Sans;
