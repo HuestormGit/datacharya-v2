@@ -313,18 +313,16 @@ margin-top: -80px;
   
 }
 
-@media only screen and (max-width: 767px) {
-  .platform-page {
-    .platform-ecosystem__grid {
-      
-    }
+// @media only screen and (max-width: 767px) {
+//   .platform-page {
+    
 
-    .ecosystem-card {
-      min-height: auto;
+//     .ecosystem-card {
+//       min-height: auto;
 
-      &:last-child {
-        grid-column: auto;
-      }
-    }
-  }
-}
+//       &:last-child {
+//         grid-column: auto;
+//       }
+//     }
+//   }
+// }
