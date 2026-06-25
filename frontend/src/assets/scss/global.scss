@@ -92,7 +92,7 @@ ul {
   }
 }
 .H240px{
-  font-family: Nunito Sans;
+  font-family: $font-primary;
   font-weight: 200;
   font-size: 30px;
   line-height: 40px;
@@ -102,7 +102,7 @@ ul {
     }
 }
 .h30px{
-   font-family: Nunito Sans;
+   font-family: $font-primary;
   font-weight: 200;
   font-size: 20px;
   line-height: 24px;
@@ -112,14 +112,21 @@ ul {
     }
 }
 .paragraph16{
-  font-family: Nunito Sans;
+  font-family: $font-primary;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
     @include xl{}
 }
+.paragraph16_24_400{
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
 .paragraph18px{
-  font-family: Nunito Sans;
+  font-family: $font-primary;
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;
@@ -127,7 +134,7 @@ ul {
 }
 
 .myButton{
-  font-family: Nunito Sans;
+  font-family: $font-primary;
   font-weight: 600;
   font-size: 16px;
   line-height: 28px;

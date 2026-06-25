@@ -24,11 +24,8 @@ const Advisory = ({ variant = "default" }) => {
               <div className="advisory-content">
                 <h2 className="H160">
                   Advisory
-                  <br />
                   Transformed
-                  <br />
                   Into Executable
-                  <br />
                   Governance
                 </h2>
 

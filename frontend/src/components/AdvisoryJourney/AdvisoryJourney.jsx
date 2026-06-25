@@ -46,10 +46,10 @@ const AdvisoryJourney = () => {
   return (
     <section className="advisory-journey">
       <div className="container">
-        <div className="advisory-journey__stack">
+        <div className="advisory-journey_stack">
 
           {/* Advisory Scope */}
-          <article className="advisory-scope advisory-panel">
+          <article className="advisory-scope-top advisory-panel">
             <header>
               <h2 className="H160">
                 Advisory <span>Scope</span>
@@ -57,7 +57,7 @@ const AdvisoryJourney = () => {
               <p>Strategic guidance across the full governance lifecycle</p>
             </header>
 
-            <div className="advisory-scope__grid">
+            <div className="advisory-scope">
               {scopeItems.map((item, index) => (
                 <div key={item}>
                   <i
@@ -76,18 +76,16 @@ const AdvisoryJourney = () => {
 
           {/* Engagement Model */}
           <article className="engagement-model advisory-panel">
-            <div className="engagement-model__image">
+            <div className="engagement-model_image">
               <img
                 src={EngagementModel}
                 alt="Enterprise engagement environment"
               />
             </div>
 
-            <div className="engagement-model__content">
+            <div className="engagement-model_content">
               <h2 className="H160">
-                Engagement
-                <br />
-                <span>Model</span>
+                Engagement <span>Model</span>
               </h2>
 
               <p>
@@ -96,9 +94,9 @@ const AdvisoryJourney = () => {
 
               <ol>
                 {engagementSteps.map((step, index) => (
-                  <li key={step} className="paragraph18px">
-                    <span className="H240px">{index + 1}</span>
-                    {step}
+                  <li key={step} >
+                    <span className="H240px number">{index + 1}</span>
+                    <span className="paragraph18px"> {step} </span>
                   </li>
                 ))}
               </ol>
@@ -111,7 +109,7 @@ const AdvisoryJourney = () => {
               <h2 className="H160">
                 Trusted by <span>CXO Leaders</span>
               </h2>
-              <p>Strategic outcomes delivered across sectors</p>
+              <p className="paragraph16_24_400">Strategic outcomes delivered across sectors</p>
             </header>
 
             <div className="advisory-testimonials__slider">

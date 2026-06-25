@@ -198,31 +198,42 @@
     width: 100%;
     max-width: 480px;
     margin-left: auto;
+    @include md{
+      margin: 0px auto;
+    }
     @include lg{
       max-width: 600px;
     }
 
 
     img {
-      min-height: 440px;
+      
       object-fit: cover;
       border-radius: 16px;
+      @include lg{
+        min-height: 440px;
+      }
     }
   }
 
   .advisory-content {
-    max-width: 480px;
+    width: 100%;
+    // max-width: 480px;
     padding-left: 0;
     text-align: left;
     margin-top: 35px;
     @include md{
-      max-width: 536px;
-      padding-left: 50px;
+      width: 100%;
+      // max-width: 536px;
+      padding-left: 15px;
     }
 
     h2 {
       color: #1A1A1A;
       margin-bottom: 16px;
+      @include lg{
+        max-width: 445px;
+      }
     }
 
     p {
