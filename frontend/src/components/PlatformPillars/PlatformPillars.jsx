@@ -152,18 +152,23 @@ const PlatformPillars = ({ variant = "default" }) => {
     return (
       <section className="platform-ecosystem">
         <div className="container-fluid">
-          <div className="platform-ecosystem__grid">
+          <div className="platform-ecosystem_grid">
             {ecosystemData.map((item) => (
               <article className="ecosystem-card" key={item.id}>
-                <div className="ecosystem-card__title">
-                  <img src={item.img} alt={item.title} />
-                  {/* <span aria-hidden="true">{item.icon}</span>
-                  <h2>{item.title}</h2> */}
+                <div className="cardbody">
+                  <div className="ecosystem-card_title">
+                    <img src={item.img} alt={item.title} />
+                    {/* <span aria-hidden="true">{item.icon}</span>
+                    <h2>{item.title}</h2> */}
+                  </div>
+                  <h3 className="h30px">{item.subtitle}</h3>
+                  <p className="paragraph18px"><strong>{item.highlight}</strong></p>
+                  <p className="paragraph18px">{item.description}</p>
+
                 </div>
-                <h3 className="h30px">{item.subtitle}</h3>
-                <strong className="paragraph18px">{item.highlight}</strong>
-                <p className="paragraph18px">{item.description}</p>
-                <a href="/contactUs">Take a trial&nbsp; →</a>
+                
+                
+                <a href="/contactUs" className="myButton">Take a trial <i className="fa-solid fa-arrow-right"></i></a>
               </article>
             ))}
           </div>

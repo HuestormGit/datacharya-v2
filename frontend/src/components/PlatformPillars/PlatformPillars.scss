@@ -64,121 +64,7 @@ margin-top: -80px;
   }
 }
 
-.platform-page {
-  .platform-ecosystem {
-    margin-top: -1px;
-    padding: 58px 0 110px;
-    background: linear-gradient(
-      180deg,
-      #dbe2ff 0%,
-      #8fa4f2 24%,
-      #5272df 52%,
-      #3155c5 100%
-    );
 
-    &__grid { 
-      max-width: 1680px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      align-items: stretch;
-    }
-  }
-
-  .ecosystem-card {
-    min-height: 365px;
-    padding: 30px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: $white;
-    color: $primary-color;
-    text-align: left;
-
-    &__title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      > span {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: #ff6500;
-        color: $white;
-        font-size: 12px;
-        font-weight: $fw-semibold;
-      }
-
-      h2 {
-        margin: 0;
-        color: $blue;
-        font-family: $font-primary;
-        font-size: 27px;
-        font-weight: $fw-light;
-        letter-spacing: 0;
-      }
-    }
-
-    h3 {
-      margin: 20px 0 12px;
-      color: $blue;
-      // font-family: $font-primary;
-      // font-size: 21px;
-      // font-weight: $fw-light;
-    }
-
-    > strong,
-    > p {
-      color: $primary-color;
-      // font-family: $font-primary;
-      // font-size: 12px;
-      // line-height: 1.5;
-    }
-
-    > strong {
-      font-weight: $fw-bold;
-    }
-
-    > p {
-      margin-bottom: 22px;
-    }
-
-    > a {
-      margin-top: auto;
-      padding: 11px 17px;
-      border-radius: 4px;
-      background: #ff6500;
-      color: $white;
-      font-size: 12px;
-      box-shadow: 0 5px 12px rgba(255, 101, 0, 0.25);
-    }
-
-    &:last-child {
-      grid-column: 1;
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .platform-page {
-    .platform-ecosystem__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .ecosystem-card {
-      min-height: auto;
-
-      &:last-child {
-        grid-column: auto;
-      }
-    }
-  }
-}
 
 .home-page {
   .platform-section {
@@ -331,6 +217,114 @@ margin-top: -80px;
     .platform-section {
       margin-top: -30px;
       padding-top: 80px;
+    }
+  }
+}
+//scss
+.platform-page {
+  .platform-ecosystem {
+    margin-top: -25px;
+    padding: 75px 0 110px;
+    background: linear-gradient(
+      180deg,
+      #dbe2ff 0%,
+      #8fa4f2 24%,
+      #5272df 52%,
+      #3155c5 100%
+    );
+
+    .platform-ecosystem_grid { 
+      max-width: 1680px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: stretch;
+      @include lg{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .ecosystem-card {
+        min-height: 392px;
+        padding:44px 31px 46px;
+        border-radius: 40px;
+        border: 2px solid #F3F4F6;
+        box-shadow: 0px 0px 50px -32px #00000040;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: $white;
+        // color: $primary-color;
+        text-align: left;
+        justify-content: space-between;
+        gap: 30px;
+
+        .cardbody{
+          display: flex;
+          flex-direction: column;
+          .ecosystem-card_title{
+            img{
+              width: auto;
+              height: 60px;
+              object-fit: contain;
+              // @include lg{
+              //   max-width: 400px;
+              // }
+            }
+
+          }
+          h3 {
+            margin: 20px 0 12px;
+            color: $blue;
+          }
+          strong, p {
+            color: $primary-color;
+            margin-bottom: 0px;
+          }
+          strong{
+            font-weight: $fw-bold;
+          }
+        }
+
+        a{
+          box-shadow: 0px 4px 14px 0px #FF670040;
+          background: #FF6700;
+          width: 160px;
+          height: 52px;  
+          color: $white;
+        }
+
+    // > a {
+    //   margin-top: auto;
+    //   padding: 11px 17px;
+    //   border-radius: 4px;
+    //   background: #ff6500;
+    //   color: $white;
+    //   font-size: 12px;
+    //   box-shadow: 0 5px 12px rgba(255, 101, 0, 0.25);
+    // }
+
+    // &:last-child {
+    //   grid-column: 1;
+    // }
+  }
+    }
+  }
+
+  
+}
+
+@media only screen and (max-width: 767px) {
+  .platform-page {
+    .platform-ecosystem__grid {
+      
+    }
+
+    .ecosystem-card {
+      min-height: auto;
+
+      &:last-child {
+        grid-column: auto;
+      }
     }
   }
 }

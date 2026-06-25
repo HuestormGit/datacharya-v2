@@ -1,19 +1,45 @@
 .footer {
-  background: #1b2430;
-  color: #fff;
+  background: #F9FAFB;
+
+  // background: #1b2430;
+  color: #4A5565;
   padding: 80px 0;
 
-  h3,
-  h5 {
-    margin-bottom: 20px;
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: 10px;
+  .widget1{
+    .footerlogo{
+    margin-bottom: 16px;
     }
+
+    .company-info{
+      font-family: Nunito Sans;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22.75px;
+      letter-spacing: 0px;
+      color:#4A5565;
+      width: 272px;
+    }
+
   }
+  
+  .Capabilities, .Company ,.Resources{
+    h5{
+      color: #1A1A1A;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+  
+
+  
+
+  
 }

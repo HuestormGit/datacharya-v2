@@ -1,11 +1,10 @@
 import "./AdvisoryJourney.scss";
 import EngagementModel from "../../assets/images/EngagementModel.png";
+import quote from "../../assets/images/quote.png";
+import SliderModule from "react-slick";
+import { useState, useEffect } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
+const Slider = SliderModule.default || SliderModule;
 
 const scopeItems = [
   "Enterprise governance design",
@@ -40,9 +39,83 @@ const testimonials = [
     outcome:
       "Control ownership and execution visibility improved across teams.",
   },
+  {
+    quote:
+      "Datacharya connected our governance strategy to practical execution, giving leadership clearer accountability and measurable progress.",
+    name: "Rahul Mehta",
+    role: "CFO",
+    company: "Mid-cap Manufacturing",
+    outcome: "IPO readiness achieved with full governance traceability.",
+  },
+  {
+    quote:
+      "The engagement moved beyond advisory recommendations and gave our teams a structure they could operate and continuously improve.",
+    name: "Anita Rao",
+    role: "Transformation Head",
+    company: "Enterprise Services",
+    outcome:
+      "Control ownership and execution visibility improved across teams.",
+  },
 ];
 
 const AdvisoryJourney = () => {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth < 768
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () =>
+      window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    autoplay: true,
+    autoplaySpeed: 4000,
+
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    // centerMode: false,
+    beforeChange: (_, next) => {
+      setCurrentSlide(next);
+    },
+
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    ],
+    
+  };
+
+  // const visibleSlides = 1;
+  const visibleSlides = isMobile ? 1 : 2;
+
+  const totalPositions = Math.max(
+    testimonials.length - visibleSlides + 1,
+    1
+  );
+
+  const progressWidth = Math.min(
+    ((currentSlide + 1) / totalPositions) * 100,
+    100
+  );
+
   return (
     <section className="advisory-journey">
       <div className="container">
@@ -112,7 +185,7 @@ const AdvisoryJourney = () => {
               <p className="paragraph16_24_400">Strategic outcomes delivered across sectors</p>
             </header>
 
-            <div className="advisory-testimonials__slider">
+            {/* <div className="advisory-testimonials__slider">
               <Swiper
                 modules={[Autoplay, Pagination]}
                 slidesPerView={1}
@@ -156,6 +229,50 @@ const AdvisoryJourney = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
+            </div> */}
+
+            <div className="advisory-testimonials_slider">
+              <Slider {...settings}>
+                {testimonials.map((testimonial, index) => (
+                  <div key={index}>
+                    <blockquote className="testimonial-card">
+                      <span className="quote-mark">
+                        <img src={quote} alt="quote" />
+                      </span>
+
+                      <p className="paragraph16">"{testimonial.quote}'</p>
+
+                      <footer>
+                        <span className="avatar">
+                          {testimonial.name
+                            .split(" ")
+                            .map((part) => part[0])
+                            .join("")}
+                        </span>
+
+                        <div>
+                          <p className="testoName">{testimonial.name}</p>
+                          <p className="paragraph16 testoRole">{testimonial.role}</p>
+                          <p className="paragraph16 testoCompany">{testimonial.company}</p>
+                        </div>
+                      </footer>
+
+                      <div className="outcome">
+                        <p className="outcomeheading paragraph16">OUTCOME</p>
+                        <p className="content">{testimonial.outcome}</p>
+                      </div>
+                    </blockquote>
+                  </div>
+                ))}
+              </Slider>
+
+              <div className="custom-progress">
+                <span
+                  style={{
+                    width: `${progressWidth}%`,
+                  }}
+                />
+              </div>
             </div>
           </article>
         </div>

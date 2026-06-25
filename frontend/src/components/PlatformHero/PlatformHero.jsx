@@ -9,8 +9,8 @@ const PlatformHero = () => {
     >
       <div className="platform-hero__content container">
         <p className="paragraph16">PLATFORMS</p>
-        <h1>Ecosystem of Transformation</h1>
-        <p className="paragraph16 platform-hero__summary">
+        <h1 className="H160">Ecosystem of Transformation</h1>
+        <p className="paragraph18px platform-hero__summary">
           An interoperable governance ecosystem that converts advisory into
           executable workflows, continuous assurance and measurable enterprise
           outcomes.
