@@ -157,10 +157,7 @@
 
 
         span {
-          font-family: $font-primary;
-          font-size: inherit;
-          font-weight: inherit;
-          line-height: inherit;
+          color: #4160F0;
         }
       }
       p{
@@ -236,6 +233,30 @@
         
       }
 
+      // .connector {
+      //   display: none;
+      //   @include md{
+      //     display: block;
+      //     position: absolute;
+      //     top: 14px;
+      //     right: -14px;
+      //     width: 34px;
+      //     height: 34px;
+      //     border : 2px solid $orange;
+      //     padding: 5px;
+      //     border-radius: 50%;
+      //     background-color: $white;
+      //   }
+
+      //   &::before {
+      //     display: none;
+      //   }
+      //   i{
+      //     width: 12px;
+      //     height: 10px;
+      //     color: $orange;
+      //   }
+      // }
       .connector {
         display: none;
         @include md{
@@ -243,22 +264,18 @@
           position: absolute;
           top: 14px;
           right: -14px;
-          width: 34px;
-          height: 34px;
-          border : 2px solid $orange;
-          padding: 5px;
-          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          // border : 2px solid $orange;
+          // padding: 5px;
+          // border-radius: 50%;
           background-color: $white;
         }
 
         &::before {
           display: none;
         }
-        i{
-          width: 12px;
-          height: 10px;
-          color: $orange;
-        }
+        
       }
 
       }

@@ -9,12 +9,15 @@ import R from "../../assets/images/ROIDASHBOARD.png";
 import SAMYOG_hp from "../../assets/images/SAMYOG-hp.png";
 import SHRUTI_hp from "../../assets/images/SHRUTI-hp.png";
 import SMRITI_hp from "../../assets/images/SMRITI-hp.png";
+import SAMVAD_hp from "../../assets/images/SAMVAD-hp.png";
+
+
 
 const platformData = [
   {
     id: 1,
     title: "SMRITI",
-    img: SAMYOG_hp,
+    img: SMRITI_hp,
     subtitle: "Governance Frameworks",
     description:
       "Advisory defines the governance spine; platform converts it into policies, procedures, controls, ownership, evidence and exceptions.",
@@ -42,7 +45,7 @@ const platformData = [
   {
     id: 3,
     title: "SAMYOG",
-    img: SMRITI_hp,
+    img: SAMYOG_hp,
     subtitle: "Trust & Organizational Intelligence",
     description:
       "Advisory interprets credibility, culture and leadership signals; platform validates professional trust and organizational health.",
@@ -52,7 +55,7 @@ const platformData = [
   {
     id: 4,
     title: "SAMVAD",
-    img: SAMYOG_hp,
+    img: SAMVAD_hp,
     subtitle: "Enterprise Interaction Layer",
     description:
       "Advisory turns decisions into operating rhythm; platform manages workflows, collaboration, utilities and action tracking.",

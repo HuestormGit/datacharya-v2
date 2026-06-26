@@ -66,38 +66,52 @@ const Insights = ({ variant = "page" }) => {
                     src={`${import.meta.env.VITE_API_URL}${article.featured_image?.url}`}
                     alt={article.title}
               /> */}
-               <img src={article.featured_image?.url || ""} alt={article.title} />
 
-              <div className="content">
-                <div className="insight-meta">
-                  <span className={index === 1 ? "orange" : ""}>
-                    {article.tags?.[0]?.Name}
-                  </span>
+              <div className="boxbody">
+                <img src={article.featured_image?.url || ""} alt={article.title} />
+                <div className="content">
+                  <div className="insight-meta">
+                    <span className={index % 2 !== 0 ? "orange" : "blue"}>
+                      {article.tags?.[0]?.Name}
+                    </span>
+                    {/* <span className={index === 1 ? "orange" : "blue"}>
+                      {article.tags?.[0]?.Name}
+                    </span> */}
 
-                  <small>
-                    {new Date(article.publish_date).toLocaleDateString(
-                      "en-GB",
-                      {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      }
-                    )}
-                  </small>
+                    <small>
+                      {new Date(article.publish_date).toLocaleDateString(
+                        "en-GB",
+                        {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        }
+                      )}
+                    </small>
+                  </div>
+
+                  <h3 className="h30px">{article.title}</h3>
+
+                  <p className="paragraph16">{article.excerpt}</p>
+
+                  {/* <a href={`/insights/${article.url}`} className={index === 1 ? "orange" : ""}>
+                    Read More →
+                  </a> */}
+
+                
                 </div>
 
-                <h3 className="h30px">{article.title}</h3>
-
-                <p className="paragraph16">{article.excerpt}</p>
-
-                {/* <a href={`/insights/${article.url}`} className={index === 1 ? "orange" : ""}>
-                  Read More →
-                </a> */}
-
-                <a href={article.read_more_link || `/insights/${article.url}`} target={article.read_more_link ? "_blank" : "_self"} rel={article.read_more_link ? "noopener noreferrer" : ""} className={index === 1 ? "orange" : ""}>
+              </div>
+              <div className="boxfooter">
+                <a href={article.read_more_link || `/insights/${article.url}`} target={article.read_more_link ? "_blank" : "_self"} rel={article.read_more_link ? "noopener noreferrer" : ""} className= "myButton1">
                   Read More →
                 </a>
+
               </div>
+
+               
+
+              
             </article>
           ))}
         </div>

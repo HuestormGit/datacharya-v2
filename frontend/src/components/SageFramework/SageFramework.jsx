@@ -2,6 +2,8 @@ import "./SageFramework.scss";
 import sense  from "../../assets/images/sense-icon.png"; //must change
 import ALIGN  from "../../assets/images/ALIGN.png";
 import GOVERN  from "../../assets/images/GOVERN.png";
+import orangearrow  from "../../assets/images/orangearrow.png";
+
 
 const defaultSteps = [
   {
@@ -169,6 +171,7 @@ const SageFramework = ({ variant = "default" }) => {
                 {index !== steps.length - 1 && (
                   <span className="connector" aria-hidden="true">
                     <i className="fa-solid fa-arrow-right"></i>
+                    
                   </span>
                 )}
               </article>
@@ -250,7 +253,8 @@ const SageFramework = ({ variant = "default" }) => {
               {/* CONNECTOR */}
               {index !== steps.length - 1 && (
                 <div className="connector">
-                  <i className="fa-solid fa-arrow-right"></i>
+                  {/* <i className="fa-solid fa-arrow-right"></i> */}
+                  <img src={orangearrow} alt="->" />
                 </div>
               )}
 

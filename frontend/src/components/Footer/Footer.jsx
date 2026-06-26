@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/footer-logo.png";
 
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      <div className="container-1680">
+      <div className="container">
 
         <div className="row">
 
-          <div className="col-lg-3 widget1">
+          <div className="col-lg-3 col-md-6 col-sm-12 widget1">
             <div className="footerlogo"><img src={logo} alt="Datacharya" /></div>
 
             <p className="company-info">
@@ -19,49 +19,68 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="col-lg-3 Capabilities">
+          <div className="col-lg-3 col-md-6 col-sm-12 Capabilities">
             <h5 className="paragraph16_24_600">Capabilities</h5>
 
             <ul>
               <li>
                 <NavLink
-                to="/approach"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Smriti</NavLink></li>
+                  to="/approach?tab=smriti"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Smriti
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
-                to="/approach"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Sutra</NavLink></li>
+                  to="/approach?tab=smriti"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Sutra
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
-                to="/approach"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Shruti</NavLink></li>
+                  to="/approach?tab=shruti"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Shruti
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
-                to="/approach"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Samyog</NavLink></li>
+                  to="/approach?tab=samyog"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Samyog
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
-                to="/approach"
-                className={({ isActive }) =>
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Samvad</NavLink></li>
+                  to="/approach?tab=samvad"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Samvad
+                </NavLink>
+              </li>
             </ul>
           </div>
 
-          <div className="col-lg-3 Company">
+          <div className="col-lg-3 col-md-6 col-sm-12 Company">
             <h5>Company</h5>
 
             <ul>
@@ -93,7 +112,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-lg-3 Resources">
+          <div className="col-lg-3 col-md-6 col-sm-12 Resources">
             <h5>Resources</h5>
             <ul>
               <li>

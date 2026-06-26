@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./ApproachPlatforms.scss";
 import SMRITISUTRA  from "../../assets/images/SMRITISUTRA.png";
 import SHRUTI  from "../../assets/images/SHRUTI.png";
@@ -85,6 +86,7 @@ const packs = [
 const platformData = [
   {
     id: 1,
+    slug: "smriti",
     title: "SMRITI + SUTRA",
     subtitle: "Enterprise Governance Framework & SAP Blueprint Design",
     headline:
@@ -110,6 +112,7 @@ const platformData = [
 
   {
     id: 2,
+    slug: "shruti",
     title: "SHRUTI",
     subtitle: "Evidence & Assurance Intelligence",
     headline:
@@ -135,6 +138,7 @@ const platformData = [
 
   {
     id: 3,
+    slug: "samyog",
     title: "SAMYOG",
     subtitle: "Trust & Organizational Intelligence",
 
@@ -162,6 +166,7 @@ const platformData = [
 
   {
     id: 4,
+    slug: "samvad",
     title: "SAMVAD",
     subtitle: "Enterprise Interaction Layer",
 
@@ -233,7 +238,31 @@ const SmritiContent = () => (
 );
 
 const ApproachPlatforms = () => {
+  const location = useLocation();
+
   const [openItem, setOpenItem] = useState(1);
+
+ useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const tab = params.get("tab");
+
+  const selected = platformData.find((item) => item.slug === tab);
+
+  if (selected) {
+    setOpenItem(selected.id);
+
+    setTimeout(() => {
+      const element = document.getElementById(`section-${selected.id}`);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  }
+}, [location]);
 
   const toggleItem = (id) => {
     setOpenItem((current) => (current === id ? null : id));
@@ -249,10 +278,16 @@ const ApproachPlatforms = () => {
             const panelId = `${item.id}-panel`;
 
             return (
+              // <article
+              //   className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone} `}
+              //   key={item.id}
+              // >
+
               <article
-                className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone} `}
-                key={item.id}
-              >
+  id={`section-${item.id}`}
+  className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone}`}
+  key={item.id}
+>
                 <button
                   type="button"
                   aria-expanded={isOpen}
