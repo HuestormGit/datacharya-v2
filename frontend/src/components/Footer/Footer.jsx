@@ -9,10 +9,14 @@ const Footer = () => {
 
       <div className="container">
 
-        <div className="row">
+        <div className="row sec1">
 
           <div className="col-lg-3 col-md-6 col-sm-12 widget1">
-            <div className="footerlogo"><img src={logo} alt="Datacharya" /></div>
+            <div className="footerlogo">
+              <NavLink className="navbar-brand" to="/">
+                <img src={logo} alt="Datacharya" />
+              </NavLink>
+            </div>
 
             <p className="company-info">
               Enterprise governance and assurance that delivers measurable outcomes.
@@ -135,6 +139,13 @@ const Footer = () => {
             <p>info@datacharya.in</p>
           </div>
 
+        </div>
+
+        <div className="row">
+          <div className="col-12 text-center Copyright">
+            <p>Copyright © 2026 Datacharya</p>
+          </div>
+          
         </div>
 
       </div>

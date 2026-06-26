@@ -5,7 +5,11 @@
 
   // background: #1b2430;
   color: $white;
-  padding: 80px 0;
+  padding: 80px 0 25px;
+  
+  .sec1{
+    align-items: flex-start;
+  }
 
   .widget1{
     .footerlogo{
@@ -37,6 +41,13 @@
       }
     }
 
+  }
+  .Copyright{
+    border-top: 1px solid $orange;
+    margin-top: 15px;
+    p{
+      margin: 18px 0;
+    }
   }
 
   

@@ -7,7 +7,7 @@ const ContactUsHero = () => {
       <div className="contact-hero__content container">
         <p className="paragraph16">CONTACT</p>
         <h1 className="H160">
-          Most problems are solved with one honest conversation.
+          Most problems are solved with<br/> one honest conversation.
           <br/>Start yours here.
 
         </h1>

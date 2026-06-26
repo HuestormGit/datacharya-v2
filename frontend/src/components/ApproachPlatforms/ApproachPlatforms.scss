@@ -21,6 +21,16 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(17, 17, 17, 0.08);
 
+      &.is-open{
+        .approach-platforms__item-icon {
+          box-shadow: 0px 4px 6px -4px #0000001A;
+          img{
+            box-shadow: 0px 10px 15px -3px #0000001A;
+          }
+        }
+
+      }
+
       &.is-open.blue{
         border: 1px solid $blue;
         > button {
@@ -109,14 +119,27 @@
             place-items: center;
             color: #ffffff;
             font-size: 19px;
-            box-shadow: 0 5px 10px rgba(17, 17, 17, 0.15);
+            
             @include md{
               flex: 0 0 42px;
               width: 42px;
               height: 42px;
             }
+            @include xxl{
+              flex: 0 0 64px;
+              width: 64px;
+              height: 64px;
+            }
+            img{
+              @include xxl{
+                width: 64px;
+                height: 64px;
+              }
+
+            }
             
           }
+          
           .approach-platforms__item-title {
             display: flex;
             flex: 1;

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./ApproachPlatforms.scss";
-import SMRITISUTRA  from "../../assets/images/SMRITISUTRA.png";
-import SHRUTI  from "../../assets/images/SHRUTI.png";
-import SAMYOG  from "../../assets/images/SAMYOG.png";
-import SAMVAD  from "../../assets/images/SAMVAD.png";
+import SMRITISUTRA  from "../../assets/images/SMRITI-hp.png";
+import SHRUTI  from "../../assets/images/SHRUTI-hp1.png";
+import SAMYOG  from "../../assets/images/SAMYOG-hp.png";
+import SAMVAD  from "../../assets/images/SAMVAD-hp1.png";
 import orangeicon  from "../../assets/images/orange-arrow.png";
  
 const packs = [
