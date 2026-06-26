@@ -1,13 +1,15 @@
 import "./SageFramework.scss";
-import sense  from "../../assets/images/sense-icon.png"; //must change
+import SENSE  from "../../assets/images/SENSE.png"; 
 import ALIGN  from "../../assets/images/ALIGN.png";
 import GOVERN  from "../../assets/images/GOVERN.png";
+import ELEVATE  from "../../assets/images/ELEVATE.png";
+
 import orangearrow  from "../../assets/images/orangearrow.png";
 
 
 const defaultSteps = [
   {
-    icon: ALIGN,
+    icon: SENSE,
     title: "SENSE",
     subtitle: "Advisory diagnosis",
     description:
@@ -34,7 +36,7 @@ const defaultSteps = [
       "Platform Outcome Live workflows + automated evidence capture + measurable controls",
   },
   {
-    icon: GOVERN,
+    icon: ELEVATE,
     title: "ELEVATE",
     subtitle: "Continuous assurance",
     description:
@@ -93,7 +95,7 @@ const approachSteps = [
   {
     iconLabel: "S",
     title: "SENSE",
-    img: sense,
+    img: SENSE,
     subtitle: "Advisory diagnosis",
     description:
       "We begin by capturing the truth of the organisation. This involves deep-dive data discovery and sensing the cultural pulse. We identify the hidden silos and friction points that traditional audits miss.",
@@ -123,7 +125,7 @@ const approachSteps = [
   {
     iconLabel: "E",
     title: "ELEVATE",
-    img: sense,
+    img: ELEVATE,
     subtitle: "Continuous assurance",
     description:
       "With a stable foundation in place, we move toward high-performance outcomes. Whether it is AI adoption or cost-major synergy, we elevate the organisation into a state of AI Readiness and peak leadership alignment.",
