@@ -1,39 +1,122 @@
+import { useState } from "react";
 import "./ContactForm.scss";
 
 const ContactForm = () => {
-  const handleSubmit = (event) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    designation: "",
+    problem: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    try {
+      const response = await fetch(
+        "http://localhost:1337/api/contacts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            data: formData,
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      console.log(result);
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+
+        setFormData({
+          name: "",
+          company: "",
+          designation: "",
+          problem: "",
+        });
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server Error");
+    }
   };
 
   return (
     <section className="contact-form-section">
       <div className="container">
         <div className="contact-form-layout">
+
           <div className="contact-location">
             <h2 className="H240px">Location</h2>
+
             <p className="Paragrapha16">
-              Address<br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien quam, pellentesque et dolor vitae, tincidunt dictum turpis.
+              Address
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-            <label htmlFor="contact-name" className="paragraph18px">Your Name</label>
-            <input id="contact-name" name="name" type="text" required />
 
-            <label htmlFor="contact-company" className="paragraph18px">Your Company Name</label>
-            <input id="contact-company" name="company" type="text" required />
+            <label>Your Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-            <label htmlFor="contact-designation" className="paragraph18px">Your Designation</label>
-            <input id="contact-designation" name="designation" type="text" required />
+            <label>Your Company Name</label>
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              required
+            />
 
-            <label htmlFor="contact-problem" className="paragraph18px">
+            <label>Your Designation</label>
+            <input
+              type="text"
+              name="designation"
+              value={formData.designation}
+              onChange={handleChange}
+              required
+            />
+
+            <label>
               State your current business problem briefly
             </label>
-            <textarea id="contact-problem" name="problem" rows="5" required />
 
-            <button type="submit" className="myButton">Submit&nbsp; →</button>
+            <textarea
+              rows="5"
+              name="problem"
+              value={formData.problem}
+              onChange={handleChange}
+              required
+            />
+
+            <button type="submit" className="myButton">
+              Submit →
+            </button>
+
           </form>
+
         </div>
       </div>
     </section>
