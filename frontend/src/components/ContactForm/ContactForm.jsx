@@ -21,7 +21,8 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:1337/api/contacts",
+        "https://smiling-garden-31c6e2badd.strapiapp.com/api/contacts",
+        // "http://localhost:1337/api/contacts",
         {
           method: "POST",
           headers: {
