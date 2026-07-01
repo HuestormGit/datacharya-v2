@@ -367,7 +367,7 @@ const ApproachPlatforms = () => {
             );
           })}
         </div>
-        <div className="text-center p-4">
+        <div className="approach-platforms_btn text-center">
           <a href="contactUs" className="advisory-btn myButton">
                 Talk to Our Advisory Team →
               </a>
