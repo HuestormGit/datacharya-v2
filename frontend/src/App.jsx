@@ -8,18 +8,23 @@ import Insights from "./pages/Insights";
 import ContactUs from "./pages/ContactUs";
 import AdvisoryPage from "./pages/Advisory";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/approach" element={<Approach />} />
-      <Route path="/platform" element={<Platform />} />
-      <Route path="/insights" element={<Insights />} />
-      <Route path="/contactUs" element={<ContactUs />} />
-      <Route path="/advisory" element={<AdvisoryPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/approach" element={<Approach />} />
+        <Route path="/platform" element={<Platform />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/advisory" element={<AdvisoryPage />} />
+      </Routes>
+    </>
+    
   );
 }
 

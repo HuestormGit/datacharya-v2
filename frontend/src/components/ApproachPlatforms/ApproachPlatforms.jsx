@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useState, useRef ,useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./ApproachPlatforms.scss";
 import SMRITISUTRA  from "../../assets/images/SMRITI-hp.png";
 import SHRUTI  from "../../assets/images/SHRUTI-hp1.png";
 import SAMYOG  from "../../assets/images/SAMYOG-hp.png";
 import SAMVAD  from "../../assets/images/SAMVAD-hp1.png";
-import orangeicon  from "../../assets/images/orange-arrow.png";
+// import orangeicon  from "../../assets/images/orange-arrow.png";
  
 const packs = [
   {
@@ -241,8 +242,33 @@ const ApproachPlatforms = () => {
   const location = useLocation();
 
   const [openItem, setOpenItem] = useState(1);
+  // const [openIndex, setOpenIndex] = useState(0);
 
- useEffect(() => {
+  // const itemRefs = useRef([]);
+
+//  useEffect(() => {
+//   const params = new URLSearchParams(location.search);
+//   const tab = params.get("tab");
+
+//   const selected = platformData.find((item) => item.slug === tab);
+
+//   if (selected) {
+//     setOpenItem(selected.id);
+
+//     setTimeout(() => {
+//       const element = document.getElementById(`section-${selected.id}`);
+
+//       if (element) {
+//         element.scrollIntoView({
+//           behavior: "smooth",
+//           block: "start",
+//         });
+//       }
+//     }, 100);
+//   }
+// }, [location]);
+
+useEffect(() => {
   const params = new URLSearchParams(location.search);
   const tab = params.get("tab");
 
@@ -255,18 +281,74 @@ const ApproachPlatforms = () => {
       const element = document.getElementById(`section-${selected.id}`);
 
       if (element) {
-        element.scrollIntoView({
+        const navbarHeight = 90;
+
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
+
+        window.scrollTo({
+          top: y,
           behavior: "smooth",
-          block: "start",
+        });
+      }
+    }, 200);
+  }
+}, [location]);
+
+const toggleItem = (id) => {
+  const newItem = openItem === id ? null : id;
+
+  setOpenItem(newItem);
+
+  if (newItem !== null) {
+    setTimeout(() => {
+      const element = document.getElementById(`section-${id}`);
+
+      if (element) {
+        const navbarHeight = 90;
+
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
         });
       }
     }, 100);
   }
-}, [location]);
+};
 
-  const toggleItem = (id) => {
-    setOpenItem((current) => (current === id ? null : id));
-  };
+  // const toggleItem = (id) => {
+  //   setOpenItem((current) => (current === id ? null : id));
+  // };
+
+//   const handleToggle = (index) => {
+//   const newIndex = openIndex === index ? -1 : index;
+
+//   setOpenIndex(newIndex);
+
+//   // Wait until React finishes rendering
+//   setTimeout(() => {
+//     if (newIndex !== -1 && itemRefs.current[index]) {
+//       const navbarHeight = 90; // change if your header height is different
+
+//       const y =
+//         itemRefs.current[index].getBoundingClientRect().top +
+//         window.pageYOffset -
+//         navbarHeight;
+
+//       window.scrollTo({
+//         top: y,
+//         behavior: "smooth",
+//       });
+//     }
+//   }, 100);
+// };
   
 
   return (
@@ -274,6 +356,7 @@ const ApproachPlatforms = () => {
       <div className="container">
         <div className="approach-platforms__list">
           {platformData.map((item) => {
+          
             const isOpen = openItem === item.id;
             const panelId = `${item.id}-panel`;
 
@@ -353,7 +436,8 @@ const ApproachPlatforms = () => {
                         {item.id === 1 ? (
                             <div className="approach-platforms__actions">
                                 {/* <a href="/contact?interest=smriti-demo">Request a Smriti Demo →</a> */}
-                                <a href="/contactUs">Request a Smriti Demo →</a>
+                                {/* <a href="/contactUs">Request a Smriti Demo →</a> */}
+                                <Link to="/contactUs">Request a Smriti Demo →</Link>
                                 <a className="outline" href="/smriti-pack-overview.pdf">Download Pack Overview ↓</a>
                             </div>
                         ) : ( "")}
@@ -368,9 +452,10 @@ const ApproachPlatforms = () => {
           })}
         </div>
         <div className="approach-platforms_btn text-center">
-          <a href="contactUs" className="advisory-btn myButton">
+          {/* <a href="contactUs" className="advisory-btn myButton">
                 Talk to Our Advisory Team →
-              </a>
+              </a> */}
+              <Link to="/contactUs" className="advisory-btn myButton"> Talk to Our Advisory Team → </Link>
 
         </div>
         
