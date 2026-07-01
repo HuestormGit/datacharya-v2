@@ -2,7 +2,7 @@
 @use '../../assets/scss/mixins' as *;
 
 .hero-slider {
-  margin-top: -56px;
+  margin-top: -90px;
   .hero-section {
     
     position: relative;
@@ -68,7 +68,7 @@
         padding: 13px 22px;
         border: 1px solid $blue;
         border-radius: 3px;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: $fw-semibold;
       }
 
@@ -106,15 +106,15 @@
           background: url('../../assets/images/check.png') center / contain no-repeat;
         }
 
-        strong {
-          font-size: 12px;
-        }
+        // strong {
+        //   font-size: 12px;
+        // }
 
-        span {
-          margin-top: 3px;
-          font-size: 10px;
-          line-height: 1.35;
-        }
+        // span {
+        //   margin-top: 3px;
+        //   font-size: 10px;
+        //   line-height: 1.35;
+        // }
       }
     }
   }

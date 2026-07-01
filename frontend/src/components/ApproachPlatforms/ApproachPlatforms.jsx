@@ -284,10 +284,10 @@ const ApproachPlatforms = () => {
               // >
 
               <article
-  id={`section-${item.id}`}
-  className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone}`}
-  key={item.id}
->
+                id={`section-${item.id}`}
+                className={`approach-platforms__item ${isOpen ? "is-open" : ""} ${item.tone}`}
+                key={item.id}
+              >
                 <button
                   type="button"
                   aria-expanded={isOpen}
@@ -367,6 +367,13 @@ const ApproachPlatforms = () => {
             );
           })}
         </div>
+        <div className="text-center p-4">
+          <a href="contactUs" className="advisory-btn myButton">
+                Talk to Our Advisory Team →
+              </a>
+
+        </div>
+        
       </div>
     </section>
   );

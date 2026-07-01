@@ -126,7 +126,7 @@ const Advisory = ({ variant = "default" }) => {
                 <li>Measurable outcomes tracked from day one</li>
               </ul> */}
 
-              <a href="#contact" className="advisory-btn myButton">
+              <a href="contactUs" className="advisory-btn myButton">
                 Talk to Our Advisory Team →
               </a>
 

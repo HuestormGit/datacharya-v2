@@ -105,7 +105,7 @@ const HeroSlider = () => {
                       {hero.benefits.map((item) => (
                         <li key={item.id}>
                           <strong className="paragraph18px">{item.title}</strong>
-                          <span className="Paragrapha16">{item.description}</span>
+                          <span className="paragraph16">{item.description}</span>
                         </li>
                       ))}
                     </ul>

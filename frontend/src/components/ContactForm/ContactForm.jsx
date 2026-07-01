@@ -62,13 +62,9 @@ const ContactForm = () => {
         <div className="contact-form-layout">
 
           <div className="contact-location">
-            <h2 className="H240px">Location</h2>
+            <h2 className="H240px">Get in Touch</h2>
 
-            <p className="Paragrapha16">
-              Address
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            {/* s  */}
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>

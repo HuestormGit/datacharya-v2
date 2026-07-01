@@ -1,5 +1,6 @@
 import "./Genesis.scss";
 import advisoryImage from "../../assets/images/advisory.png";
+import advisorysecImage from "../../assets/images/advisorysec.png";
 
 const Genesis = () => {
   return (
@@ -14,7 +15,7 @@ const Genesis = () => {
               Western consulting approaches often miss nuances of Indian business
               philosophy.
             </p>
-            <p className="genesis-note h30px">
+            <p className="genesis-note paragraph18px">
               We emphasize <span className="paragraph18px">holistic rather than transactional</span> thinking,
               combining ancient scriptural wisdom with contemporary data science.
             </p>
@@ -22,18 +23,18 @@ const Genesis = () => {
         </div>
 
         <div className="core-philosophy">
-          <h2 className="H160">Core Philosophy</h2>
+          {/* <h2 className="H160">Core Philosophy</h2> */}
           <p className="H240px">
             Data is not just an asset - it is a responsibility.
             <br />
             When governed well, it becomes dharma.
           </p>
-          <small className="paragraph16">- Mission Statement</small>
+          {/* <small className="paragraph16">- Mission Statement</small> */}
         </div>
 
         <div className="ethical-intelligence">
           <div className="img-box">
-            <img src={advisoryImage} alt="Business leaders in a governance discussion" />
+            <img src={advisorysecImage} alt="Business leaders in a governance discussion" />
 
           </div>
           <div className="ethical-copy">

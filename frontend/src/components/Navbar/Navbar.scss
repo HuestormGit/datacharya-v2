@@ -14,9 +14,15 @@
   /* LOGO */
   .navbar-brand {
     img {
-      width: 180px;
+      width: 200px;
       height: auto;
       display: block;
+      @include md{
+        width: 250px;
+      }
+      @include xl{
+        width: 350px;
+      }
     }
   }
 
@@ -159,13 +165,13 @@ z-index: 9999;
    TABLET
 ========================= */
 
-@include lg {
-  .custom-navbar {
-    .navbar-brand img {
-      width: 170px;
-    }
-  }
-}
+// @include lg {
+//   .custom-navbar {
+//     .navbar-brand img {
+//       width: 170px;
+//     }
+//   }
+// }
 
 /* =========================
    MOBILE
@@ -175,9 +181,9 @@ z-index: 9999;
   .custom-navbar {
     padding: 15px 0;
 
-    .navbar-brand img {
-      width: 140px;
-    }
+    // .navbar-brand img {
+    //   width: 140px;
+    // }
 
     .navbar-nav {
       gap: 0;
@@ -237,9 +243,9 @@ z-index: 9999;
 
 @media only screen and (max-width: 576px) {
   .custom-navbar {
-    .navbar-brand img {
-      width: 120px;
-    }
+    // .navbar-brand img {
+    //   width: 120px;
+    // }
 
     .navbar-collapse {
       padding: 16px;
