@@ -9,22 +9,15 @@ const ContactForm = () => {
     problem: "",
   });
 
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value,
-    }));
+    });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // Prevent multiple clicks
-    if (loading) return;
-
-    setLoading(true);
 
     try {
       const response = await fetch(
@@ -45,23 +38,21 @@ const ContactForm = () => {
 
       console.log(result);
 
-      if (!response.ok) {
-        throw new Error(result.error?.message || "Something went wrong");
+      if (response.ok) {
+        alert("Form submitted successfully!");
+
+        setFormData({
+          name: "",
+          company: "",
+          designation: "",
+          problem: "",
+        });
+      } else {
+        alert("Something went wrong.");
       }
-
-      alert("Thank you! Your request has been submitted successfully.");
-
-      setFormData({
-        name: "",
-        company: "",
-        designation: "",
-        problem: "",
-      });
     } catch (err) {
       console.error(err);
-      alert(err.message || "Server Error. Please try again.");
-    } finally {
-      setLoading(false);
+      alert("Server Error");
     }
   };
 
@@ -69,11 +60,15 @@ const ContactForm = () => {
     <section className="contact-form-section">
       <div className="container">
         <div className="contact-form-layout">
+
           <div className="contact-location">
             <h2 className="H240px">Get in Touch</h2>
+
+            {/* s  */}
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
+
             <label>Your Name</label>
             <input
               type="text"
@@ -101,7 +96,9 @@ const ContactForm = () => {
               required
             />
 
-            <label>State your current business problem briefly</label>
+            <label>
+              State your current business problem briefly
+            </label>
 
             <textarea
               rows="5"
@@ -111,14 +108,12 @@ const ContactForm = () => {
               required
             />
 
-            <button
-              type="submit"
-              className="myButton"
-              disabled={loading}
-            >
-              {loading ? "Submitting..." : "Submit →"}
+            <button type="submit" className="myButton">
+              Submit →
             </button>
+
           </form>
+
         </div>
       </div>
     </section>
