@@ -437,8 +437,8 @@ const toggleItem = (id) => {
                             <div className="approach-platforms__actions">
                                 {/* <a href="/contact?interest=smriti-demo">Request a Smriti Demo →</a> */}
                                 {/* <a href="/contactUs">Request a Smriti Demo →</a> */}
-                                <Link to="/contactUs">Request a Smriti Demo →</Link>
-                                <a className="outline" href="/smriti-pack-overview.pdf">Download Pack Overview ↓</a>
+                                <Link to="/contactUs" className="myButton">Request a Smriti Demo →</Link>
+                                <a className="outline myButton" href="/smriti-pack-overview.pdf">Download Pack Overview ↓</a>
                             </div>
                         ) : ( "")}
 

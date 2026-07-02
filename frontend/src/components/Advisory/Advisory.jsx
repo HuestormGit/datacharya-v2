@@ -107,15 +107,15 @@ const Advisory = ({ variant = "default" }) => {
 
               <div className="mylist">
                 <div className="paragraph16">
-                  <i class="fa-regular fa-circle-check"></i>
+                  <i className="fa-regular fa-circle-check"></i>
                   Strategic governance design backed by implementation expertise
                 </div>
                  <div className="paragraph16"> 
-                  <i class="fa-regular fa-circle-check"></i>
+                  <i className="fa-regular fa-circle-check"></i>
                   Executive-level insights with operational depth
                 </div>
                  <div className="paragraph16"> 
-                  <i class="fa-regular fa-circle-check"></i>
+                  <i className="fa-regular fa-circle-check"></i>
                   Measurable outcomes tracked from day one
                 </div>
               </div>
