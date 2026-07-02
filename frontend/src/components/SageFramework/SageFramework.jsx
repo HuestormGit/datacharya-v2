@@ -1,4 +1,5 @@
 import "./SageFramework.scss";
+import { Link } from "react-router-dom";
 import SENSE  from "../../assets/images/SENSE.png"; 
 import ALIGN  from "../../assets/images/ALIGN.png";
 import GOVERN  from "../../assets/images/GOVERN.png";
@@ -288,9 +289,13 @@ const SageFramework = ({ variant = "default" }) => {
 
           </div>
 
-          <button className="myButton">
+          {/* <button className="myButton">
             View Case Studies
-          </button>
+          </button> */}
+
+           <Link className="myButton" to="/insights">
+                     View Case Studies      
+                        </Link>
 
         </div>
 
