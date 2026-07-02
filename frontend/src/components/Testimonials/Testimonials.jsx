@@ -3,26 +3,28 @@ import quote  from "../../assets/images/quote.png";
 
 const testimonials = [
   {
-    text: "Datacharya didn't just audit our controls. They showed us how to make them self-enforcing. Our ITGC cycle went from 6 months to 8 weeks.",
-    name: "Rahul Mehta",
+    text: "Datacharya didn't just advise – they anticipated. Before we encountered our first major issue, they had already prepared us for it. The infrastructure, the core team, the vendor selection — all done right the first time. Additionally, they still support the team as and when required even after the contract.",
+    name: "Hill Selia",
     role: "CFO",
-    company: "Mid-cap Manufacturing (IPO-bound)",
-    initials: "RM",
+    company: "RamKrinsha Pure Finance, Mumbai",
+    outcome: "Technical infrastructure and vendor ecosystem established. Foundation built for the next ten years of operations.",
+    initials: "HS",
   },
   {
-    text: "We had SAP implemented for 3 years. It took Datacharya 6 weeks to show us we were using less than 40% of what we'd paid for, and how to fix it.",
-    name: "Priya Sharma",
-    role: "Head of IT Governance",
-    company: "Leading BFSI Institution",
-    initials: "PS",
+    text: "We weren't using our technology as well as we should have been. Balaji gave us a clear, structured path through the problem – practical enough to implement without disrupting operations. The difference showed quickly. Our processes became more coordinated, our teams better aligned, and we finally felt in control of our technology rather than the other way around.",
+    name: "Tej Dholakia",
+    role: " Founder",
+    company: "SRK PureMed, Mumbai",
+    outcome: "Data processes streamlined. Technology utilisation improved. Cross-department coordination and operational performance measurably stronger.",
+    initials: "TD",
   },
-  {
-    text: "The Shruti platform gave us real-time control visibility for the first time. No more spreadsheet archaeology before board meetings.",
-    name: "Amit Patel",
-    role: "VP of Internal Audit",
-    company: "Global Manufacturing Conglomerate",
-    initials: "AP",
-  },
+  // {
+  //   text: "The Shruti platform gave us real-time control visibility for the first time. No more spreadsheet archaeology before board meetings.",
+  //   name: "Amit Patel",
+  //   role: "VP of Internal Audit",
+  //   company: "Global Manufacturing Conglomerate",
+  //   initials: "AP",
+  // },
 ];
 
 const Testimonials = () => {
@@ -54,6 +56,11 @@ const Testimonials = () => {
                   <p className="paragraph16 author-role">{item.role}</p>
                   <p className="paragraph16 author-company">{item.company}</p>
                 </div>
+                
+              </div>
+              <div className="outcome-box">
+                  <h6 className="paragraph16">OUTCOME</h6>
+                  <p className="paragraph16">{item.outcome}</p>
               </div>
             </article>
           ))}

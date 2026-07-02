@@ -47,7 +47,7 @@
       grid-template-columns: 1fr;
       gap: 40px;
       @include md{
-       grid-template-columns: repeat(3, 1fr);
+       grid-template-columns: repeat(2, 1fr);
        
       }
       
@@ -127,8 +127,15 @@
             }
           }
         }
+        
 
       }
+      .outcome-box{
+          margin-top: 33px;
+          h6{
+            color: $orange;
+          }
+        }
     }
 
     .results-text {

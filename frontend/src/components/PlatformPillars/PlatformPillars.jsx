@@ -1,4 +1,5 @@
 import "./PlatformPillars.scss";
+import { Link } from "react-router-dom";
 import C from "../../assets/images/CHETAK.png";
 import D from "../../assets/images/CHATURVIMA.png";
 import DA from "../../assets/images/DATARAKSHA.png";
@@ -267,10 +268,15 @@ const PlatformPillars = ({ variant = "default" }) => {
 
                   </div>
 
-                  <a className="platform-link myButton" href="/approach">
+                   <Link className="platform-link myButton" to="/approach">
+                            {item.buttonText} <i className="fa-solid fa-arrow-right"></i>
+
+                        </Link>
+
+                  {/* <a className="platform-link myButton" href="/approach">
                     {item.buttonText} <i className="fa-solid fa-arrow-right"></i>
 
-                  </a>
+                  </a> */}
 
                 </div>
               </div>

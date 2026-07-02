@@ -2,7 +2,7 @@
 @use '../../assets/scss/mixins' as *;
 
 .hero-slider {
-  margin-top: -90px;
+  margin-top: -93px;
   .hero-section {
     
     position: relative;
@@ -68,7 +68,7 @@
         padding: 13px 22px;
         border: 1px solid $blue;
         border-radius: 3px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: $fw-semibold;
       }
 
