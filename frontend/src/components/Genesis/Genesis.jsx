@@ -1,6 +1,6 @@
 import "./Genesis.scss";
 import advisoryImage from "../../assets/images/advisory.png";
-import advisorysecImage from "../../assets/images/advisorysec.png";
+import advisorysecImage from "../../assets/images/about_sec.jpeg";
 
 const Genesis = () => {
   return (
