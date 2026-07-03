@@ -14,36 +14,36 @@ const defaultSteps = [
     title: "SENSE",
     subtitle: "Advisory diagnosis",
     description:
-      "Advisory Outcome Diagnostic assessment report + governance opportunity map",
+      "Diagnostic assessment report + governance opportunity map",
     outcome:
-      "Platform Outcome Control inventory baseline + risk visibility dashboard",
+      "Control inventory baseline + risk visibility dashboard",
   },
   {
     icon: ALIGN,
     title: "ALIGN",
     subtitle: "Framework design",
     description:
-      "Advisory Outcome Control, framework blueprint + ownership model",
+      "Control, framework blueprint + ownership model",
     outcome:
-      "Platform Outcome Configured SMRITI governance packs + SUTRA blueprint structure",
+      "Configured SMRITI governance packs + SUTRA blueprint structure",
   },
   {
     icon: GOVERN,
     title: "GOVERN",
     subtitle: "Platform execution",
     description:
-      "Advisory Outcome Governance operating model + implementation roadmap",
+      "Governance operating model + implementation roadmap",
     outcome:
-      "Platform Outcome Live workflows + automated evidence capture + measurable controls",
+      "Live workflows + automated evidence capture + measurable controls",
   },
   {
     icon: ELEVATE,
     title: "ELEVATE",
     subtitle: "Continuous assurance",
     description:
-      "Advisory Outcome Performance insights + governance optimisation recommendations",
+      "Performance insights + governance optimisation recommendations",
     outcome:
-      "Platform Outcome Board-ready dashboards + assurance metrics + monitoring systems",
+      "Board-ready dashboards + assurance metrics + monitoring systems",
   },
 ];
 

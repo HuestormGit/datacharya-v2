@@ -10,7 +10,7 @@
     background: linear-gradient(110deg, $blue 0%, #8174b9 52%, #ff6500 100%);
     color: $white;
    @include xxl { 
-      min-height:430px;
+      min-height:630px;
       // margin-top: 70px;
       border-radius: 0 0 36px 36px;
     }

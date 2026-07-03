@@ -3,6 +3,8 @@ import EngagementModel from "../../assets/images/EngagementModel.png";
 import quote from "../../assets/images/quote.png";
 import SliderModule from "react-slick";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const Slider = SliderModule.default || SliderModule;
 
@@ -275,6 +277,17 @@ const AdvisoryJourney = () => {
               </div>
             </div>
           </article>
+        </div>
+
+        
+      </div>
+      <div className="container">
+        <div className="advisory-journey_btn text-center">
+          {/* <a href="contactUs" className="advisory-btn myButton">
+                Talk to Our Advisory Team →
+              </a> */}
+              <Link to="/contactUs" className="advisory-btn myButton"> Talk to Our Advisory Team → </Link>
+
         </div>
       </div>
     </section>

@@ -24,7 +24,9 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-3 col-md-6 col-sm-12 Capabilities">
-            <h5 className="paragraph16_24_600">Capabilities</h5>
+            <h5>Pillars</h5>
+            {/* <h5 className="paragraph16_24_600">Pillars</h5> */}
+
 
             <ul>
               <li>
@@ -38,7 +40,7 @@ const Footer = () => {
                 </NavLink>
               </li>
 
-              <li>
+              {/* <li>
                 <NavLink
                   to="/approach?tab=smriti"
                   className={({ isActive }) =>
@@ -47,7 +49,7 @@ const Footer = () => {
                 >
                   Sutra
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <NavLink
