@@ -26,38 +26,38 @@ const engagementSteps = [
 const testimonials = [
   {
     quote:
-      "Datacharya connected our governance strategy to practical execution, giving leadership clearer accountability and measurable progress.",
-    name: "Rahul Mehta",
-    role: "CFO",
-    company: "Mid-cap Manufacturing",
-    outcome: "IPO readiness achieved with full governance traceability.",
+      "Datacharya didn't just advise – they anticipated. Before we encountered our first major issue, they had already prepared us for it. The infrastructure, the core team, the vendor selection — all done right the first time. Additionally, they still support the team as and when required even after the contract.",
+    name: "Hill Selia",
+    role: "CEO",
+    company: "RamKrinsha Pure Finance, Mumbai",
+    outcome: "Technical infrastructure and vendor ecosystem established. Foundation built for the next ten years of operations.",
   },
   {
     quote:
-      "The engagement moved beyond advisory recommendations and gave our teams a structure they could operate and continuously improve.",
-    name: "Anita Rao",
-    role: "Transformation Head",
-    company: "Enterprise Services",
+      "We weren't using our technology as well as we should have been. Datacharya gave us a clear, structured path through the problem – practical enough to implement without disrupting operations. The difference showed quickly. Our processes became more coordinated, our teams better aligned, and we finally felt in control of our technology rather than the other way around.",
+    name: "Tej Dholakia",
+    role: "Founder",
+    company: "SRK PureMed, Mumbai",
     outcome:
-      "Control ownership and execution visibility improved across teams.",
+      "Data processes streamlined. Technology utilisation improved. Cross-department coordination and operational performance measurably stronger.",
   },
-  {
-    quote:
-      "Datacharya connected our governance strategy to practical execution, giving leadership clearer accountability and measurable progress.",
-    name: "Rahul Mehta",
-    role: "CFO",
-    company: "Mid-cap Manufacturing",
-    outcome: "IPO readiness achieved with full governance traceability.",
-  },
-  {
-    quote:
-      "The engagement moved beyond advisory recommendations and gave our teams a structure they could operate and continuously improve.",
-    name: "Anita Rao",
-    role: "Transformation Head",
-    company: "Enterprise Services",
-    outcome:
-      "Control ownership and execution visibility improved across teams.",
-  },
+  // {
+  //   quote:
+  //     "Datacharya connected our governance strategy to practical execution, giving leadership clearer accountability and measurable progress.",
+  //   name: "Rahul Mehta",
+  //   role: "CFO",
+  //   company: "Mid-cap Manufacturing",
+  //   outcome: "IPO readiness achieved with full governance traceability.",
+  // },
+  // {
+  //   quote:
+  //     "The engagement moved beyond advisory recommendations and gave our teams a structure they could operate and continuously improve.",
+  //   name: "Anita Rao",
+  //   role: "Transformation Head",
+  //   company: "Enterprise Services",
+  //   outcome:
+  //     "Control ownership and execution visibility improved across teams.",
+  // },
 ];
 
 const AdvisoryJourney = () => {

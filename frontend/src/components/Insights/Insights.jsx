@@ -28,7 +28,7 @@ const Insights = ({ variant = "page" }) => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="container">Loading...</div>;
   }
 
   return (

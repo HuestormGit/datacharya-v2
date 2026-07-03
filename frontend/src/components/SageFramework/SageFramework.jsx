@@ -145,7 +145,7 @@ const SageFramework = ({ variant = "default" }) => {
         <div className="container approach-sage-box">
           <div className="approach-sage-intro">
             <h2 className="H240px">
-              SAGE<sub>TM</sub>
+              SAGE<sup>TM</sup>
               <br />
               philosophy
             </h2>

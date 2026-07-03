@@ -8,42 +8,42 @@ const Slider = SliderModule.default || SliderModule;
 const voices = [
   {
     quote:
-      "Datacharya connected our governance strategy to practical execution, giving leadership clearer accountability and measurable progress.",
-    initials: "RM",
-    name: "Rahul Mehta",
-    role: "CFO",
-    company: "Mid-cap Manufacturing (IPO-bound)",
-    outcome:
-      "IPO readiness achieved in 9 months with full governance traceability.",
-  },
-  {
-    quote:
-      "The engagement moved beyond advisory recommendations and gave our teams a structure they could operate and continuously improve.",
-    initials: "AR",
-    name: "Anita Rao",
-    role: "Transformation Head",
-    company: "Enterprise Services",
-    outcome:
-      "Control ownership and execution visibility improved across teams.",
-  },
-  {
-    quote:
-      "The framework created measurable governance outcomes and aligned teams toward execution excellence.",
-    initials: "SK",
-    name: "Sanjay Kumar",
-    role: "Director",
-    company: "Technology Enterprise",
-    outcome: "Governance compliance improved.",
-  },
-  {
-    quote:
-      "Execution visibility and accountability improved dramatically after implementation.",
-    initials: "VP",
-    name: "Vikas Patel",
+      "Datacharya didn't just advise – they anticipated. Before we encountered our first major issue, they had already prepared us for it. The infrastructure, the core team, the vendor selection — all done right the first time. Additionally, they still support the team as and when required even after the contract.",
+    initials: "HS",
+    name: "Hill Selia",
     role: "CEO",
-    company: "Manufacturing Group",
-    outcome: "Operational performance increased.",
+    company: "RamKrinsha Pure Finance, Mumbai",
+    outcome:
+      "Technical infrastructure and vendor ecosystem established. Foundation built for the next ten years of operations.",
   },
+  {
+    quote:
+      "We weren't using our technology as well as we should have been. Datacharya gave us a clear, structured path through the problem – practical enough to implement without disrupting operations. The difference showed quickly. Our processes became more coordinated, our teams better aligned, and we finally felt in control of our technology rather than the other way around.",
+    initials: "TD",
+    name: "Tej Dholakia",
+    role: "Founder",
+    company: "SRK PureMed, Mumbai",
+    outcome:
+      " Data processes streamlined. Technology utilisation improved. Cross-department coordination and operational performance measurably stronger.",
+  },
+  // {
+  //   quote:
+  //     "The framework created measurable governance outcomes and aligned teams toward execution excellence.",
+  //   initials: "SK",
+  //   name: "Sanjay Kumar",
+  //   role: "Director",
+  //   company: "Technology Enterprise",
+  //   outcome: "Governance compliance improved.",
+  // },
+  // {
+  //   quote:
+  //     "Execution visibility and accountability improved dramatically after implementation.",
+  //   initials: "VP",
+  //   name: "Vikas Patel",
+  //   role: "CEO",
+  //   company: "Manufacturing Group",
+  //   outcome: "Operational performance increased.",
+  // },
 ];
 
 const AboutVoices = () => {
