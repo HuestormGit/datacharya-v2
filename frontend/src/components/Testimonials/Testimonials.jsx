@@ -11,7 +11,7 @@ const testimonials = [
     initials: "HS",
   },
   {
-    text: "We weren't using our technology as well as we should have been. Balaji gave us a clear, structured path through the problem – practical enough to implement without disrupting operations. The difference showed quickly. Our processes became more coordinated, our teams better aligned, and we finally felt in control of our technology rather than the other way around.",
+    text: "We weren't using our technology as well as we should have been. Datacharya gave us a clear, structured path through the problem – practical enough to implement without disrupting operations. The difference showed quickly. Our processes became more coordinated, our teams better aligned, and we finally felt in control of our technology rather than the other way around.",
     name: "Tej Dholakia",
     role: " Founder",
     company: "SRK PureMed, Mumbai",
