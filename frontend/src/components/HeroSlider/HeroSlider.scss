@@ -89,8 +89,12 @@
     .hero-benefits {
       margin-top: 34px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+      
       gap: 22px;
+      @include lg{
+        grid-template-columns: repeat(3, 1fr);
+      }
 
       li {
         position: relative;
@@ -131,13 +135,13 @@
       border-radius: 0 0 36px 36px;
       background-position: 62% center;
 
-      h1 {
-        font-size: 36px;
-      }
+      // h1 {
+      //   font-size: 36px;
+      // }
 
-      .hero-benefits {
-        grid-template-columns: 1fr;
-      }
+      // .hero-benefits {
+      //   grid-template-columns: 1fr;
+      // }
     }
   }
 }
