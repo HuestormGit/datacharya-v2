@@ -39,7 +39,38 @@ const HeroSlider = () => {
     loadSlides();
   }, []);
 
-  if (loading) return null;
+  // if (loading) return null;
+  if (loading) {
+  return (
+    <section className="hero-slider hero-loading">
+      <div className="hero-section">
+        <div className="container">
+          <div className="hero-content">
+            <div className="skeleton skeleton-eyebrow"></div>
+
+            <div className="skeleton skeleton-title"></div>
+            <div className="skeleton skeleton-title short"></div>
+
+            <div className="skeleton skeleton-text"></div>
+            <div className="skeleton skeleton-text"></div>
+            <div className="skeleton skeleton-text small"></div>
+
+            <div className="hero-btns">
+              <div className="skeleton skeleton-btn"></div>
+              <div className="skeleton skeleton-btn"></div>
+            </div>
+
+            <div className="hero-benefits">
+              <div className="skeleton skeleton-benefit"></div>
+              <div className="skeleton skeleton-benefit"></div>
+              <div className="skeleton skeleton-benefit"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
   if (!slides.length) return null;
 
