@@ -236,6 +236,20 @@
             }
           }
         }
+
+        .desktop-slider {
+          display: none;
+          @include md{
+            display: block;
+          }
+        }
+
+        .mobile-slider {
+          display: block;
+          @include md{
+            display: none;
+          }
+        }
         .advisory-testimonials_slider{
           .testimonial-card {
             margin: 0;
