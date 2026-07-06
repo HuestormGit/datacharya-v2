@@ -14,10 +14,13 @@
       }
 
       .advisory-panel{
-        position: sticky;
+        
         top: 150px; // below your header
         margin-bottom: 80px;
         border-radius:20px;
+        @include lg{
+          position: sticky;
+        }
       }
 
       .advisory-scope-top{
