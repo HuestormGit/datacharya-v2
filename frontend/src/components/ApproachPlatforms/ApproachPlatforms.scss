@@ -277,6 +277,7 @@
                   grid-template-columns: repeat(2, 1fr);
                 }
                 li{
+                  display: flex;
                   i{
                     color: $blue;
                     margin: 0px 15px;
