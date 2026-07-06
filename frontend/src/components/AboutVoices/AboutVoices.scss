@@ -16,6 +16,19 @@
       text-align: center;
       margin-bottom: 40px;
     }
+    .desktop-slider {
+      display: none;
+      @include lg{
+        display: block;
+      }
+    }
+
+    .mobile-slider {
+      display: block;
+      @include lg{
+        display: none;
+      }
+    }
   }
 
   .slide-item {
