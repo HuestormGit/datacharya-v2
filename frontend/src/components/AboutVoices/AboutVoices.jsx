@@ -1,7 +1,7 @@
 import "./AboutVoices.scss";
 import SliderModule from "react-slick";
 import quote from "../../assets/images/quote.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Slider = SliderModule.default || SliderModule;
 
@@ -24,81 +24,96 @@ const voices = [
     role: "Founder",
     company: "SRK PureMed, Mumbai",
     outcome:
-      " Data processes streamlined. Technology utilisation improved. Cross-department coordination and operational performance measurably stronger.",
+      "Data processes streamlined. Technology utilisation improved. Cross-department coordination and operational performance measurably stronger.",
   },
-  // {
-  //   quote:
-  //     "The framework created measurable governance outcomes and aligned teams toward execution excellence.",
-  //   initials: "SK",
-  //   name: "Sanjay Kumar",
-  //   role: "Director",
-  //   company: "Technology Enterprise",
-  //   outcome: "Governance compliance improved.",
-  // },
-  // {
-  //   quote:
-  //     "Execution visibility and accountability improved dramatically after implementation.",
-  //   initials: "VP",
-  //   name: "Vikas Patel",
-  //   role: "CEO",
-  //   company: "Manufacturing Group",
-  //   outcome: "Operational performance increased.",
-  // },
 ];
 
 const AboutVoices = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth < 768
-  );
+  const [mobileSlide, setMobileSlide] = useState(0);
+  const [desktopSlide, setDesktopSlide] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () =>
-      window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const settings = {
+  const mobileSettings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 600,
     autoplay: true,
     autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
 
+    beforeChange: (_, next) => {
+      setMobileSlide(next);
+    },
+  };
+
+  const desktopSettings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 2,
     slidesToScroll: 1,
 
     beforeChange: (_, next) => {
-      setCurrentSlide(next);
+      setDesktopSlide(next);
     },
-
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
-  const visibleSlides = isMobile ? 1 : 2;
-
-  const totalPositions = Math.max(
-    voices.length - visibleSlides + 1,
-    1
+  const mobileProgress = Math.min(
+    ((mobileSlide + 1) / voices.length) * 100,
+    100
   );
 
-  const progressWidth = Math.min(
-    ((currentSlide + 1) / totalPositions) * 100,
+  const desktopProgress = Math.min(
+    ((desktopSlide + 1) /
+      Math.max(voices.length - 1, 1)) *
+      100,
     100
+  );
+
+  const renderVoiceCard = (voice, index) => (
+    <div key={index} className="slide-item">
+      <article className="voice-item">
+        <span className="quote-mark">
+          <img src={quote} alt="quote" />
+        </span>
+
+        <p className="voice-quote paragraph16">
+          "{voice.quote}"
+        </p>
+
+        <div className="voice-person">
+          <span className="avatar">
+            {voice.initials}
+          </span>
+
+          <div className="avatar-profile">
+            <p className="avatar-name">
+              {voice.name}
+            </p>
+
+            <p className="avatar-role paragraph16">
+              {voice.role}
+            </p>
+
+            <p className="avatar-company paragraph16">
+              {voice.company}
+            </p>
+          </div>
+        </div>
+
+        <p className="outcome-label paragraph16">
+          OUTCOME
+        </p>
+
+        <p className="voice-outcome paragraph16">
+          {voice.outcome}
+        </p>
+      </article>
+    </div>
   );
 
   return (
@@ -107,56 +122,38 @@ const AboutVoices = () => {
         <div className="voices-card">
           <h2 className="H160">Client Voices</h2>
 
-          <Slider {...settings}>
-            {voices.map((voice, index) => (
-              <div key={index} className="slide-item">
-                <article className="voice-item">
-                  <span className="quote-mark">
-                    <img src={quote} alt="quote" />
-                  </span>
+          {/* ================= MOBILE SLIDER ================= */}
+          <div className="mobile-slider">
+            <Slider {...mobileSettings}>
+              {voices.map((voice, index) =>
+                renderVoiceCard(voice, index)
+              )}
+            </Slider>
 
-                  <p className="voice-quote paragraph16">
-                    "{voice.quote}"
-                  </p>
+            <div className="custom-progress">
+              <span
+                style={{
+                  width: `${mobileProgress}%`,
+                }}
+              />
+            </div>
+          </div>
 
-                  <div className="voice-person">
-                    <span className="avatar">
-                      {voice.initials}
-                    </span>
+          {/* ================= DESKTOP/TABLET SLIDER ================= */}
+          <div className="desktop-slider">
+            <Slider {...desktopSettings}>
+              {voices.map((voice, index) =>
+                renderVoiceCard(voice, index)
+              )}
+            </Slider>
 
-                    <div className="avatar-profile">
-                      <p className="avatar-name">
-                        {voice.name}
-                      </p>
-
-                      <p className="avatar-role paragraph16">
-                        {voice.role}
-                      </p>
-
-                      <p className="avatar-company paragraph16">
-                        {voice.company}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="outcome-label paragraph16">
-                    OUTCOME
-                  </p>
-
-                  <p className="voice-outcome paragraph16">
-                    {voice.outcome}
-                  </p>
-                </article>
-              </div>
-            ))}
-          </Slider>
-
-          <div className="custom-progress">
-            <span
-              style={{
-                width: `${progressWidth}%`,
-              }}
-            />
+            <div className="custom-progress">
+              <span
+                style={{
+                  width: `${desktopProgress}%`,
+                }}
+              />
+            </div>
           </div>
         </div>
 

@@ -63,8 +63,11 @@
   .ethical-intelligence {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 42px;
+    gap: 50px;
     align-items: start;
+    @include lg{
+      gap: 42px;
+    }
 
     .img-box{
       padding: 16px 32px 0px 16px;
