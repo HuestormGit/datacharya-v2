@@ -25,6 +25,9 @@
       padding: 150px 0 70px;
       border-radius: 0 0 58px 58px;
     }
+    @include xxl{
+      border-radius: 0px 0px 100px 100pxs;
+    }
 
     
 
