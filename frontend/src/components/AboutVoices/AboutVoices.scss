@@ -18,14 +18,14 @@
     }
     .desktop-slider {
       display: none;
-      @include lg{
+      @include md{
         display: block;
       }
     }
 
     .mobile-slider {
       display: block;
-      @include lg{
+      @include md{
         display: none;
       }
     }
