@@ -143,7 +143,12 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0px 32px;
+    padding: 32px;
+
+    @include lg{
+      padding: 0px 32px;
+
+    }
 
     p.label{
       color: $orange;
@@ -197,7 +202,7 @@
   .advisory-image {
     width: 100%;
     max-width: 480px;
-    margin-left: auto;
+    margin-left: auto;  
     @include md{
       margin: 0px auto;
     }
