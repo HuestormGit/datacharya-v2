@@ -138,7 +138,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <p>info@datacharya.in</p>
+            <p><a href="mailto:balaji.aravamuthan@datacharya.ai">balaji.aravamuthan@datacharya.ai</a></p>
           </div>
 
         </div>
