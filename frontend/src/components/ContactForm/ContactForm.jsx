@@ -71,8 +71,8 @@ const ContactForm = () => {
         <div className="contact-form-layout">
           <div className="contact-location">
             <h2 className="H240px">Get in Touch</h2>
-            <p className="paragraph18px"><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-white">balaji.aravamuthan@datacharya.ai</a></p>
-            <p className="paragraph18px"><a href="tel:7506931747" className="text-white">+91 7506931747</a></p>
+            <p className="paragraph18px"><i className="fa-regular fa-envelope"></i><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-black">balaji.aravamuthan@datacharya.ai</a></p>
+            <p className="paragraph18px"><i className="fa-regular fa-phone"></i><a href="tel:7506931747" className="text-black">+91 7506931747</a></p>
 
           </div>
 
