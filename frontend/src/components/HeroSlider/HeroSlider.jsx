@@ -115,13 +115,13 @@ const HeroSlider = () => {
                   </p>
 
                   <div className="hero-btns row">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="col-lg-5 col-md-5 col-sm-12">
                         <Link className="btn-dark myButton" to={hero.primaryButtonLink}>
                             {hero.primaryButtonText}
                         </Link>
 
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="col-lg-5 col-md-5 col-sm-12">
                         <Link className="btn-light myButton" to={hero.secondaryButtonLink}>
                             {hero.secondaryButtonText}
                         </Link>
