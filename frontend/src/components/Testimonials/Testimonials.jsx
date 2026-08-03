@@ -32,10 +32,14 @@ const Testimonials = () => {
     <section className="testimonial-section">
       <div className="container">
         <div className="section-title">
-          <h5 className="paragraph18px">OUR METHODOLOGY</h5>
+          {/* <h5 className="paragraph18px">OUR METHODOLOGY</h5>
           <h2 className="H160">
             Outcomes that are <span className="highlight">verifiable</span>, not
             implied.
+          </h2> */}
+          <h5 className="paragraph18px">Illustrative and verified outcomes</h5>
+          <h2 className="H160">
+            Illustrative examples are clearly marked; verified client evidence is published only with approval.
           </h2>
         </div>
 

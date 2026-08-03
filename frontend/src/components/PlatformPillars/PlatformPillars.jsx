@@ -21,10 +21,12 @@ const platformData = [
     img: SMRITI_hp,
     subtitle: "Governance Frameworks",
     description:
-      "Advisory defines the governance spine; platform converts it into policies, procedures, controls, ownership, evidence and exceptions.",
+      "SMRITI converts governance knowledge into working enterprise discipline—policies, procedures, controls, ownership, evidence and execution-ready frameworks.",
+      // "Advisory defines the governance spine; platform converts it into policies, procedures, controls, ownership, evidence and exceptions.",
     tags: ["ERP Pack", "IFC Pack", "IPO Pack", "EXE Pack", "RASE Pack"],
     Featuredcapabilitytitle :" Featured capability",
-    Featuredcapabilitycontent : "SUTRA - SAP Blueprinting & KRIYA Execution Governance",
+    Featuredcapabilitycontent : "SUTRA — SAP blueprinting and execution governance.",
+    // Featuredcapabilitycontent : "SUTRA - SAP Blueprinting & KRIYA Execution Governance","Featured SMRITI capability: SUTRA—SAP blueprinting and execution governance.",
     buttonText: "Explore the Platforms",
   },
   {
@@ -33,7 +35,8 @@ const platformData = [
     img: SHRUTI_hp,
     subtitle: "Evidence & Assurance Intelligence",
     description:
-      "Advisory identifies risk and value leakage; platform monitors controls, ITGC, DPDP, audit, ROI and exceptions continuously.",
+      // "Advisory identifies risk and value leakage; platform monitors controls, ITGC, DPDP, audit, ROI and exceptions continuously.",
+      "AI-assisted continuous audit with evidence-led review, exception prioritisation and accountable follow-through.",
     tags: [
       "ITGC Assurance",
       "Internal Audit",
