@@ -21,7 +21,8 @@ const AboutHero = () => {
           scriptural wisdom with contemporary data science.
         </p> */}
         <p className="about-hero-copy paragraph18px">
-          Datacharya transforms governance advisory into operational execution, continuous assurance and measurable enterprise outcomes.
+          {/* Datacharya transforms governance advisory into operational execution, continuous assurance and measurable enterprise outcomes. */}
+          Datacharya combines senior CXO advisory with executable enterprise platforms to turn governance intent into evidence-backed controls, better decisions and measurable outcomes.
         </p>
       </div>
     </section>

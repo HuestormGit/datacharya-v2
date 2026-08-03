@@ -175,7 +175,7 @@ const PlatformPillars = ({ variant = "default" }) => {
                 </div>
                 
                 
-                <a href="/contactUs" className="myButton">Take a trial <i className="fa-solid fa-arrow-right"></i></a>
+                <a href="/contactUs" className="myButton">Explore the Platform <i className="fa-solid fa-arrow-right"></i></a>
               </article>
             ))}
           </div>

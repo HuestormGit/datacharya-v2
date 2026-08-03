@@ -11,9 +11,10 @@ const PlatformHero = () => {
         <p className="paragraph16">PLATFORMS</p>
         <h1 className="H160">Ecosystem of Transformation</h1>
         <p className="paragraph18px platform-hero__summary">
-          An interoperable governance ecosystem that converts advisory into
+          {/* An interoperable governance ecosystem that converts advisory into
           executable workflows, continuous assurance and measurable enterprise
-          outcomes.
+          outcomes. */}
+          Datacharya combines senior CXO advisory with executable enterprise platforms to turn governance intent into evidence-backed controls, better decisions and measurable outcomes.
         </p>
       </div>
     </section>
