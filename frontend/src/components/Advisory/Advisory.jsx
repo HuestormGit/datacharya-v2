@@ -127,7 +127,7 @@ const Advisory = ({ variant = "default" }) => {
               </ul> */}
 
               <a href="contactUs" className="advisory-btn myButton">
-                Talk to Our Advisory Team →
+                Request a Diagnostic Conversation →
               </a>
 
             </div>

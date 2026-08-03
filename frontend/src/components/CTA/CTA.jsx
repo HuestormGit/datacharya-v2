@@ -21,7 +21,7 @@ const CTA = () => {
         <div className="buttons">
           <Link className="primary-btn myButton" to="/contactUs">
           <i class="fa-regular fa-envelope"></i>
-            Request Consultation
+            Request a Diagnostic Conversation
           </Link>
 
           <Link className="secondary-btn myButton" to="/advisory">

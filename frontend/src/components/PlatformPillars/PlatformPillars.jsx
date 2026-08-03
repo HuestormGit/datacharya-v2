@@ -25,7 +25,7 @@ const platformData = [
     tags: ["ERP Pack", "IFC Pack", "IPO Pack", "EXE Pack", "RASE Pack"],
     Featuredcapabilitytitle :" Featured capability",
     Featuredcapabilitycontent : "SUTRA - SAP Blueprinting & KRIYA Execution Governance",
-    buttonText: "Read more",
+    buttonText: "Explore the Platforms",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const platformData = [
       "ROI Engine",
       "Risk Intelligence",
     ],
-    buttonText: "Read more",
+    buttonText: "Explore the Platforms",
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const platformData = [
     description:
       "Advisory interprets credibility, culture and leadership signals; platform validates professional trust and organizational health.",
     tags: ["TrustLink B2C", "TrustLink B2B"],
-    buttonText: "Read more",
+    buttonText: "Explore the Platforms",
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ const platformData = [
       "Utilities",
       "Action registers",
     ],
-    buttonText: "Read more",
+    buttonText: "Explore the Platforms",
   },
 ];
 
@@ -192,7 +192,7 @@ const PlatformPillars = ({ variant = "default" }) => {
           </span>
 
           <h2 className="H160">
-            Four Platform Pillars
+           Four Platform Families. One Operating Logic.
           </h2>
 
           <p className="paragraph18px">

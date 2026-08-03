@@ -294,7 +294,7 @@ const SageFramework = ({ variant = "default" }) => {
           </button> */}
 
            <Link className="myButton" to="/insights">
-                     View Case Studies      
+                     See Example Outcomes     
                         </Link>
 
         </div>
