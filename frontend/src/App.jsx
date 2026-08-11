@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs";
 import AdvisoryPage from "./pages/Advisory";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/insights" element={<Insights />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/advisory" element={<AdvisoryPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       </Routes>
     </>
     

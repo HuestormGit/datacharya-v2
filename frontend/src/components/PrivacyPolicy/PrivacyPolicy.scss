@@ -1,0 +1,172 @@
+@use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixins' as *;
+
+.privacy-policy-section {
+  padding: 70px 0 90px;
+  background: $white;
+
+  @include lg {
+    padding: 100px 0 120px;
+  }
+
+  .privacy-policy-header {
+    max-width: 900px;
+    margin: 0 auto 60px;
+
+    @include lg {
+      margin-bottom: 80px;
+    }
+
+    .label {
+      color: $orange;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      color: #1a1a1a;
+      margin-bottom: 25px;
+    }
+  }
+
+  .privacy-policy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+
+    p {
+      color: #4a5565;
+      margin: 0;
+    }
+
+    strong {
+      color: #1a1a1a;
+    }
+  }
+
+  .privacy-policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+
+    section {
+      margin-bottom: 45px;
+
+      @include lg {
+        margin-bottom: 55px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      color: #1a1a1a;
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 500;
+      margin: 0 0 20px;
+
+      @include md {
+        font-size: 34px;
+      }
+
+      @include lg {
+        font-size: 38px;
+      }
+    }
+
+    p {
+      color: #4a5565;
+      font-size: 17px;
+      line-height: 1.8;
+      margin: 0 0 18px;
+
+      @include md {
+        font-size: 18px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      margin: 20px 0 25px;
+      padding-left: 25px;
+
+      li {
+        color: #4a5565;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+        padding-left: 5px;
+
+        @include md {
+          font-size: 18px;
+        }
+
+        &::marker {
+          color: $orange;
+        }
+      }
+    }
+
+    a {
+      color: $orange;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        color: #1a1a1a;
+        text-decoration: underline;
+      }
+    }
+
+    strong {
+      color: #1a1a1a;
+    }
+  }
+
+  .privacy-policy-footer {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 60px;
+    padding-top: 25px;
+
+    p {
+      color: #6b7280;
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+
+  @include sm {
+    padding: 50px 0 70px;
+
+    .privacy-policy-header {
+      margin-bottom: 45px;
+    }
+
+    .privacy-policy-meta {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .privacy-policy-content {
+      h2 {
+        font-size: 27px;
+      }
+
+      p,
+      ul li {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+    }
+  }
+}

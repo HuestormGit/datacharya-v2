@@ -71,10 +71,11 @@ const ContactForm = () => {
         <div className="contact-form-layout">
           <div className="contact-location">
             <h2 className="H240px">Get in Touch</h2>
-            <p className="paragraph18px text-black pl-2"><i className="fa-regular fa-envelope"></i> Datacharya Technologies LLP </p>
-            <p className="paragraph18px text-black pl-2"><i className="fa-regular fa-map-marker"></i>Flat 101, Plot 2, Sreevas CHS Ltd., Sector 42A, Seawoods, Navi Mumbai, Maharashtra 400706, India</p>
+            <p className="paragraph18px text-black pl-2"><i className="fa fa-building"></i> Datacharya Technologies LLP </p>
             <p className="paragraph18px"><i className="fa-regular fa-envelope"></i> <a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-black pl-2">balaji.aravamuthan@datacharya.ai</a></p>
             <p className="paragraph18px"> <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:7506931747" className="text-black pl-2">+91 7506931747</a></p>
+            <p className="paragraph18px text-black pl-2"><i className="fa fa-map-marker"></i>Flat 101, Plot 2, Sreevas CHS Ltd., Sector 42A, Seawoods, Navi Mumbai, Maharashtra 400706, India</p>
+            
 
           </div>
 
