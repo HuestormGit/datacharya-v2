@@ -1,7 +1,7 @@
 @use '../../assets/scss/variables' as *;
 @use '../../assets/scss/mixins' as *;
 
-.privacy-policy-section {
+.terms-of-use-section {
   padding: 70px 0 90px;
   background: $white;
 
@@ -9,7 +9,7 @@
     padding: 100px 0 120px;
   }
 
-  .privacy-policy-header {
+  .terms-of-use-header {
     max-width: 900px;
     margin: 0 auto 60px;
 
@@ -30,7 +30,7 @@
     }
   }
 
-  .privacy-policy-meta {
+  .terms-of-use-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 40px;
@@ -45,7 +45,7 @@
     }
   }
 
-  .privacy-policy-content {
+  .terms-of-use-content {
     max-width: 900px;
     margin: 0 auto;
 
@@ -129,21 +129,31 @@
     }
   }
 
-  
+  .terms-of-use-footer {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 60px;
+    padding-top: 25px;
+
+    p {
+      color: #6b7280;
+      font-size: 15px;
+      margin: 0;
+    }
+  }
 
   @include sm {
     padding: 50px 0 70px;
 
-    .privacy-policy-header {
+    .terms-of-use-header {
       margin-bottom: 45px;
     }
 
-    .privacy-policy-meta {
+    .terms-of-use-meta {
       flex-direction: column;
       gap: 5px;
     }
 
-    .privacy-policy-content {
+    .terms-of-use-content {
       h2 {
         font-size: 27px;
       }

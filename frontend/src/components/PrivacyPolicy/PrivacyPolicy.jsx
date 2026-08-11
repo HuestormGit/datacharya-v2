@@ -591,9 +591,7 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
-          <div className="privacy-policy-footer">
-            <p>© 2026 Datacharya Technologies LLP. All rights reserved.</p>
-          </div>
+          
 
         </div>
       </div>

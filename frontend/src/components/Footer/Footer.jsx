@@ -143,6 +143,13 @@ const Footer = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }>Privacy Policy</NavLink>
               </li>
+              <li>
+                <NavLink
+                to="/terms-of-use"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }>Terms of Use </NavLink>
+              </li>
             </ul>
 
             <p><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-white">balaji.aravamuthan@datacharya.ai</a></p>

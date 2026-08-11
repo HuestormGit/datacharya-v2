@@ -10,6 +10,7 @@ import AdvisoryPage from "./pages/Advisory";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfUsePage from "./pages/TermsOfUsePage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/advisory" element={<AdvisoryPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-use" element={<TermsOfUsePage />} />
       </Routes>
     </>
     
