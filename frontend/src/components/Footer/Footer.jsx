@@ -136,7 +136,7 @@ const Footer = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }>Contact</NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink
                 to="/privacy-policy"
                 className={({ isActive }) =>
@@ -149,7 +149,7 @@ const Footer = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }>Terms of Use </NavLink>
-              </li> */}
+              </li>
             </ul>
 
             <p><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-white">balaji.aravamuthan@datacharya.ai</a></p>
