@@ -159,7 +159,7 @@ const Footer = () => {
 
         <div className="row">
           <div className="col-12 text-center Copyright">
-            <p>Copyright © 2026 Datacharya</p>
+            <p>© 2026 Datacharya Technologies LLP. All rights reserved.</p>
             <p>*Illustrative example based on Datacharya delivery patterns. It is not presented as a named client result</p>
           </div>
           
