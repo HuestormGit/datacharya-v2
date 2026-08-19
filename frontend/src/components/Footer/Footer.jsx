@@ -136,6 +136,34 @@ const Footer = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }>Contact</NavLink>
               </li>
+              {/* <li>
+                <NavLink
+                to="/privacy-policy"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }>Privacy Policy</NavLink>
+              </li>
+              <li>
+                <NavLink
+                to="/terms-of-use"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }>Terms of Use </NavLink>
+              </li> */}
+            </ul>
+
+            <p><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-white">balaji.aravamuthan@datacharya.ai</a></p>
+          </div>
+
+        </div>
+
+        <div className="footer-md Copyright">
+          <div className="col-lg-6 col-md-12 col-sm-12 text-center ">
+            <p>© 2026 Datacharya Technologies LLP. All rights reserved.</p>
+          </div>
+          <div className="col-lg-6 col-md-12 col-sm-12 text-center">
+            <div className="footer-sub-menu">
+              <ul>
               <li>
                 <NavLink
                 to="/privacy-policy"
@@ -150,19 +178,22 @@ const Footer = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }>Terms of Use </NavLink>
               </li>
-            </ul>
-
-            <p><a href="mailto:balaji.aravamuthan@datacharya.ai" className="text-white">balaji.aravamuthan@datacharya.ai</a></p>
+              <li>
+                <NavLink
+                to="/cookie-settings"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }>Cookie Settings </NavLink>
+              </li>
+              </ul>
+            </div>
+            {/* <p>*Illustrative example based on Datacharya delivery patterns. It is not presented as a named client result</p> */}
           </div>
-
         </div>
-
         <div className="row">
-          <div className="col-12 text-center Copyright">
-            <p>© 2026 Datacharya Technologies LLP. All rights reserved.</p>
+          <div className="col-12 text-center ">
             <p>*Illustrative example based on Datacharya delivery patterns. It is not presented as a named client result</p>
           </div>
-          
         </div>
 
       </div>

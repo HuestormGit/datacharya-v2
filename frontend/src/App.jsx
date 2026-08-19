@@ -11,11 +11,14 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
+import CookieSettingsPage from "./pages/CookieSettingsPage";
+import CookieConsent from "./components/CookieConsent/CookieConsent";
 
 function App() {
   return (
     <>
       <ScrollToTop />
+      <CookieConsent/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/advisory" element={<AdvisoryPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms-of-use" element={<TermsOfUsePage />} />
+        <Route path="/cookie-settings" element={<CookieSettingsPage />}/>
       </Routes>
     </>
     

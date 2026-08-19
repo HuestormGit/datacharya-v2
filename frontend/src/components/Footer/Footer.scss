@@ -42,10 +42,38 @@
     }
 
   }
+  .footer-md{
+    display: flex;
+    flex-direction: column-reverse;
+    
+    @include md{
+      flex-direction: column;
+    }
+    @include lg{
+      flex-direction: row;
+
+    }
+    .footer-sub-menu{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        @include md{   
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+
+        li{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
   .Copyright{
     border-top: 1px solid $orange;
     margin-top: 15px;
-    p{
+    p , .footer-sub-menu{
       margin: 18px 0;
     }
   }
